@@ -1,0 +1,111 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: freqtrade trade",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade FreqaiExampleStrategy trade ",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            // freqaimodel: LightGBMRegressor
+            "args": ["trade", "--strategy", "FreqaiExampleStrategy","--freqaimodel", "ReinforcementLearner_multiproc", "--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config-ai.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade LightGBMRegressor trade ",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            // freqaimodel: LightGBMRegressor
+            "args": ["trade", "--strategy", "FreqaiExampleStrategy","--freqaimodel", "LightGBMRegressor", "--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config-ai.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade --help",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["--help"],
+            // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade list-pairs",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["list-pairs"],
+            // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade list-data",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["list-data"],
+            // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade list-freqaimodels",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["list-freqaimodels"],
+            // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade strategy-updater",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["strategy-updater"],
+            // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "Python: freqtrade edge",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["edge", "--strategy", "SampleStrategy"],
+            // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+        
+
+        
+        
+        
+    ]
+}

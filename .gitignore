@@ -29,22 +29,22 @@ __pycache__/
 *.so
 
 # Distribution / packaging
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
+#.Python
+#env/
+#build/
+#develop-eggs/
+#dist/
+#downloads/
+#eggs/
+#.eggs/
+#lib/
+#lib64/
+#parts/
+#sdist/
+#var/
+#wheels/
+#*.egg-info/
+#.installed.cfg
 *.egg
 
 # PyInstaller
@@ -54,8 +54,8 @@ wheels/
 *.spec
 
 # Installer logs
-pip-log.txt
-pip-delete-this-directory.txt
+#pip-log.txt
+#pip-delete-this-directory.txt
 
 # Unit test / coverage reports
 htmlcov/
@@ -98,12 +98,12 @@ target/
 *.ipynb_checkpoints
 
 # pyenv
-.python-version
+#python-version
 
-.env
+#.env
 .venv
-.idea
-.vscode
+#.idea
+#.vscode
 
 .pytest_cache/
 .mypy_cache/
