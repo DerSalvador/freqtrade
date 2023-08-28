@@ -212,8 +212,11 @@ def parse_db_uri_for_logging(uri: str):
     parsed_db_uri = urlparse(uri)
     if not parsed_db_uri.netloc:  # No need for censoring as no password was provided
         return uri
-    pwd = parsed_db_uri.netloc.split(':')[1].split('@')[0]
-    return parsed_db_uri.geturl().replace(f':{pwd}@', ':*****@')
+    if (len(parsed_db_uri.netloc.split(':')) > 1):
+        pwd = parsed_db_uri.netloc.split(':')[1].split('@')[0]
+        return parsed_db_uri.geturl().replace(f':{pwd}@', ':*****@')
+    return parsed_db_uri.geturl()
+
 
 
 def dataframe_to_json(dataframe: pd.DataFrame) -> str:

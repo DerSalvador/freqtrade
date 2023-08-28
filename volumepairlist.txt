@@ -1,0 +1,661 @@
+|  1INCHUSD |  1INCH/USD |  1INCH |     USD |     True |   Spot |          |          |          1 |
+|   AAVEXBT |   AAVE/BTC |   AAVE |     BTC |     True |   Spot |          |          |          1 |
+|   AAVEETH |   AAVE/ETH |   AAVE |     ETH |     True |   Spot |          |          |          1 |
+|   AAVEEUR |   AAVE/EUR |   AAVE |     EUR |     True |   Spot |   Margin |          |          1 |
+|   AAVEGBP |   AAVE/GBP |   AAVE |     GBP |     True |   Spot |          |          |          1 |
+|   AAVEUSD |   AAVE/USD |   AAVE |     USD |     True |   Spot |   Margin |          |          1 |
+|    ACAEUR |    ACA/EUR |    ACA |     EUR |     True |   Spot |          |          |          1 |
+|    ACAUSD |    ACA/USD |    ACA |     USD |     True |   Spot |          |          |          1 |
+|    ACHEUR |    ACH/EUR |    ACH |     EUR |     True |   Spot |          |          |          1 |
+|    ACHUSD |    ACH/USD |    ACH |     USD |     True |   Spot |          |          |          1 |
+|    ADAAUD |    ADA/AUD |    ADA |     AUD |     True |   Spot |          |          |          1 |
+|    ADAXBT |    ADA/BTC |    ADA |     BTC |     True |   Spot |   Margin |          |          1 |
+|    ADAETH |    ADA/ETH |    ADA |     ETH |     True |   Spot |   Margin |          |          1 |
+|    ADAEUR |    ADA/EUR |    ADA |     EUR |     True |   Spot |   Margin |          |          1 |
+|    ADAGBP |    ADA/GBP |    ADA |     GBP |     True |   Spot |          |          |          1 |
+|    ADAUSD |    ADA/USD |    ADA |     USD |     True |   Spot |   Margin |          |          1 |
+|   ADAUSDT |   ADA/USDT |    ADA |    USDT |     True |   Spot |   Margin |          |          1 |
+|    ADXEUR |    ADX/EUR |    ADX |     EUR |     True |   Spot |          |          |          1 |
+|    ADXUSD |    ADX/USD |    ADX |     USD |     True |   Spot |          |          |          1 |
+|   AGLDEUR |   AGLD/EUR |   AGLD |     EUR |     True |   Spot |          |          |          1 |
+|   AGLDUSD |   AGLD/USD |   AGLD |     USD |     True |   Spot |          |          |          1 |
+|    AIREUR |    AIR/EUR |    AIR |     EUR |     True |   Spot |          |          |          1 |
+|    AIRUSD |    AIR/USD |    AIR |     USD |     True |   Spot |          |          |          1 |
+|    AKTEUR |    AKT/EUR |    AKT |     EUR |     True |   Spot |          |          |          1 |
+|    AKTUSD |    AKT/USD |    AKT |     USD |     True |   Spot |          |          |          1 |
+|   ALCXEUR |   ALCX/EUR |   ALCX |     EUR |     True |   Spot |          |          |          1 |
+|   ALCXUSD |   ALCX/USD |   ALCX |     USD |     True |   Spot |          |          |          1 |
+|   ALGOXBT |   ALGO/BTC |   ALGO |     BTC |     True |   Spot |   Margin |          |          1 |
+|   ALGOETH |   ALGO/ETH |   ALGO |     ETH |     True |   Spot |          |          |          1 |
+|   ALGOEUR |   ALGO/EUR |   ALGO |     EUR |     True |   Spot |   Margin |          |          1 |
+|   ALGOGBP |   ALGO/GBP |   ALGO |     GBP |     True |   Spot |          |          |          1 |
+|   ALGOUSD |   ALGO/USD |   ALGO |     USD |     True |   Spot |   Margin |          |          1 |
+|  ALGOUSDT |  ALGO/USDT |   ALGO |    USDT |     True |   Spot |          |          |          1 |
+|  ALICEEUR |  ALICE/EUR |  ALICE |     EUR |     True |   Spot |          |          |          1 |
+|  ALICEUSD |  ALICE/USD |  ALICE |     USD |     True |   Spot |          |          |          1 |
+|  ALPHAEUR |  ALPHA/EUR |  ALPHA |     EUR |     True |   Spot |          |          |          1 |
+|  ALPHAUSD |  ALPHA/USD |  ALPHA |     USD |     True |   Spot |          |          |          1 |
+|   ANKRXBT |   ANKR/BTC |   ANKR |     BTC |     True |   Spot |          |          |          1 |
+|   ANKREUR |   ANKR/EUR |   ANKR |     EUR |     True |   Spot |          |          |          1 |
+|   ANKRUSD |   ANKR/USD |   ANKR |     USD |     True |   Spot |          |          |          1 |
+|    ANTXBT |    ANT/BTC |    ANT |     BTC |     True |   Spot |          |          |          1 |
+|    ANTETH |    ANT/ETH |    ANT |     ETH |     True |   Spot |          |          |          1 |
+|    ANTEUR |    ANT/EUR |    ANT |     EUR |     True |   Spot |          |          |          1 |
+|    ANTUSD |    ANT/USD |    ANT |     USD |     True |   Spot |          |          |          1 |
+|    APEEUR |    APE/EUR |    APE |     EUR |     True |   Spot |   Margin |          |          1 |
+|    APEUSD |    APE/USD |    APE |     USD |     True |   Spot |   Margin |          |          1 |
+|   APEUSDT |   APE/USDT |    APE |    USDT |     True |   Spot |          |          |          1 |
+|   API3EUR |   API3/EUR |   API3 |     EUR |     True |   Spot |          |          |          1 |
+|   API3USD |   API3/USD |   API3 |     USD |     True |   Spot |          |          |          1 |
+|    APTEUR |    APT/EUR |    APT |     EUR |     True |   Spot |   Margin |          |          1 |
+|    APTUSD |    APT/USD |    APT |     USD |     True |   Spot |   Margin |          |          1 |
+|    ARBEUR |    ARB/EUR |    ARB |     EUR |     True |   Spot |   Margin |          |          1 |
+|    ARBUSD |    ARB/USD |    ARB |     USD |     True |   Spot |   Margin |          |          1 |
+|   ARPAEUR |   ARPA/EUR |   ARPA |     EUR |     True |   Spot |          |          |          1 |
+|   ARPAUSD |   ARPA/USD |   ARPA |     USD |     True |   Spot |          |          |          1 |
+|   ASTREUR |   ASTR/EUR |   ASTR |     EUR |     True |   Spot |          |          |          1 |
+|   ASTRUSD |   ASTR/USD |   ASTR |     USD |     True |   Spot |          |          |          1 |
+|  ATLASEUR |  ATLAS/EUR |  ATLAS |     EUR |     True |   Spot |          |          |          1 |
+|  ATLASUSD |  ATLAS/USD |  ATLAS |     USD |     True |   Spot |          |          |          1 |
+|   ATOMXBT |   ATOM/BTC |   ATOM |     BTC |     True |   Spot |   Margin |          |          1 |
+|   ATOMETH |   ATOM/ETH |   ATOM |     ETH |     True |   Spot |          |          |          1 |
+|   ATOMEUR |   ATOM/EUR |   ATOM |     EUR |     True |   Spot |   Margin |          |          1 |
+|   ATOMGBP |   ATOM/GBP |   ATOM |     GBP |     True |   Spot |          |          |          1 |
+|   ATOMUSD |   ATOM/USD |   ATOM |     USD |     True |   Spot |   Margin |          |          1 |
+|  ATOMUSDT |  ATOM/USDT |   ATOM |    USDT |     True |   Spot |          |          |          1 |
+|    AUDJPY |    AUD/JPY |    AUD |     JPY |     True |   Spot |          |          |          1 |
+|    AUDUSD |    AUD/USD |    AUD |     USD |     True |   Spot |          |          |          1 |
+|  AUDIOEUR |  AUDIO/EUR |  AUDIO |     EUR |     True |   Spot |          |          |          1 |
+|  AUDIOUSD |  AUDIO/USD |  AUDIO |     USD |     True |   Spot |          |          |          1 |
+|   AVAXEUR |   AVAX/EUR |   AVAX |     EUR |     True |   Spot |   Margin |          |          1 |
+|   AVAXUSD |   AVAX/USD |   AVAX |     USD |     True |   Spot |   Margin |          |          1 |
+|  AVAXUSDT |  AVAX/USDT |   AVAX |    USDT |     True |   Spot |          |          |          1 |
+|    AXSEUR |    AXS/EUR |    AXS |     EUR |     True |   Spot |   Margin |          |          1 |
+|    AXSUSD |    AXS/USD |    AXS |     USD |     True |   Spot |   Margin |          |          1 |
+| BADGEREUR | BADGER/EUR | BADGER |     EUR |     True |   Spot |          |          |          1 |
+| BADGERUSD | BADGER/USD | BADGER |     USD |     True |   Spot |          |          |          1 |
+|    BALXBT |    BAL/BTC |    BAL |     BTC |     True |   Spot |          |          |          1 |
+|    BALEUR |    BAL/EUR |    BAL |     EUR |     True |   Spot |          |          |          1 |
+|    BALUSD |    BAL/USD |    BAL |     USD |     True |   Spot |          |          |          1 |
+|   BANDEUR |   BAND/EUR |   BAND |     EUR |     True |   Spot |          |          |          1 |
+|   BANDUSD |   BAND/USD |   BAND |     USD |     True |   Spot |          |          |          1 |
+|    BATXBT |    BAT/BTC |    BAT |     BTC |     True |   Spot |          |          |          1 |
+|    BATETH |    BAT/ETH |    BAT |     ETH |     True |   Spot |          |          |          1 |
+|    BATEUR |    BAT/EUR |    BAT |     EUR |     True |   Spot |   Margin |          |          1 |
+|    BATJPY |    BAT/JPY |    BAT |     JPY |     True |   Spot |          |          |          1 |
+|    BATUSD |    BAT/USD |    BAT |     USD |     True |   Spot |   Margin |          |          1 |
+|    BCHAUD |    BCH/AUD |    BCH |     AUD |     True |   Spot |          |          |          1 |
+|    BCHXBT |    BCH/BTC |    BCH |     BTC |     True |   Spot |   Margin |          |          1 |
+|    BCHETH |    BCH/ETH |    BCH |     ETH |     True |   Spot |          |          |          1 |
+|    BCHEUR |    BCH/EUR |    BCH |     EUR |     True |   Spot |   Margin |          |          1 |
+|    BCHGBP |    BCH/GBP |    BCH |     GBP |     True |   Spot |          |          |          1 |
+|    BCHJPY |    BCH/JPY |    BCH |     JPY |     True |   Spot |          |          |          1 |
+|    BCHUSD |    BCH/USD |    BCH |     USD |     True |   Spot |   Margin |          |          1 |
+|   BCHUSDT |   BCH/USDT |    BCH |    USDT |     True |   Spot |          |          |          1 |
+|   BICOEUR |   BICO/EUR |   BICO |     EUR |     True |   Spot |          |          |          1 |
+|   BICOUSD |   BICO/USD |   BICO |     USD |     True |   Spot |          |          |          1 |
+|    BITEUR |    BIT/EUR |    BIT |     EUR |     True |   Spot |          |          |          1 |
+|    BITUSD |    BIT/USD |    BIT |     USD |     True |   Spot |          |          |          1 |
+|   BLUREUR |   BLUR/EUR |   BLUR |     EUR |     True |   Spot |   Margin |          |          1 |
+|   BLURUSD |   BLUR/USD |   BLUR |     USD |     True |   Spot |   Margin |          |          1 |
+|    BLZEUR |    BLZ/EUR |    BLZ |     EUR |     True |   Spot |          |          |          1 |
+|    BLZUSD |    BLZ/USD |    BLZ |     USD |     True |   Spot |          |          |          1 |
+|    BNCEUR |    BNC/EUR |    BNC |     EUR |     True |   Spot |          |          |          1 |
+|    BNCUSD |    BNC/USD |    BNC |     USD |     True |   Spot |          |          |          1 |
+|    BNTXBT |    BNT/BTC |    BNT |     BTC |     True |   Spot |          |          |          1 |
+|    BNTEUR |    BNT/EUR |    BNT |     EUR |     True |   Spot |          |          |          1 |
+|    BNTUSD |    BNT/USD |    BNT |     USD |     True |   Spot |          |          |          1 |
+|   BOBAEUR |   BOBA/EUR |   BOBA |     EUR |     True |   Spot |          |          |          1 |
+|   BOBAUSD |   BOBA/USD |   BOBA |     USD |     True |   Spot |          |          |          1 |
+|   BONDEUR |   BOND/EUR |   BOND |     EUR |     True |   Spot |          |          |          1 |
+|   BONDUSD |   BOND/USD |   BOND |     USD |     True |   Spot |          |          |          1 |
+|  BRICKEUR |  BRICK/EUR |  BRICK |     EUR |     True |   Spot |          |          |          1 |
+|  BRICKUSD |  BRICK/USD |  BRICK |     USD |     True |   Spot |          |          |          1 |
+|    BSXEUR |    BSX/EUR |    BSX |     EUR |     True |   Spot |          |          |          1 |
+|    BSXUSD |    BSX/USD |    BSX |     USD |     True |   Spot |          |          |          1 |
+|    XBTAED |    BTC/AED |    BTC |     AED |     True |   Spot |          |          |          1 |
+|    XBTAUD |    BTC/AUD |    BTC |     AUD |     True |   Spot |   Margin |          |          1 |
+|  XXBTZCAD |    BTC/CAD |    BTC |     CAD |     True |   Spot |   Margin |          |          1 |
+|    XBTCHF |    BTC/CHF |    BTC |     CHF |     True |   Spot |   Margin |          |          1 |
+|    XBTDAI |    BTC/DAI |    BTC |     DAI |     True |   Spot |          |          |          1 |
+|  XXBTZEUR |    BTC/EUR |    BTC |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XXBTZGBP |    BTC/GBP |    BTC |     GBP |     True |   Spot |   Margin |          |          1 |
+|  XXBTZJPY |    BTC/JPY |    BTC |     JPY |     True |   Spot |          |          |          1 |
+|  XXBTZUSD |    BTC/USD |    BTC |     USD |     True |   Spot |   Margin |          |          1 |
+|   XBTUSDC |   BTC/USDC |    BTC |    USDC |     True |   Spot |   Margin |          |          1 |
+|   XBTUSDT |   BTC/USDT |    BTC |    USDT |     True |   Spot |   Margin |          |          1 |
+|    BTTEUR |    BTT/EUR |    BTT |     EUR |     True |   Spot |          |          |          1 |
+|    BTTUSD |    BTT/USD |    BTT |     USD |     True |   Spot |          |          |          1 |
+|    C98EUR |    C98/EUR |    C98 |     EUR |     True |   Spot |          |          |          1 |
+|    C98USD |    C98/USD |    C98 |     USD |     True |   Spot |          |          |          1 |
+|   CELREUR |   CELR/EUR |   CELR |     EUR |     True |   Spot |          |          |          1 |
+|   CELRUSD |   CELR/USD |   CELR |     USD |     True |   Spot |          |          |          1 |
+|    CFGEUR |    CFG/EUR |    CFG |     EUR |     True |   Spot |          |          |          1 |
+|    CFGUSD |    CFG/USD |    CFG |     USD |     True |   Spot |          |          |          1 |
+|    CHREUR |    CHR/EUR |    CHR |     EUR |     True |   Spot |          |          |          1 |
+|    CHRUSD |    CHR/USD |    CHR |     USD |     True |   Spot |          |          |          1 |
+|    CHZEUR |    CHZ/EUR |    CHZ |     EUR |     True |   Spot |          |          |          1 |
+|    CHZUSD |    CHZ/USD |    CHZ |     USD |     True |   Spot |          |          |          1 |
+|   COMPXBT |   COMP/BTC |   COMP |     BTC |     True |   Spot |          |          |          1 |
+|   COMPEUR |   COMP/EUR |   COMP |     EUR |     True |   Spot |   Margin |          |          1 |
+|   COMPUSD |   COMP/USD |   COMP |     USD |     True |   Spot |   Margin |          |          1 |
+|   COTIEUR |   COTI/EUR |   COTI |     EUR |     True |   Spot |          |          |          1 |
+|   COTIUSD |   COTI/USD |   COTI |     USD |     True |   Spot |          |          |          1 |
+|    CQTEUR |    CQT/EUR |    CQT |     EUR |     True |   Spot |          |          |          1 |
+|    CQTUSD |    CQT/USD |    CQT |     USD |     True |   Spot |          |          |          1 |
+|    CRVXBT |    CRV/BTC |    CRV |     BTC |     True |   Spot |          |          |          1 |
+|    CRVETH |    CRV/ETH |    CRV |     ETH |     True |   Spot |          |          |          1 |
+|    CRVEUR |    CRV/EUR |    CRV |     EUR |     True |   Spot |   Margin |          |          1 |
+|    CRVUSD |    CRV/USD |    CRV |     USD |     True |   Spot |   Margin |          |          1 |
+|    CSMEUR |    CSM/EUR |    CSM |     EUR |     True |   Spot |          |          |          1 |
+|    CSMUSD |    CSM/USD |    CSM |     USD |     True |   Spot |          |          |          1 |
+|   CTSIEUR |   CTSI/EUR |   CTSI |     EUR |     True |   Spot |          |          |          1 |
+|   CTSIUSD |   CTSI/USD |   CTSI |     USD |     True |   Spot |          |          |          1 |
+|    CVCEUR |    CVC/EUR |    CVC |     EUR |     True |   Spot |          |          |          1 |
+|    CVCUSD |    CVC/USD |    CVC |     USD |     True |   Spot |          |          |          1 |
+|    CVXEUR |    CVX/EUR |    CVX |     EUR |     True |   Spot |          |          |          1 |
+|    CVXUSD |    CVX/USD |    CVX |     USD |     True |   Spot |          |          |          1 |
+|    DAIEUR |    DAI/EUR |    DAI |     EUR |     True |   Spot |   Margin |          |          1 |
+|    DAIUSD |    DAI/USD |    DAI |     USD |     True |   Spot |   Margin |          |          1 |
+|   DAIUSDT |   DAI/USDT |    DAI |    USDT |     True |   Spot |   Margin |          |          1 |
+|   DASHXBT |   DASH/BTC |   DASH |     BTC |     True |   Spot |   Margin |          |          1 |
+|   DASHEUR |   DASH/EUR |   DASH |     EUR |     True |   Spot |   Margin |          |          1 |
+|   DASHUSD |   DASH/USD |   DASH |     USD |     True |   Spot |   Margin |          |          1 |
+|   DENTEUR |   DENT/EUR |   DENT |     EUR |     True |   Spot |          |          |          1 |
+|   DENTUSD |   DENT/USD |   DENT |     USD |     True |   Spot |          |          |          1 |
+|  XXDGXXBT |   DOGE/BTC |   DOGE |     BTC |     True |   Spot |   Margin |          |          1 |
+|    XDGEUR |   DOGE/EUR |   DOGE |     EUR |     True |   Spot |   Margin |          |          1 |
+|    XDGUSD |   DOGE/USD |   DOGE |     USD |     True |   Spot |   Margin |          |          1 |
+|   XDGUSDT |  DOGE/USDT |   DOGE |    USDT |     True |   Spot |          |          |          1 |
+|    DOTXBT |    DOT/BTC |    DOT |     BTC |     True |   Spot |   Margin |          |          1 |
+|    DOTETH |    DOT/ETH |    DOT |     ETH |     True |   Spot |   Margin |          |          1 |
+|    DOTEUR |    DOT/EUR |    DOT |     EUR |     True |   Spot |   Margin |          |          1 |
+|    DOTGBP |    DOT/GBP |    DOT |     GBP |     True |   Spot |          |          |          1 |
+|    DOTJPY |    DOT/JPY |    DOT |     JPY |     True |   Spot |          |          |          1 |
+|    DOTUSD |    DOT/USD |    DOT |     USD |     True |   Spot |   Margin |          |          1 |
+|   DOTUSDT |   DOT/USDT |    DOT |    USDT |     True |   Spot |   Margin |          |          1 |
+|   DYDXEUR |   DYDX/EUR |   DYDX |     EUR |     True |   Spot |          |          |          1 |
+|   DYDXUSD |   DYDX/USD |   DYDX |     USD |     True |   Spot |          |          |          1 |
+|   EGLDEUR |   EGLD/EUR |   EGLD |     EUR |     True |   Spot |          |          |          1 |
+|   EGLDUSD |   EGLD/USD |   EGLD |     USD |     True |   Spot |          |          |          1 |
+|    ENJXBT |    ENJ/BTC |    ENJ |     BTC |     True |   Spot |          |          |          1 |
+|    ENJEUR |    ENJ/EUR |    ENJ |     EUR |     True |   Spot |          |          |          1 |
+|    ENJGBP |    ENJ/GBP |    ENJ |     GBP |     True |   Spot |          |          |          1 |
+|    ENJJPY |    ENJ/JPY |    ENJ |     JPY |     True |   Spot |          |          |          1 |
+|    ENJUSD |    ENJ/USD |    ENJ |     USD |     True |   Spot |          |          |          1 |
+|    ENSEUR |    ENS/EUR |    ENS |     EUR |     True |   Spot |          |          |          1 |
+|    ENSUSD |    ENS/USD |    ENS |     USD |     True |   Spot |          |          |          1 |
+|    EOSXBT |    EOS/BTC |    EOS |     BTC |     True |   Spot |   Margin |          |          1 |
+|    EOSETH |    EOS/ETH |    EOS |     ETH |     True |   Spot |   Margin |          |          1 |
+|    EOSEUR |    EOS/EUR |    EOS |     EUR |     True |   Spot |   Margin |          |          1 |
+|    EOSUSD |    EOS/USD |    EOS |     USD |     True |   Spot |   Margin |          |          1 |
+|   EOSUSDT |   EOS/USDT |    EOS |    USDT |     True |   Spot |          |          |          1 |
+|  XETCXXBT |    ETC/BTC |    ETC |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XETCXETH |    ETC/ETH |    ETC |     ETH |     True |   Spot |   Margin |          |          1 |
+|  XETCZEUR |    ETC/EUR |    ETC |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XETCZUSD |    ETC/USD |    ETC |     USD |     True |   Spot |   Margin |          |          1 |
+|    ETHAED |    ETH/AED |    ETH |     AED |     True |   Spot |          |          |          1 |
+|    ETHAUD |    ETH/AUD |    ETH |     AUD |     True |   Spot |   Margin |          |          1 |
+|  XETHXXBT |    ETH/BTC |    ETH |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XETHZCAD |    ETH/CAD |    ETH |     CAD |     True |   Spot |          |          |          1 |
+|    ETHCHF |    ETH/CHF |    ETH |     CHF |     True |   Spot |          |          |          1 |
+|    ETHDAI |    ETH/DAI |    ETH |     DAI |     True |   Spot |          |          |          1 |
+|  XETHZEUR |    ETH/EUR |    ETH |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XETHZGBP |    ETH/GBP |    ETH |     GBP |     True |   Spot |   Margin |          |          1 |
+|  XETHZJPY |    ETH/JPY |    ETH |     JPY |     True |   Spot |          |          |          1 |
+|  XETHZUSD |    ETH/USD |    ETH |     USD |     True |   Spot |   Margin |          |          1 |
+|   ETHUSDC |   ETH/USDC |    ETH |    USDC |     True |   Spot |   Margin |          |          1 |
+|   ETHUSDT |   ETH/USDT |    ETH |    USDT |     True |   Spot |   Margin |          |          1 |
+| ETH2.SETH | ETH2.S/ETH | ETH2.S |     ETH |     True |   Spot |          |          |          1 |
+|   ETHWETH |   ETHW/ETH |   ETHW |     ETH |     True |   Spot |          |          |          1 |
+|   ETHWEUR |   ETHW/EUR |   ETHW |     EUR |     True |   Spot |          |          |          1 |
+|   ETHWUSD |   ETHW/USD |   ETHW |     USD |     True |   Spot |          |          |          1 |
+|    EULEUR |    EUL/EUR |    EUL |     EUR |     True |   Spot |          |          |          1 |
+|    EULUSD |    EUL/USD |    EUL |     USD |     True |   Spot |          |          |          1 |
+|    EURAUD |    EUR/AUD |    EUR |     AUD |     True |   Spot |          |          |          1 |
+|    EURCAD |    EUR/CAD |    EUR |     CAD |     True |   Spot |          |          |          1 |
+|    EURCHF |    EUR/CHF |    EUR |     CHF |     True |   Spot |          |          |          1 |
+|    EURGBP |    EUR/GBP |    EUR |     GBP |     True |   Spot |          |          |          1 |
+|    EURJPY |    EUR/JPY |    EUR |     JPY |     True |   Spot |          |          |          1 |
+|  ZEURZUSD |    EUR/USD |    EUR |     USD |     True |   Spot |          |          |          1 |
+|   EURTEUR |   EURT/EUR |   EURT |     EUR |     True |   Spot |          |          |          1 |
+|   EURTUSD |   EURT/USD |   EURT |     USD |     True |   Spot |          |          |          1 |
+|  EURTUSDT |  EURT/USDT |   EURT |    USDT |     True |   Spot |          |          |          1 |
+|    EWTXBT |    EWT/BTC |    EWT |     BTC |     True |   Spot |          |          |          1 |
+|    EWTEUR |    EWT/EUR |    EWT |     EUR |     True |   Spot |          |          |          1 |
+|    EWTGBP |    EWT/GBP |    EWT |     GBP |     True |   Spot |          |          |          1 |
+|    EWTUSD |    EWT/USD |    EWT |     USD |     True |   Spot |          |          |          1 |
+|   FARMEUR |   FARM/EUR |   FARM |     EUR |     True |   Spot |          |          |          1 |
+|   FARMUSD |   FARM/USD |   FARM |     USD |     True |   Spot |          |          |          1 |
+|    FETEUR |    FET/EUR |    FET |     EUR |     True |   Spot |          |          |          1 |
+|    FETUSD |    FET/USD |    FET |     USD |     True |   Spot |          |          |          1 |
+|   FIDAEUR |   FIDA/EUR |   FIDA |     EUR |     True |   Spot |          |          |          1 |
+|   FIDAUSD |   FIDA/USD |   FIDA |     USD |     True |   Spot |          |          |          1 |
+|    FILXBT |    FIL/BTC |    FIL |     BTC |     True |   Spot |   Margin |          |          1 |
+|    FILETH |    FIL/ETH |    FIL |     ETH |     True |   Spot |          |          |          1 |
+|    FILEUR |    FIL/EUR |    FIL |     EUR |     True |   Spot |   Margin |          |          1 |
+|    FILGBP |    FIL/GBP |    FIL |     GBP |     True |   Spot |          |          |          1 |
+|    FILUSD |    FIL/USD |    FIL |     USD |     True |   Spot |   Margin |          |          1 |
+|    FISEUR |    FIS/EUR |    FIS |     EUR |     True |   Spot |          |          |          1 |
+|    FISUSD |    FIS/USD |    FIS |     USD |     True |   Spot |          |          |          1 |
+|   FLOWXBT |   FLOW/BTC |   FLOW |     BTC |     True |   Spot |          |          |          1 |
+|   FLOWETH |   FLOW/ETH |   FLOW |     ETH |     True |   Spot |          |          |          1 |
+|   FLOWEUR |   FLOW/EUR |   FLOW |     EUR |     True |   Spot |   Margin |          |          1 |
+|   FLOWGBP |   FLOW/GBP |   FLOW |     GBP |     True |   Spot |          |          |          1 |
+|   FLOWUSD |   FLOW/USD |   FLOW |     USD |     True |   Spot |   Margin |          |          1 |
+|    FLREUR |    FLR/EUR |    FLR |     EUR |     True |   Spot |   Margin |          |          1 |
+|    FLRUSD |    FLR/USD |    FLR |     USD |     True |   Spot |   Margin |          |          1 |
+|  FORTHEUR |  FORTH/EUR |  FORTH |     EUR |     True |   Spot |          |          |          1 |
+|  FORTHUSD |  FORTH/USD |  FORTH |     USD |     True |   Spot |          |          |          1 |
+|    FTMEUR |    FTM/EUR |    FTM |     EUR |     True |   Spot |   Margin |          |          1 |
+|    FTMUSD |    FTM/USD |    FTM |     USD |     True |   Spot |   Margin |          |          1 |
+|    FXSEUR |    FXS/EUR |    FXS |     EUR |     True |   Spot |          |          |          1 |
+|    FXSUSD |    FXS/USD |    FXS |     USD |     True |   Spot |          |          |          1 |
+|    GALEUR |    GAL/EUR |    GAL |     EUR |     True |   Spot |          |          |          1 |
+|    GALUSD |    GAL/USD |    GAL |     USD |     True |   Spot |          |          |          1 |
+|   GALAEUR |   GALA/EUR |   GALA |     EUR |     True |   Spot |          |          |          1 |
+|   GALAUSD |   GALA/USD |   GALA |     USD |     True |   Spot |          |          |          1 |
+|   GARIEUR |   GARI/EUR |   GARI |     EUR |     True |   Spot |          |          |          1 |
+|   GARIUSD |   GARI/USD |   GARI |     USD |     True |   Spot |          |          |          1 |
+|  ZGBPZUSD |    GBP/USD |    GBP |     USD |     True |   Spot |          |          |          1 |
+|   GHSTXBT |   GHST/BTC |   GHST |     BTC |     True |   Spot |          |          |          1 |
+|   GHSTEUR |   GHST/EUR |   GHST |     EUR |     True |   Spot |          |          |          1 |
+|   GHSTUSD |   GHST/USD |   GHST |     USD |     True |   Spot |          |          |          1 |
+|   GLMREUR |   GLMR/EUR |   GLMR |     EUR |     True |   Spot |          |          |          1 |
+|   GLMRUSD |   GLMR/USD |   GLMR |     USD |     True |   Spot |          |          |          1 |
+|    GMTEUR |    GMT/EUR |    GMT |     EUR |     True |   Spot |          |          |          1 |
+|    GMTUSD |    GMT/USD |    GMT |     USD |     True |   Spot |          |          |          1 |
+|    GMXEUR |    GMX/EUR |    GMX |     EUR |     True |   Spot |          |          |          1 |
+|    GMXUSD |    GMX/USD |    GMX |     USD |     True |   Spot |          |          |          1 |
+|    GNOXBT |    GNO/BTC |    GNO |     BTC |     True |   Spot |          |          |          1 |
+|    GNOEUR |    GNO/EUR |    GNO |     EUR |     True |   Spot |          |          |          1 |
+|    GNOUSD |    GNO/USD |    GNO |     USD |     True |   Spot |          |          |          1 |
+|    GRTXBT |    GRT/BTC |    GRT |     BTC |     True |   Spot |          |          |          1 |
+|    GRTEUR |    GRT/EUR |    GRT |     EUR |     True |   Spot |   Margin |          |          1 |
+|    GRTGBP |    GRT/GBP |    GRT |     GBP |     True |   Spot |          |          |          1 |
+|    GRTUSD |    GRT/USD |    GRT |     USD |     True |   Spot |   Margin |          |          1 |
+|    GSTEUR |    GST/EUR |    GST |     EUR |     True |   Spot |          |          |          1 |
+|    GSTUSD |    GST/USD |    GST |     USD |     True |   Spot |          |          |          1 |
+|    GTCEUR |    GTC/EUR |    GTC |     EUR |     True |   Spot |          |          |          1 |
+|    GTCUSD |    GTC/USD |    GTC |     USD |     True |   Spot |          |          |          1 |
+|    HDXEUR |    HDX/EUR |    HDX |     EUR |     True |   Spot |          |          |          1 |
+|    HDXUSD |    HDX/USD |    HDX |     USD |     True |   Spot |          |          |          1 |
+|    HFTEUR |    HFT/EUR |    HFT |     EUR |     True |   Spot |          |          |          1 |
+|    HFTUSD |    HFT/USD |    HFT |     USD |     True |   Spot |          |          |          1 |
+|    ICPEUR |    ICP/EUR |    ICP |     EUR |     True |   Spot |          |          |          1 |
+|    ICPUSD |    ICP/USD |    ICP |     USD |     True |   Spot |          |          |          1 |
+|    ICXXBT |    ICX/BTC |    ICX |     BTC |     True |   Spot |          |          |          1 |
+|    ICXETH |    ICX/ETH |    ICX |     ETH |     True |   Spot |          |          |          1 |
+|    ICXEUR |    ICX/EUR |    ICX |     EUR |     True |   Spot |          |          |          1 |
+|    ICXUSD |    ICX/USD |    ICX |     USD |     True |   Spot |          |          |          1 |
+|   IDEXEUR |   IDEX/EUR |   IDEX |     EUR |     True |   Spot |          |          |          1 |
+|   IDEXUSD |   IDEX/USD |   IDEX |     USD |     True |   Spot |          |          |          1 |
+|    IMXEUR |    IMX/EUR |    IMX |     EUR |     True |   Spot |          |          |          1 |
+|    IMXUSD |    IMX/USD |    IMX |     USD |     True |   Spot |          |          |          1 |
+|    INJEUR |    INJ/EUR |    INJ |     EUR |     True |   Spot |          |          |          1 |
+|    INJUSD |    INJ/USD |    INJ |     USD |     True |   Spot |          |          |          1 |
+|   INTREUR |   INTR/EUR |   INTR |     EUR |     True |   Spot |          |          |          1 |
+|   INTRUSD |   INTR/USD |   INTR |     USD |     True |   Spot |          |          |          1 |
+|  JASMYEUR |  JASMY/EUR |  JASMY |     EUR |     True |   Spot |          |          |          1 |
+|  JASMYUSD |  JASMY/USD |  JASMY |     USD |     True |   Spot |          |          |          1 |
+|   JUNOEUR |   JUNO/EUR |   JUNO |     EUR |     True |   Spot |          |          |          1 |
+|   JUNOUSD |   JUNO/USD |   JUNO |     USD |     True |   Spot |          |          |          1 |
+|    KAREUR |    KAR/EUR |    KAR |     EUR |     True |   Spot |          |          |          1 |
+|    KARUSD |    KAR/USD |    KAR |     USD |     True |   Spot |          |          |          1 |
+|   KAVAXBT |   KAVA/BTC |   KAVA |     BTC |     True |   Spot |          |          |          1 |
+|   KAVAETH |   KAVA/ETH |   KAVA |     ETH |     True |   Spot |          |          |          1 |
+|   KAVAEUR |   KAVA/EUR |   KAVA |     EUR |     True |   Spot |   Margin |          |          1 |
+|   KAVAUSD |   KAVA/USD |   KAVA |     USD |     True |   Spot |   Margin |          |          1 |
+|   KEEPXBT |   KEEP/BTC |   KEEP |     BTC |     True |   Spot |          |          |          1 |
+|   KEEPEUR |   KEEP/EUR |   KEEP |     EUR |     True |   Spot |   Margin |          |          1 |
+|   KEEPUSD |   KEEP/USD |   KEEP |     USD |     True |   Spot |   Margin |          |          1 |
+|    KEYEUR |    KEY/EUR |    KEY |     EUR |     True |   Spot |          |          |          1 |
+|    KEYUSD |    KEY/USD |    KEY |     USD |     True |   Spot |          |          |          1 |
+|   KILTEUR |   KILT/EUR |   KILT |     EUR |     True |   Spot |          |          |          1 |
+|   KILTUSD |   KILT/USD |   KILT |     USD |     True |   Spot |          |          |          1 |
+|    KINEUR |    KIN/EUR |    KIN |     EUR |     True |   Spot |          |          |          1 |
+|    KINUSD |    KIN/USD |    KIN |     USD |     True |   Spot |          |          |          1 |
+|   KINTEUR |   KINT/EUR |   KINT |     EUR |     True |   Spot |          |          |          1 |
+|   KINTUSD |   KINT/USD |   KINT |     USD |     True |   Spot |          |          |          1 |
+|    KNCXBT |    KNC/BTC |    KNC |     BTC |     True |   Spot |          |          |          1 |
+|    KNCETH |    KNC/ETH |    KNC |     ETH |     True |   Spot |          |          |          1 |
+|    KNCEUR |    KNC/EUR |    KNC |     EUR |     True |   Spot |          |          |          1 |
+|    KNCUSD |    KNC/USD |    KNC |     USD |     True |   Spot |          |          |          1 |
+|   KP3REUR |   KP3R/EUR |   KP3R |     EUR |     True |   Spot |          |          |          1 |
+|   KP3RUSD |   KP3R/USD |   KP3R |     USD |     True |   Spot |          |          |          1 |
+|    KSMXBT |    KSM/BTC |    KSM |     BTC |     True |   Spot |          |          |          1 |
+|    KSMDOT |    KSM/DOT |    KSM |     DOT |     True |   Spot |          |          |          1 |
+|    KSMETH |    KSM/ETH |    KSM |     ETH |     True |   Spot |          |          |          1 |
+|    KSMEUR |    KSM/EUR |    KSM |     EUR |     True |   Spot |   Margin |          |          1 |
+|    KSMGBP |    KSM/GBP |    KSM |     GBP |     True |   Spot |          |          |          1 |
+|    KSMUSD |    KSM/USD |    KSM |     USD |     True |   Spot |   Margin |          |          1 |
+|    LCXEUR |    LCX/EUR |    LCX |     EUR |     True |   Spot |          |          |          1 |
+|    LCXUSD |    LCX/USD |    LCX |     USD |     True |   Spot |          |          |          1 |
+|    LDOEUR |    LDO/EUR |    LDO |     EUR |     True |   Spot |   Margin |          |          1 |
+|    LDOUSD |    LDO/USD |    LDO |     USD |     True |   Spot |   Margin |          |          1 |
+|   LINKAUD |   LINK/AUD |   LINK |     AUD |     True |   Spot |          |          |          1 |
+|   LINKXBT |   LINK/BTC |   LINK |     BTC |     True |   Spot |   Margin |          |          1 |
+|   LINKETH |   LINK/ETH |   LINK |     ETH |     True |   Spot |   Margin |          |          1 |
+|   LINKEUR |   LINK/EUR |   LINK |     EUR |     True |   Spot |   Margin |          |          1 |
+|   LINKGBP |   LINK/GBP |   LINK |     GBP |     True |   Spot |          |          |          1 |
+|   LINKJPY |   LINK/JPY |   LINK |     JPY |     True |   Spot |          |          |          1 |
+|   LINKUSD |   LINK/USD |   LINK |     USD |     True |   Spot |   Margin |          |          1 |
+|  LINKUSDT |  LINK/USDT |   LINK |    USDT |     True |   Spot |   Margin |          |          1 |
+|   LMWREUR |   LMWR/EUR |   LMWR |     EUR |     True |   Spot |          |          |          1 |
+|   LMWRUSD |   LMWR/USD |   LMWR |     USD |     True |   Spot |          |          |          1 |
+|    LPTXBT |    LPT/BTC |    LPT |     BTC |     True |   Spot |          |          |          1 |
+|    LPTEUR |    LPT/EUR |    LPT |     EUR |     True |   Spot |          |          |          1 |
+|    LPTGBP |    LPT/GBP |    LPT |     GBP |     True |   Spot |          |          |          1 |
+|    LPTUSD |    LPT/USD |    LPT |     USD |     True |   Spot |          |          |          1 |
+|    LRCEUR |    LRC/EUR |    LRC |     EUR |     True |   Spot |   Margin |          |          1 |
+|    LRCUSD |    LRC/USD |    LRC |     USD |     True |   Spot |   Margin |          |          1 |
+|    LSKXBT |    LSK/BTC |    LSK |     BTC |     True |   Spot |          |          |          1 |
+|    LSKETH |    LSK/ETH |    LSK |     ETH |     True |   Spot |          |          |          1 |
+|    LSKEUR |    LSK/EUR |    LSK |     EUR |     True |   Spot |          |          |          1 |
+|    LSKUSD |    LSK/USD |    LSK |     USD |     True |   Spot |          |          |          1 |
+|    LTCAUD |    LTC/AUD |    LTC |     AUD |     True |   Spot |          |          |          1 |
+|  XLTCXXBT |    LTC/BTC |    LTC |     BTC |     True |   Spot |   Margin |          |          1 |
+|    LTCETH |    LTC/ETH |    LTC |     ETH |     True |   Spot |          |          |          1 |
+|  XLTCZEUR |    LTC/EUR |    LTC |     EUR |     True |   Spot |   Margin |          |          1 |
+|    LTCGBP |    LTC/GBP |    LTC |     GBP |     True |   Spot |          |          |          1 |
+|  XLTCZJPY |    LTC/JPY |    LTC |     JPY |     True |   Spot |          |          |          1 |
+|  XLTCZUSD |    LTC/USD |    LTC |     USD |     True |   Spot |   Margin |          |          1 |
+|   LTCUSDT |   LTC/USDT |    LTC |    USDT |     True |   Spot |          |          |          1 |
+|  LUNA2EUR |   LUNA/EUR |   LUNA |     EUR |     True |   Spot |          |          |          1 |
+|  LUNA2USD |   LUNA/USD |   LUNA |     USD |     True |   Spot |          |          |          1 |
+|   LUNAEUR |   LUNC/EUR |   LUNC |     EUR |     True |   Spot |          |          |          1 |
+|   LUNAUSD |   LUNC/USD |   LUNC |     USD |     True |   Spot |          |          |          1 |
+|   MANAXBT |   MANA/BTC |   MANA |     BTC |     True |   Spot |   Margin |          |          1 |
+|   MANAETH |   MANA/ETH |   MANA |     ETH |     True |   Spot |          |          |          1 |
+|   MANAEUR |   MANA/EUR |   MANA |     EUR |     True |   Spot |   Margin |          |          1 |
+|   MANAUSD |   MANA/USD |   MANA |     USD |     True |   Spot |   Margin |          |          1 |
+|  MANAUSDT |  MANA/USDT |   MANA |    USDT |     True |   Spot |          |          |          1 |
+|   MASKEUR |   MASK/EUR |   MASK |     EUR |     True |   Spot |          |          |          1 |
+|   MASKUSD |   MASK/USD |   MASK |     USD |     True |   Spot |          |          |          1 |
+|  MATICXBT |  MATIC/BTC |  MATIC |     BTC |     True |   Spot |   Margin |          |          1 |
+|  MATICEUR |  MATIC/EUR |  MATIC |     EUR |     True |   Spot |   Margin |          |          1 |
+|  MATICGBP |  MATIC/GBP |  MATIC |     GBP |     True |   Spot |          |          |          1 |
+|  MATICUSD |  MATIC/USD |  MATIC |     USD |     True |   Spot |   Margin |          |          1 |
+| MATICUSDT | MATIC/USDT |  MATIC |    USDT |     True |   Spot |          |          |          1 |
+|     MCEUR |     MC/EUR |     MC |     EUR |     True |   Spot |          |          |          1 |
+|     MCUSD |     MC/USD |     MC |     USD |     True |   Spot |          |          |          1 |
+|   MINAXBT |   MINA/BTC |   MINA |     BTC |     True |   Spot |          |          |          1 |
+|   MINAEUR |   MINA/EUR |   MINA |     EUR |     True |   Spot |   Margin |          |          1 |
+|   MINAGBP |   MINA/GBP |   MINA |     GBP |     True |   Spot |          |          |          1 |
+|   MINAUSD |   MINA/USD |   MINA |     USD |     True |   Spot |   Margin |          |          1 |
+|    MIREUR |    MIR/EUR |    MIR |     EUR |     True |   Spot |          |          |          1 |
+|    MIRUSD |    MIR/USD |    MIR |     USD |     True |   Spot |          |          |          1 |
+|    MKRXBT |    MKR/BTC |    MKR |     BTC |     True |   Spot |          |          |          1 |
+|    MKREUR |    MKR/EUR |    MKR |     EUR |     True |   Spot |          |          |          1 |
+|    MKRUSD |    MKR/USD |    MKR |     USD |     True |   Spot |          |          |          1 |
+|  XMLNXXBT |    MLN/BTC |    MLN |     BTC |     True |   Spot |          |          |          1 |
+|  XMLNXETH |    MLN/ETH |    MLN |     ETH |     True |   Spot |          |          |          1 |
+|  XMLNZEUR |    MLN/EUR |    MLN |     EUR |     True |   Spot |          |          |          1 |
+|  XMLNZUSD |    MLN/USD |    MLN |     USD |     True |   Spot |          |          |          1 |
+|   MNGOEUR |   MNGO/EUR |   MNGO |     EUR |     True |   Spot |          |          |          1 |
+|   MNGOUSD |   MNGO/USD |   MNGO |     USD |     True |   Spot |          |          |          1 |
+|   MOONEUR |   MOON/EUR |   MOON |     EUR |     True |   Spot |          |          |          1 |
+|   MOONUSD |   MOON/USD |   MOON |     USD |     True |   Spot |          |          |          1 |
+|   MOVREUR |   MOVR/EUR |   MOVR |     EUR |     True |   Spot |          |          |          1 |
+|   MOVRUSD |   MOVR/USD |   MOVR |     USD |     True |   Spot |          |          |          1 |
+|   MSOLEUR |   MSOL/EUR |   MSOL |     EUR |     True |   Spot |          |          |          1 |
+|   MSOLUSD |   MSOL/USD |   MSOL |     USD |     True |   Spot |          |          |          1 |
+|  MULTIEUR |  MULTI/EUR |  MULTI |     EUR |     True |   Spot |          |          |          1 |
+|  MULTIUSD |  MULTI/USD |  MULTI |     USD |     True |   Spot |          |          |          1 |
+|     MVEUR |     MV/EUR |     MV |     EUR |     True |   Spot |          |          |          1 |
+|     MVUSD |     MV/USD |     MV |     USD |     True |   Spot |          |          |          1 |
+|    MXCEUR |    MXC/EUR |    MXC |     EUR |     True |   Spot |          |          |          1 |
+|    MXCUSD |    MXC/USD |    MXC |     USD |     True |   Spot |          |          |          1 |
+|   NANOXBT |   NANO/BTC |   NANO |     BTC |     True |   Spot |          |          |          1 |
+|   NANOETH |   NANO/ETH |   NANO |     ETH |     True |   Spot |          |          |          1 |
+|   NANOEUR |   NANO/EUR |   NANO |     EUR |     True |   Spot |   Margin |          |          1 |
+|   NANOUSD |   NANO/USD |   NANO |     USD |     True |   Spot |   Margin |          |          1 |
+|   NEAREUR |   NEAR/EUR |   NEAR |     EUR |     True |   Spot |          |          |          1 |
+|   NEARUSD |   NEAR/USD |   NEAR |     USD |     True |   Spot |          |          |          1 |
+|    NMREUR |    NMR/EUR |    NMR |     EUR |     True |   Spot |          |          |          1 |
+|    NMRUSD |    NMR/USD |    NMR |     USD |     True |   Spot |          |          |          1 |
+|   NODLEUR |   NODL/EUR |   NODL |     EUR |     True |   Spot |          |          |          1 |
+|   NODLUSD |   NODL/USD |   NODL |     USD |     True |   Spot |          |          |          1 |
+|    NYMXBT |    NYM/BTC |    NYM |     BTC |     True |   Spot |          |          |          1 |
+|    NYMEUR |    NYM/EUR |    NYM |     EUR |     True |   Spot |          |          |          1 |
+|    NYMUSD |    NYM/USD |    NYM |     USD |     True |   Spot |          |          |          1 |
+|  OCEANXBT |  OCEAN/BTC |  OCEAN |     BTC |     True |   Spot |          |          |          1 |
+|  OCEANEUR |  OCEAN/EUR |  OCEAN |     EUR |     True |   Spot |   Margin |          |          1 |
+|  OCEANGBP |  OCEAN/GBP |  OCEAN |     GBP |     True |   Spot |          |          |          1 |
+|  OCEANUSD |  OCEAN/USD |  OCEAN |     USD |     True |   Spot |   Margin |          |          1 |
+|    OGNEUR |    OGN/EUR |    OGN |     EUR |     True |   Spot |          |          |          1 |
+|    OGNUSD |    OGN/USD |    OGN |     USD |     True |   Spot |          |          |          1 |
+|    OMGXBT |    OMG/BTC |    OMG |     BTC |     True |   Spot |   Margin |          |          1 |
+|    OMGETH |    OMG/ETH |    OMG |     ETH |     True |   Spot |          |          |          1 |
+|    OMGEUR |    OMG/EUR |    OMG |     EUR |     True |   Spot |   Margin |          |          1 |
+|    OMGJPY |    OMG/JPY |    OMG |     JPY |     True |   Spot |          |          |          1 |
+|    OMGUSD |    OMG/USD |    OMG |     USD |     True |   Spot |   Margin |          |          1 |
+|   ORCAEUR |   ORCA/EUR |   ORCA |     EUR |     True |   Spot |          |          |          1 |
+|   ORCAUSD |   ORCA/USD |   ORCA |     USD |     True |   Spot |          |          |          1 |
+|    OXTXBT |    OXT/BTC |    OXT |     BTC |     True |   Spot |          |          |          1 |
+|    OXTEUR |    OXT/EUR |    OXT |     EUR |     True |   Spot |          |          |          1 |
+|    OXTUSD |    OXT/USD |    OXT |     USD |     True |   Spot |          |          |          1 |
+|    OXYEUR |    OXY/EUR |    OXY |     EUR |     True |   Spot |          |          |          1 |
+|    OXYUSD |    OXY/USD |    OXY |     USD |     True |   Spot |          |          |          1 |
+|   PARAEUR |   PARA/EUR |   PARA |     EUR |     True |   Spot |          |          |          1 |
+|   PARAUSD |   PARA/USD |   PARA |     USD |     True |   Spot |          |          |          1 |
+|   PAXGXBT |   PAXG/BTC |   PAXG |     BTC |     True |   Spot |   Margin |          |          1 |
+|   PAXGETH |   PAXG/ETH |   PAXG |     ETH |     True |   Spot |          |          |          1 |
+|   PAXGEUR |   PAXG/EUR |   PAXG |     EUR |     True |   Spot |   Margin |          |          1 |
+|   PAXGUSD |   PAXG/USD |   PAXG |     USD |     True |   Spot |   Margin |          |          1 |
+|   PEPEEUR |   PEPE/EUR |   PEPE |     EUR |     True |   Spot |          |          |          1 |
+|   PEPEUSD |   PEPE/USD |   PEPE |     USD |     True |   Spot |          |          |          1 |
+|   PERPEUR |   PERP/EUR |   PERP |     EUR |     True |   Spot |          |          |          1 |
+|   PERPUSD |   PERP/USD |   PERP |     USD |     True |   Spot |          |          |          1 |
+|    PHAEUR |    PHA/EUR |    PHA |     EUR |     True |   Spot |          |          |          1 |
+|    PHAUSD |    PHA/USD |    PHA |     USD |     True |   Spot |          |          |          1 |
+|    PLAEUR |    PLA/EUR |    PLA |     EUR |     True |   Spot |          |          |          1 |
+|    PLAUSD |    PLA/USD |    PLA |     USD |     True |   Spot |          |          |          1 |
+|  POLISEUR |  POLIS/EUR |  POLIS |     EUR |     True |   Spot |          |          |          1 |
+|  POLISUSD |  POLIS/USD |  POLIS |     USD |     True |   Spot |          |          |          1 |
+|   POLSEUR |   POLS/EUR |   POLS |     EUR |     True |   Spot |          |          |          1 |
+|   POLSUSD |   POLS/USD |   POLS |     USD |     True |   Spot |          |          |          1 |
+|   PONDEUR |   POND/EUR |   POND |     EUR |     True |   Spot |          |          |          1 |
+|   PONDUSD |   POND/USD |   POND |     USD |     True |   Spot |          |          |          1 |
+|   POWREUR |   POWR/EUR |   POWR |     EUR |     True |   Spot |          |          |          1 |
+|   POWRUSD |   POWR/USD |   POWR |     USD |     True |   Spot |          |          |          1 |
+| PSTAKEEUR | PSTAKE/EUR | PSTAKE |     EUR |     True |   Spot |          |          |          1 |
+| PSTAKEUSD | PSTAKE/USD | PSTAKE |     USD |     True |   Spot |          |          |          1 |
+|  PYUSDEUR |  PYUSD/EUR |  PYUSD |     EUR |     True |   Spot |          |          |          1 |
+|  PYUSDUSD |  PYUSD/USD |  PYUSD |     USD |     True |   Spot |          |          |          1 |
+|    QNTEUR |    QNT/EUR |    QNT |     EUR |     True |   Spot |          |          |          1 |
+|    QNTUSD |    QNT/USD |    QNT |     USD |     True |   Spot |          |          |          1 |
+|   QTUMXBT |   QTUM/BTC |   QTUM |     BTC |     True |   Spot |          |          |          1 |
+|   QTUMETH |   QTUM/ETH |   QTUM |     ETH |     True |   Spot |          |          |          1 |
+|   QTUMEUR |   QTUM/EUR |   QTUM |     EUR |     True |   Spot |          |          |          1 |
+|   QTUMUSD |   QTUM/USD |   QTUM |     USD |     True |   Spot |          |          |          1 |
+|    RADEUR |    RAD/EUR |    RAD |     EUR |     True |   Spot |          |          |          1 |
+|    RADUSD |    RAD/USD |    RAD |     USD |     True |   Spot |          |          |          1 |
+|   RAREEUR |   RARE/EUR |   RARE |     EUR |     True |   Spot |          |          |          1 |
+|   RAREUSD |   RARE/USD |   RARE |     USD |     True |   Spot |          |          |          1 |
+|   RARIXBT |   RARI/BTC |   RARI |     BTC |     True |   Spot |          |          |          1 |
+|   RARIEUR |   RARI/EUR |   RARI |     EUR |     True |   Spot |          |          |          1 |
+|   RARIUSD |   RARI/USD |   RARI |     USD |     True |   Spot |          |          |          1 |
+|    RAYEUR |    RAY/EUR |    RAY |     EUR |     True |   Spot |          |          |          1 |
+|    RAYUSD |    RAY/USD |    RAY |     USD |     True |   Spot |          |          |          1 |
+|    RBCEUR |    RBC/EUR |    RBC |     EUR |     True |   Spot |          |          |          1 |
+|    RBCUSD |    RBC/USD |    RBC |     USD |     True |   Spot |          |          |          1 |
+|    RENXBT |    REN/BTC |    REN |     BTC |     True |   Spot |          |          |          1 |
+|    RENEUR |    REN/EUR |    REN |     EUR |     True |   Spot |          |          |          1 |
+|    RENUSD |    REN/USD |    REN |     USD |     True |   Spot |          |          |          1 |
+|  REPV2XBT |    REP/BTC |    REP |     BTC |     True |   Spot |          |          |          1 |
+|  REPV2ETH |    REP/ETH |    REP |     ETH |     True |   Spot |          |          |          1 |
+|  REPV2EUR |    REP/EUR |    REP |     EUR |     True |   Spot |          |          |          1 |
+|  REPV2USD |    REP/USD |    REP |     USD |     True |   Spot |          |          |          1 |
+|  XREPXXBT |  REPV1/BTC |  REPV1 |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XREPZEUR |  REPV1/EUR |  REPV1 |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XREPZUSD |  REPV1/USD |  REPV1 |     USD |     True |   Spot |          |          |          1 |
+|    REQEUR |    REQ/EUR |    REQ |     EUR |     True |   Spot |          |          |          1 |
+|    REQUSD |    REQ/USD |    REQ |     USD |     True |   Spot |          |          |          1 |
+|    RLCEUR |    RLC/EUR |    RLC |     EUR |     True |   Spot |          |          |          1 |
+|    RLCUSD |    RLC/USD |    RLC |     USD |     True |   Spot |          |          |          1 |
+|   RNDREUR |   RNDR/EUR |   RNDR |     EUR |     True |   Spot |          |          |          1 |
+|   RNDRUSD |   RNDR/USD |   RNDR |     USD |     True |   Spot |          |          |          1 |
+|   ROOKEUR |   ROOK/EUR |   ROOK |     EUR |     True |   Spot |          |          |          1 |
+|   ROOKUSD |   ROOK/USD |   ROOK |     USD |     True |   Spot |          |          |          1 |
+|    RPLEUR |    RPL/EUR |    RPL |     EUR |     True |   Spot |          |          |          1 |
+|    RPLUSD |    RPL/USD |    RPL |     USD |     True |   Spot |          |          |          1 |
+|   RUNEEUR |   RUNE/EUR |   RUNE |     EUR |     True |   Spot |          |          |          1 |
+|   RUNEUSD |   RUNE/USD |   RUNE |     USD |     True |   Spot |          |          |          1 |
+|   SAMOEUR |   SAMO/EUR |   SAMO |     EUR |     True |   Spot |          |          |          1 |
+|   SAMOUSD |   SAMO/USD |   SAMO |     USD |     True |   Spot |          |          |          1 |
+|   SANDXBT |   SAND/BTC |   SAND |     BTC |     True |   Spot |          |          |          1 |
+|   SANDEUR |   SAND/EUR |   SAND |     EUR |     True |   Spot |   Margin |          |          1 |
+|   SANDGBP |   SAND/GBP |   SAND |     GBP |     True |   Spot |          |          |          1 |
+|   SANDUSD |   SAND/USD |   SAND |     USD |     True |   Spot |   Margin |          |          1 |
+|    SBREUR |    SBR/EUR |    SBR |     EUR |     True |   Spot |          |          |          1 |
+|    SBRUSD |    SBR/USD |    SBR |     USD |     True |   Spot |          |          |          1 |
+|     SCXBT |     SC/BTC |     SC |     BTC |     True |   Spot |          |          |          1 |
+|     SCETH |     SC/ETH |     SC |     ETH |     True |   Spot |          |          |          1 |
+|     SCEUR |     SC/EUR |     SC |     EUR |     True |   Spot |   Margin |          |          1 |
+|     SCUSD |     SC/USD |     SC |     USD |     True |   Spot |   Margin |          |          1 |
+|   SCRTEUR |   SCRT/EUR |   SCRT |     EUR |     True |   Spot |          |          |          1 |
+|   SCRTUSD |   SCRT/USD |   SCRT |     USD |     True |   Spot |          |          |          1 |
+|    SDNEUR |    SDN/EUR |    SDN |     EUR |     True |   Spot |          |          |          1 |
+|    SDNUSD |    SDN/USD |    SDN |     USD |     True |   Spot |          |          |          1 |
+|    SEIEUR |    SEI/EUR |    SEI |     EUR |     True |   Spot |          |          |          1 |
+|    SEIUSD |    SEI/USD |    SEI |     USD |     True |   Spot |          |          |          1 |
+|    SGBEUR |    SGB/EUR |    SGB |     EUR |     True |   Spot |          |          |          1 |
+|    SGBUSD |    SGB/USD |    SGB |     USD |     True |   Spot |          |          |          1 |
+|   SHIBEUR |   SHIB/EUR |   SHIB |     EUR |     True |   Spot |          |          |          1 |
+|   SHIBUSD |   SHIB/USD |   SHIB |     USD |     True |   Spot |          |          |          1 |
+|  SHIBUSDT |  SHIB/USDT |   SHIB |    USDT |     True |   Spot |          |          |          1 |
+|    SNXXBT |    SNX/BTC |    SNX |     BTC |     True |   Spot |          |          |          1 |
+|    SNXETH |    SNX/ETH |    SNX |     ETH |     True |   Spot |          |          |          1 |
+|    SNXEUR |    SNX/EUR |    SNX |     EUR |     True |   Spot |          |          |          1 |
+|    SNXUSD |    SNX/USD |    SNX |     USD |     True |   Spot |          |          |          1 |
+|    SOLXBT |    SOL/BTC |    SOL |     BTC |     True |   Spot |   Margin |          |          1 |
+|    SOLEUR |    SOL/EUR |    SOL |     EUR |     True |   Spot |   Margin |          |          1 |
+|    SOLGBP |    SOL/GBP |    SOL |     GBP |     True |   Spot |   Margin |          |          1 |
+|    SOLUSD |    SOL/USD |    SOL |     USD |     True |   Spot |   Margin |          |          1 |
+|   SOLUSDT |   SOL/USDT |    SOL |    USDT |     True |   Spot |          |          |          1 |
+|  SPELLEUR |  SPELL/EUR |  SPELL |     EUR |     True |   Spot |          |          |          1 |
+|  SPELLUSD |  SPELL/USD |  SPELL |     USD |     True |   Spot |          |          |          1 |
+|    SRMXBT |    SRM/BTC |    SRM |     BTC |     True |   Spot |          |          |          1 |
+|    SRMEUR |    SRM/EUR |    SRM |     EUR |     True |   Spot |          |          |          1 |
+|    SRMUSD |    SRM/USD |    SRM |     USD |     True |   Spot |          |          |          1 |
+|   STEPEUR |   STEP/EUR |   STEP |     EUR |     True |   Spot |          |          |          1 |
+|   STEPUSD |   STEP/USD |   STEP |     USD |     True |   Spot |          |          |          1 |
+|    STGEUR |    STG/EUR |    STG |     EUR |     True |   Spot |          |          |          1 |
+|    STGUSD |    STG/USD |    STG |     USD |     True |   Spot |          |          |          1 |
+|  STORJXBT |  STORJ/BTC |  STORJ |     BTC |     True |   Spot |          |          |          1 |
+|  STORJEUR |  STORJ/EUR |  STORJ |     EUR |     True |   Spot |          |          |          1 |
+|  STORJUSD |  STORJ/USD |  STORJ |     USD |     True |   Spot |          |          |          1 |
+|    STXEUR |    STX/EUR |    STX |     EUR |     True |   Spot |          |          |          1 |
+|    STXUSD |    STX/USD |    STX |     USD |     True |   Spot |          |          |          1 |
+|    SUIEUR |    SUI/EUR |    SUI |     EUR |     True |   Spot |          |          |          1 |
+|    SUIUSD |    SUI/USD |    SUI |     USD |     True |   Spot |          |          |          1 |
+|  SUPEREUR |  SUPER/EUR |  SUPER |     EUR |     True |   Spot |          |          |          1 |
+|  SUPERUSD |  SUPER/USD |  SUPER |     USD |     True |   Spot |          |          |          1 |
+|  SUSHIXBT |  SUSHI/BTC |  SUSHI |     BTC |     True |   Spot |          |          |          1 |
+|  SUSHIEUR |  SUSHI/EUR |  SUSHI |     EUR |     True |   Spot |          |          |          1 |
+|  SUSHIGBP |  SUSHI/GBP |  SUSHI |     GBP |     True |   Spot |          |          |          1 |
+|  SUSHIUSD |  SUSHI/USD |  SUSHI |     USD |     True |   Spot |          |          |          1 |
+|    SYNEUR |    SYN/EUR |    SYN |     EUR |     True |   Spot |          |          |          1 |
+|    SYNUSD |    SYN/USD |    SYN |     USD |     True |   Spot |          |          |          1 |
+|      TEUR |      T/EUR |      T |     EUR |     True |   Spot |          |          |          1 |
+|      TUSD |      T/USD |      T |     USD |     True |   Spot |          |          |          1 |
+|   TBTCXBT |   TBTC/BTC |   TBTC |     BTC |     True |   Spot |          |          |          1 |
+|   TBTCEUR |   TBTC/EUR |   TBTC |     EUR |     True |   Spot |          |          |          1 |
+|   TBTCUSD |   TBTC/USD |   TBTC |     USD |     True |   Spot |          |          |          1 |
+|   TEEREUR |   TEER/EUR |   TEER |     EUR |     True |   Spot |          |          |          1 |
+|   TEERUSD |   TEER/USD |   TEER |     USD |     True |   Spot |          |          |          1 |
+|    TLMEUR |    TLM/EUR |    TLM |     EUR |     True |   Spot |          |          |          1 |
+|    TLMUSD |    TLM/USD |    TLM |     USD |     True |   Spot |          |          |          1 |
+|   TOKEEUR |   TOKE/EUR |   TOKE |     EUR |     True |   Spot |          |          |          1 |
+|   TOKEUSD |   TOKE/USD |   TOKE |     USD |     True |   Spot |          |          |          1 |
+|    TRUEUR |    TRU/EUR |    TRU |     EUR |     True |   Spot |          |          |          1 |
+|    TRUUSD |    TRU/USD |    TRU |     USD |     True |   Spot |          |          |          1 |
+|    TRXXBT |    TRX/BTC |    TRX |     BTC |     True |   Spot |   Margin |          |          1 |
+|    TRXETH |    TRX/ETH |    TRX |     ETH |     True |   Spot |   Margin |          |          1 |
+|    TRXEUR |    TRX/EUR |    TRX |     EUR |     True |   Spot |   Margin |          |          1 |
+|    TRXUSD |    TRX/USD |    TRX |     USD |     True |   Spot |   Margin |          |          1 |
+|   TUSDEUR |   TUSD/EUR |   TUSD |     EUR |     True |   Spot |          |          |          1 |
+|   TUSDUSD |   TUSD/USD |   TUSD |     USD |     True |   Spot |          |          |          1 |
+|    TVKEUR |    TVK/EUR |    TVK |     EUR |     True |   Spot |          |          |          1 |
+|    TVKUSD |    TVK/USD |    TVK |     USD |     True |   Spot |          |          |          1 |
+|    UMAEUR |    UMA/EUR |    UMA |     EUR |     True |   Spot |          |          |          1 |
+|    UMAUSD |    UMA/USD |    UMA |     USD |     True |   Spot |          |          |          1 |
+|   UNFIEUR |   UNFI/EUR |   UNFI |     EUR |     True |   Spot |          |          |          1 |
+|   UNFIUSD |   UNFI/USD |   UNFI |     USD |     True |   Spot |          |          |          1 |
+|    UNIXBT |    UNI/BTC |    UNI |     BTC |     True |   Spot |          |          |          1 |
+|    UNIETH |    UNI/ETH |    UNI |     ETH |     True |   Spot |          |          |          1 |
+|    UNIEUR |    UNI/EUR |    UNI |     EUR |     True |   Spot |   Margin |          |          1 |
+|    UNIUSD |    UNI/USD |    UNI |     USD |     True |   Spot |   Margin |          |          1 |
+|    USDAED |    USD/AED |    USD |     AED |     True |   Spot |          |          |          1 |
+|  ZUSDZCAD |    USD/CAD |    USD |     CAD |     True |   Spot |          |          |          1 |
+|    USDCHF |    USD/CHF |    USD |     CHF |     True |   Spot |          |          |          1 |
+|  ZUSDZJPY |    USD/JPY |    USD |     JPY |     True |   Spot |          |          |          1 |
+|   USDCAUD |   USDC/AUD |   USDC |     AUD |     True |   Spot |   Margin |          |          1 |
+|   USDCCAD |   USDC/CAD |   USDC |     CAD |     True |   Spot |          |          |          1 |
+|   USDCCHF |   USDC/CHF |   USDC |     CHF |     True |   Spot |          |          |          1 |
+|   USDCEUR |   USDC/EUR |   USDC |     EUR |     True |   Spot |   Margin |          |          1 |
+|   USDCGBP |   USDC/GBP |   USDC |     GBP |     True |   Spot |   Margin |          |          1 |
+|   USDCUSD |   USDC/USD |   USDC |     USD |     True |   Spot |   Margin |          |          1 |
+|  USDCUSDT |  USDC/USDT |   USDC |    USDT |     True |   Spot |   Margin |          |          1 |
+|   USDTAUD |   USDT/AUD |   USDT |     AUD |     True |   Spot |   Margin |          |          1 |
+|   USDTCAD |   USDT/CAD |   USDT |     CAD |     True |   Spot |   Margin |          |          1 |
+|   USDTCHF |   USDT/CHF |   USDT |     CHF |     True |   Spot |   Margin |          |          1 |
+|   USDTEUR |   USDT/EUR |   USDT |     EUR |     True |   Spot |   Margin |          |          1 |
+|   USDTGBP |   USDT/GBP |   USDT |     GBP |     True |   Spot |   Margin |          |          1 |
+|   USDTJPY |   USDT/JPY |   USDT |     JPY |     True |   Spot |   Margin |          |          1 |
+|  USDTZUSD |   USDT/USD |   USDT |     USD |     True |   Spot |   Margin |          |          1 |
+|    USTEUR |   USTC/EUR |   USTC |     EUR |     True |   Spot |          |          |          1 |
+|    USTUSD |   USTC/USD |   USTC |     USD |     True |   Spot |          |          |          1 |
+|   USTUSDC |  USTC/USDC |   USTC |    USDC |     True |   Spot |          |          |          1 |
+|   USTUSDT |  USTC/USDT |   USTC |    USDT |     True |   Spot |          |          |          1 |
+|  WAVESXBT |  WAVES/BTC |  WAVES |     BTC |     True |   Spot |          |          |          1 |
+|  WAVESETH |  WAVES/ETH |  WAVES |     ETH |     True |   Spot |          |          |          1 |
+|  WAVESEUR |  WAVES/EUR |  WAVES |     EUR |     True |   Spot |   Margin |          |          1 |
+|  WAVESUSD |  WAVES/USD |  WAVES |     USD |     True |   Spot |   Margin |          |          1 |
+|   WAXLEUR |   WAXL/EUR |   WAXL |     EUR |     True |   Spot |          |          |          1 |
+|   WAXLUSD |   WAXL/USD |   WAXL |     USD |     True |   Spot |          |          |          1 |
+|   WBTCXBT |   WBTC/BTC |   WBTC |     BTC |     True |   Spot |          |          |          1 |
+|   WBTCEUR |   WBTC/EUR |   WBTC |     EUR |     True |   Spot |          |          |          1 |
+|   WBTCUSD |   WBTC/USD |   WBTC |     USD |     True |   Spot |          |          |          1 |
+|    WOOEUR |    WOO/EUR |    WOO |     EUR |     True |   Spot |          |          |          1 |
+|    WOOUSD |    WOO/USD |    WOO |     USD |     True |   Spot |          |          |          1 |
+|    XCNEUR |    XCN/EUR |    XCN |     EUR |     True |   Spot |          |          |          1 |
+|    XCNUSD |    XCN/USD |    XCN |     USD |     True |   Spot |          |          |          1 |
+|  XXLMXXBT |    XLM/BTC |    XLM |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XXLMZEUR |    XLM/EUR |    XLM |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XXLMZGBP |    XLM/GBP |    XLM |     GBP |     True |   Spot |          |          |          1 |
+|  XXLMZUSD |    XLM/USD |    XLM |     USD |     True |   Spot |   Margin |          |          1 |
+|  XXMRXXBT |    XMR/BTC |    XMR |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XXMRZEUR |    XMR/EUR |    XMR |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XXMRZUSD |    XMR/USD |    XMR |     USD |     True |   Spot |   Margin |          |          1 |
+|   XMRUSDT |   XMR/USDT |    XMR |    USDT |     True |   Spot |          |          |          1 |
+|    XRPAUD |    XRP/AUD |    XRP |     AUD |     True |   Spot |          |          |          1 |
+|  XXRPXXBT |    XRP/BTC |    XRP |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XXRPZCAD |    XRP/CAD |    XRP |     CAD |     True |   Spot |          |          |          1 |
+|    XRPETH |    XRP/ETH |    XRP |     ETH |     True |   Spot |          |          |          1 |
+|  XXRPZEUR |    XRP/EUR |    XRP |     EUR |     True |   Spot |   Margin |          |          1 |
+|    XRPGBP |    XRP/GBP |    XRP |     GBP |     True |   Spot |          |          |          1 |
+|  XXRPZJPY |    XRP/JPY |    XRP |     JPY |     True |   Spot |          |          |          1 |
+|  XXRPZUSD |    XRP/USD |    XRP |     USD |     True |   Spot |   Margin |          |          1 |
+|   XRPUSDT |   XRP/USDT |    XRP |    USDT |     True |   Spot |   Margin |          |          1 |
+|    XRTEUR |    XRT/EUR |    XRT |     EUR |     True |   Spot |          |          |          1 |
+|    XRTUSD |    XRT/USD |    XRT |     USD |     True |   Spot |          |          |          1 |
+|    XTZAUD |    XTZ/AUD |    XTZ |     AUD |     True |   Spot |          |          |          1 |
+|    XTZXBT |    XTZ/BTC |    XTZ |     BTC |     True |   Spot |   Margin |          |          1 |
+|    XTZETH |    XTZ/ETH |    XTZ |     ETH |     True |   Spot |   Margin |          |          1 |
+|    XTZEUR |    XTZ/EUR |    XTZ |     EUR |     True |   Spot |   Margin |          |          1 |
+|    XTZGBP |    XTZ/GBP |    XTZ |     GBP |     True |   Spot |          |          |          1 |
+|    XTZUSD |    XTZ/USD |    XTZ |     USD |     True |   Spot |   Margin |          |          1 |
+|   XTZUSDT |   XTZ/USDT |    XTZ |    USDT |     True |   Spot |          |          |          1 |
+|    YFIXBT |    YFI/BTC |    YFI |     BTC |     True |   Spot |          |          |          1 |
+|    YFIEUR |    YFI/EUR |    YFI |     EUR |     True |   Spot |          |          |          1 |
+|    YFIUSD |    YFI/USD |    YFI |     USD |     True |   Spot |          |          |          1 |
+|    YGGEUR |    YGG/EUR |    YGG |     EUR |     True |   Spot |          |          |          1 |
+|    YGGUSD |    YGG/USD |    YGG |     USD |     True |   Spot |          |          |          1 |
+|  XZECXXBT |    ZEC/BTC |    ZEC |     BTC |     True |   Spot |   Margin |          |          1 |
+|  XZECZEUR |    ZEC/EUR |    ZEC |     EUR |     True |   Spot |   Margin |          |          1 |
+|  XZECZUSD |    ZEC/USD |    ZEC |     USD |     True |   Spot |   Margin |          |          1 |
+|    ZRXXBT |    ZRX/BTC |    ZRX |     BTC |     True |   Spot |          |          |          1 |
+|    ZRXEUR |    ZRX/EUR |    ZRX |     EUR |     True |   Spot |          |          |          1 |
+|    ZRXUSD |    ZRX/USD |    ZRX |     USD |     True |   Spot |          |          |          1 |

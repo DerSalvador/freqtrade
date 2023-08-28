@@ -220,7 +220,10 @@ class IFreqaiModel(ABC):
         """
         while not self._stop_event.is_set():
             time.sleep(1)
-            pair = self.train_queue[0]
+            if len(self.train_queue) > 0:
+                pair = self.train_queue[0]
+            else:
+                continue
 
             # ensure pair is avaialble in dp
             if pair not in strategy.dp.current_whitelist():
