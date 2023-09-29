@@ -1676,6 +1676,7 @@ class Telegram(RPCHandler):
             pa_info = "*Position adjustment:* Off\n"
 
         await self._send_msg(
+            f"*Botname:* `{val['bot_name']}`\n"
             f"*Mode:* `{'Dry-run' if val['dry_run'] else 'Live'}`\n"
             f"*Exchange:* `{val['exchange']}`\n"
             f"*Market: * `{val['trading_mode']}`\n"
