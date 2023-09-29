@@ -1,0 +1,42 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kaniko
+  labels:
+    app: kaniko
+spec:
+  containers:
+  - name: kaniko
+    image: gcr.io/kaniko-project/executor:debug
+    command: ["/bin/sh", "-c"]
+    args:
+    - cat /root/.docker/config.json;
+      /kaniko/executor --dockerfile=./Dockerfile --context=/tmp/freqtrade --destination=registry.digitalocean.com/do-dersalvador-registry/freqtrade:2023.8_freqairlds --force;
+    volumeMounts:
+      - name: docker-config
+        mountPath: /kaniko/.docker
+      - name: docker-config
+        mountPath: /root/.docker
+      - name: clonerepo
+        mountPath: /tmp/freqtrade
+  restartPolicy: Never
+  initContainers:
+    - image: python
+      name: clonerepo
+      command: ["/bin/sh"]
+      args: ["-c", "mkdir /root/.ssh/; cp /tmp/sshkey/id_rsa /root/.ssh/id_rsa; chmod 0600 /root/.ssh/id_rsa; GIT_SSH_COMMAND='ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no' git clone git@github.com:DerSalvador/freqtrade.git --single-branch --branch 2023.8-freqtrade /tmp/freqtrade; echo finished cloning"] 
+      volumeMounts:
+      - name: clonerepo
+        mountPath: /tmp/freqtrade
+      - name: sshkey
+        mountPath: /tmp/sshkey
+  restartPolicy: Never
+  volumes:
+    - name: sshkey
+      configMap:
+        name: sshkey
+    - name: docker-config
+      configMap:
+        name: brokerme-docker-registry-config
+    - name: clonerepo
+      emptyDir: {}
