@@ -7,11 +7,9 @@ metadata:
 spec:
   containers:
   - name: kaniko
-    image: gcr.io/kaniko-project/executor:debug
-    command: ["/bin/sh", "-c"]
-    args:
-    - cat /root/.docker/config.json;
-      /kaniko/executor --dockerfile=./Dockerfile --context=/tmp/freqtrade --destination=registry.digitalocean.com/do-dersalvador-registry/freqtrade:2023.8_freqairlds --force;
+    image: gcr.io/kaniko-project/executor:v1.9.2 # gcr.io/kaniko-project/executor:latest
+    # args: [ "--dockerfile=./Dockerfile", "--context=/tmp/freqtrade", "--destination=registry.digitalocean.com/do-dersalvador-registry/freqtrade:2023.8_freqairlds", "--force", "--single-snapshot", "--use-new-run", "--snapshot-mode=redo" ]
+    args: [ "--dockerfile=./Dockerfile", "--context=/tmp/freqtrade", "--destination=registry.digitalocean.com/do-dersalvador-registry/freqtrade:2023.8_freqairlds", "--force" ]
     volumeMounts:
       - name: docker-config
         mountPath: /kaniko/.docker
