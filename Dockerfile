@@ -53,6 +53,10 @@ RUN pip install -e . --user --no-cache-dir --no-build-isolation \
   && mkdir /freqtrade/user_data/ \
   && freqtrade install-ui
 
+# Install dependencies freqai_rl
+COPY requirements-freqai.txt requirements-freqai-rl.txt /freqtrade/
+RUN pip install -r requirements-freqai-rl.txt --user --no-cache-dir
+
 ENTRYPOINT ["freqtrade"]
 # Default to trade mode
 CMD [ "trade" ]
