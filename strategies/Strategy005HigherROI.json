@@ -2,31 +2,31 @@
   "strategy_name": "Strategy005HigherROI",
   "params": {
     "buy": {
-      "buy_fastd": 52,
-      "buy_fishRsiNorma": 67,
+      "buy_fastd": 14,
+      "buy_fishRsiNorma": 89,
       "buy_rsi": 18,
-      "buy_volumeAVG": 180
+      "buy_volumeAVG": 289
     },
     "sell": {
-      "sell_fishRsiNorma": 74,
-      "sell_minusDI": 68,
-      "sell_rsi": 9,
+      "sell_fishRsiNorma": 15,
+      "sell_minusDI": 42,
+      "sell_rsi": 26,
       "sell_trigger": "rsi-macd-minusdi"
     },
     "protection": {},
     "roi": {
-      "0": 0.161,
-      "19": 0.028999999999999998,
-      "31": 0.01,
-      "139": 0
+      "0": 0.184,
+      "39": 0.065,
+      "87": 0.01,
+      "161": 0
     },
     "stoploss": {
-      "stoploss": -0.051
+      "stoploss": -0.131
     },
     "trailing": {
       "trailing_stop": true,
-      "trailing_stop_positive": 0.102,
-      "trailing_stop_positive_offset": 0.136,
+      "trailing_stop_positive": 0.16,
+      "trailing_stop_positive_offset": 0.253,
       "trailing_only_offset_is_reached": true
     },
     "max_open_trades": {
@@ -34,5 +34,5 @@
     }
   },
   "ft_stratparam_v": 1,
-  "export_time": "2023-10-08 10:18:43.493872+00:00"
+  "export_time": "2023-10-08 11:13:26.489061+00:00"
 }
