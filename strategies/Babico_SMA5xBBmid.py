@@ -1,8 +1,11 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
-from pandas import DataFrame
 import talib.abstract as ta
+from pandas import DataFrame
+
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy.interface import IStrategy
+
+
 # --------------------------------
 
 class Babico_SMA5xBBmid(IStrategy):
@@ -20,7 +23,7 @@ class Babico_SMA5xBBmid(IStrategy):
     trailing_stop_positive_offset = 0.03
 
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     process_only_new_candles = True
 
     # Optional order type mapping.
@@ -49,7 +52,7 @@ class Babico_SMA5xBBmid(IStrategy):
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-                qtpylib.crossed_above(dataframe['ema5'], dataframe['bb_mid']) 
+                qtpylib.crossed_above(dataframe['ema5'], dataframe['bb_mid'])
             ),
             'buy'] = 1
         return dataframe
@@ -57,7 +60,7 @@ class Babico_SMA5xBBmid(IStrategy):
     def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-                qtpylib.crossed_above(dataframe['bb_mid'], dataframe['ema5']) 
+                qtpylib.crossed_above(dataframe['bb_mid'], dataframe['ema5'])
             ),
             'sell'] = 1
         return dataframe

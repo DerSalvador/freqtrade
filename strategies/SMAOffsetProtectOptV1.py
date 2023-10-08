@@ -1,19 +1,24 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
-from typing import Dict, List
+import datetime
+from datetime import datetime, timedelta
 from functools import reduce
+from typing import Dict, List
+
+import numpy as np
+import talib.abstract as ta
+import technical.indicators as ftt
 from pandas import DataFrame
+from technical.util import resample_to_interval, resampled_merge
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.persistence import Trade
+from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
+                                merge_informative_pair, stoploss_from_open)
+from freqtrade.strategy.interface import IStrategy
+
+
 # --------------------------------
 
-import talib.abstract as ta
-import numpy as np
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-import datetime
-from technical.util import resample_to_interval, resampled_merge
-from datetime import datetime, timedelta
-from freqtrade.persistence import Trade
-from freqtrade.strategy import stoploss_from_open, merge_informative_pair, DecimalParameter, IntParameter, CategoricalParameter
-import technical.indicators as ftt
 
 # Buy hyperspace params:
 buy_params = {
@@ -77,7 +82,7 @@ class SMAOffsetProtectOptV1(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = True
 
@@ -123,7 +128,7 @@ class SMAOffsetProtectOptV1(IStrategy):
 
         # Elliot
         dataframe['EWO'] = EWO(dataframe, self.fast_ewo, self.slow_ewo)
-        
+
         # RSI
         dataframe['rsi'] = ta.RSI(dataframe, timeperiod=14)
 

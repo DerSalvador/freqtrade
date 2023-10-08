@@ -1,13 +1,15 @@
-import freqtrade.vendor.qtpylib.indicators as qtpylib
+from datetime import datetime
+from functools import reduce
+
 import numpy as np
 import talib.abstract as ta
-from freqtrade.strategy.interface import IStrategy
-from freqtrade.strategy import (merge_informative_pair,
-                                DecimalParameter, IntParameter, CategoricalParameter)
 from pandas import DataFrame
-from functools import reduce
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.persistence import Trade
-from datetime import datetime
+from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
+                                merge_informative_pair)
+from freqtrade.strategy.interface import IStrategy
 
 
 ###########################################################################################################
@@ -25,7 +27,7 @@ from datetime import datetime
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     sell_profit_only must set to false (or not set at all).                                           ##
+##     exit_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -224,7 +226,7 @@ class NFI5MOHO_WIP(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals

@@ -1,28 +1,29 @@
-import numpy as np
-import talib.abstract as ta
-from datetime import datetime, timedelta
+import math
 import random
 import time
+from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional, Tuple
-from datetime import datetime,timedelta
-import math
+
+import numpy as np
+import talib.abstract as ta
+from talipp.indicators import BB, EMA, SMA
+
 from freqtrade.strategy.interface import IStrategy, SellCheckTuple, SellType
-from talipp.indicators import EMA, SMA ,BB
+from user_data.strategies.BinanceStream import BaseIndicator, BinanceStream, OrderBook
 
 
-from user_data.strategies.BinanceStream import BaseIndicator, OrderBook,BinanceStream
 sell_pct={"SOL/BUSD":0.006}
 buy_delta={"SOL/BUSD":0.006}
 class OBOnlyWSv2bband(BinanceStream):
     INTERFACE_VERSION = 2
 
 
-    stoploss = -0.99  
+    stoploss = -0.99
 
 
     timeframe = '1h'
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     # Run "populate_indicators()" only for new candle.
     process_only_new_candles = False
     strat_data={
@@ -37,7 +38,7 @@ class OBOnlyWSv2bband(BinanceStream):
         "ratio_gain":0,
     }
     def init_pair_info(self,pi):
-  
+
         pi.buy_signal=0
         pi.bi=BaseIndicator(pi.pair, currency="USDT")
         pi.ob_bb=BB(200,2.0)
@@ -45,7 +46,7 @@ class OBOnlyWSv2bband(BinanceStream):
         pi.ob_ema=EMA(7)
         pi.sell_signal=0
         pi.ob=OrderBook(pi.pair,currency="USDT")
-   
+
     def ob_cut(self, bids, asks,delta_bid,delta_ask=None,bid_weight=0.5):
         if delta_ask is None:
             delta_ask=delta_bid
@@ -53,8 +54,8 @@ class OBOnlyWSv2bband(BinanceStream):
         bid_cut = mid_price - mid_price*delta_bid
         ask_cut = mid_price + mid_price*delta_ask
         bid_side=bids[bids[:,0]>bid_cut]
-        ask_side=asks[asks[:,0]<ask_cut] 
-        return bid_side,ask_side  
+        ask_side=asks[asks[:,0]<ask_cut]
+        return bid_side,ask_side
     def check_ob(self,pi , bids, asks,delta_bid,delta_ask=None,wall=0.0,ratio=1.0,bid_weight=0.5,reciprocal=False):
         if delta_ask is None:
             delta_ask=delta_bid
@@ -64,13 +65,13 @@ class OBOnlyWSv2bband(BinanceStream):
         bid_side=bids[bids[:,0]>bid_cut]
         ask_side=asks[asks[:,0]<ask_cut]
         wall_side=bid_side
-        asum=ask_side[:,1].sum() 
-        bsum=bid_side[:,1].sum() 
+        asum=ask_side[:,1].sum()
+        bsum=bid_side[:,1].sum()
         if wall<0:
             wall_side=ask_side
             wall=-wall
         wsum=wall_side[:,1].sum()
-        r=bsum/asum 
+        r=bsum/asum
         r_test=(r >ratio)
         if reciprocal:
             r_test= ((1/r) >ratio)
@@ -84,46 +85,46 @@ class OBOnlyWSv2bband(BinanceStream):
             return 1
         if r>1:
             return r-1
-        return -(1/r-1)   
+        return -(1/r-1)
     def process_ob(self,pi, bids, asks):
-  
+
         bb=pi.ob_bb
         ema=pi.ob_ema
         self.strat_data["price"]=mid_price=(1*bids[0][0]+1*asks[0][0])/2
 
         _, r2=self.check_ob(pi,bids, asks,delta_bid=0.002,delta_ask=0.002,wall=0.4,ratio=1.7)
-       
+
         bid_side,ask_side=self.ob_cut( bids, asks,delta_bid=0.002)
         mid_price=(1*bids[0][0]+1*asks[0][0])/2
-  
+
 
         no_wallb=bid_side[bid_side[:,1]<0.4*np.sum(bid_side[:,1])]
         no_walla=ask_side[ask_side[:,1]<0.4*np.sum(ask_side[:,1])]
 
         r2=np.sum(bid_side)/np.sum(ask_side)
-        r2=self.rescale(r2)  
+        r2=self.rescale(r2)
         r2nw=np.sum(no_wallb)/np.sum(no_walla)
-        r2nw=self.rescale(r2nw)  
+        r2nw=self.rescale(r2nw)
 
-        
-        if len(bb)>0:      
+
+        if len(bb)>0:
             iv=r2nw
-           
+
             bb.add_input_value(iv)
 
             bb.purge_oldest(1)
 
-           
 
-           
+
+
         else:
-            bb.add_input_value(r2nw)   
-        if len(ema)>0:      
+            bb.add_input_value(r2nw)
+        if len(ema)>0:
             self.strat_data["ratio_ema"]=ema[-1]
-            
+
             ema.add_input_value(r2)
             ema.purge_oldest(1)
-            
+
         else:
              ema.add_input_value(r2)
 
@@ -141,46 +142,46 @@ class OBOnlyWSv2bband(BinanceStream):
         pair=pi.pair
 
         open_trades= pi.open_trades()
-        
+
         #### NO RETURN BEFORE HERE
-        
-        
+
+
        # if len (open_trades) >= 1 or self.no_trade_until > datetime.now():
        #     return
         mid_price=(1*bids[0][0]+1*asks[0][0])/2
-        
-        
+
+
         buy_price=(0.5*bids[0][0]+0.5*asks[0][0])
 
         if len(pi.bi.c) == 0 or pi.bi.c[-1][-1] > bids[0][0]:
              return
         bb5=pi.bb5
-        if len(bb5)>0: 
+        if len(bb5)>0:
             bbb=bb5[-1]
             cond1=mid_price<(bbb.cb)
             cond2 = (bbb.cb-bbb.lb)> mid_price *buy_delta.get(pi.pair, 0.0035)
             self.strat_data["ratio_buy1"]=cond1
             self.strat_data["ratio_buy2"]=cond2
             if not (cond1 and cond2):
-                
-                return 
+
+                return
         else:
-            return           
- 
+            return
+
         buy3=False
         bb=pi.ob_bb
         ema=pi.ob_ema
-        if len(bb)>0 and len(ema)>0:      
+        if len(bb)>0 and len(ema)>0:
             if ema[-1] > 1.2*bb[-1].ub:
                 buy3=True
-            
+
         self.strat_data["ratio_buy3"]= 1 if buy3 else 0
 
-        if   buy3 : 
+        if   buy3 :
            pi.buy(buy_price)
-     
+
     def check_sell(self, pi, bids, asks):
-        
+
         sell_price=(0.0*bids[0][0]+1.00*asks[0][0])
         ob_price=(0.2*bids[0][0]+0.8*asks[0][0])
         mid_price=(0.5*bids[0][0]+0.5*asks[0][0])
@@ -195,39 +196,39 @@ class OBOnlyWSv2bband(BinanceStream):
             return
         if len(pi.bi.c) == 0 or  pi.bi.c[-1][-1] < asks[0][0]:
             return
-                
+
         gain = (mid_price-found_trade.open_rate)/found_trade.open_rate
-        
+
         self.strat_data["ratio_gain"]= gain*100
 
-        
-        
+
+
         sell_1=False
         bb=pi.ob_bb
         ema=pi.ob_ema
         sell2,r2=self.check_ob(pair,bids=bids, asks=asks,delta_bid=0.002,delta_ask=0.002,ratio=1.,bid_weight=0.2,wall=-0,reciprocal=True)
-        sell2=False 
+        sell2=False
         if r2 <1.0:
             sell2=True
-        elapsed=datetime.now()-found_trade.open_date  
+        elapsed=datetime.now()-found_trade.open_date
         elapsed_min=elapsed.total_seconds()//60
         elapsed_min2=max(0,elapsed_min-20)
-        factor=max(0.8,1-elapsed_min2*0.005)    
-        if len(bb)>0 and len(ema)>0:  
-  
+        factor=max(0.8,1-elapsed_min2*0.005)
+        if len(bb)>0 and len(ema)>0:
+
             if ema[-1] < 1*factor*bb[-1].lb:
                 sell_1=True
-        
+
         sell=False
         if sell_1 and sell2:
             pi.sell_signal=prev_sell_signal+1
-           
- 
+
+
             if gain > 0.001:# or elapsed > timedelta(hours=24):
                 pi.sell(asks[0][0])
-  
+
 
         if gain >sell_pct.get(pi.pair,0.003) or  sell:
             pi.sell(sell_price)
-       
-            
+
+

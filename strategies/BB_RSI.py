@@ -1,13 +1,17 @@
 
 # --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
-from typing import Dict, List
 from functools import reduce
-from pandas import DataFrame
-# --------------------------------
+from typing import Dict, List
 
 import talib.abstract as ta
+from pandas import DataFrame
+
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy.interface import IStrategy
+
+
+# --------------------------------
+
 
 class BB_RSI(IStrategy):
     """
@@ -46,7 +50,7 @@ class BB_RSI(IStrategy):
 
     # Experimental settings (configuration will overide these if set)
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     ignore_roi_if_buy_signal = False
 
     # Optional order type mapping

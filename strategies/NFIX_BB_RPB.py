@@ -1,22 +1,25 @@
 import copy
 import logging
-import pathlib
-import rapidjson
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-import numpy as np
-import talib.abstract as ta
-from freqtrade.strategy.interface import IStrategy
-from freqtrade.strategy import merge_informative_pair, timeframe_to_minutes
-from freqtrade.exchange import timeframe_to_prev_date
-from pandas import DataFrame, Series, concat
-from functools import reduce
 import math
-from typing import Dict
-from freqtrade.persistence import Trade
-from datetime import datetime, timedelta
-from technical.util import resample_to_interval, resampled_merge
-from technical.indicators import zema, VIDYA, ichimoku, RMI
+import pathlib
 import time
+from datetime import datetime, timedelta
+from functools import reduce
+from typing import Dict
+
+import numpy as np
+import rapidjson
+import talib.abstract as ta
+from pandas import DataFrame, Series, concat
+from technical.indicators import RMI, VIDYA, ichimoku, zema
+from technical.util import resample_to_interval, resampled_merge
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.exchange import timeframe_to_prev_date
+from freqtrade.persistence import Trade
+from freqtrade.strategy import merge_informative_pair, timeframe_to_minutes
+from freqtrade.strategy.interface import IStrategy
+
 
 log = logging.getLogger(__name__)
 #log.setLevel(logging.DEBUG)
@@ -50,7 +53,7 @@ else:
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     sell_profit_only must set to false (or not set at all).                                           ##
+##     exit_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -156,7 +159,7 @@ class NFIX_BB_RPB(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = True
 
     use_custom_stoploss = True

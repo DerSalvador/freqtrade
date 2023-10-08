@@ -2,16 +2,15 @@
 
 import numpy as np  # noqa
 import pandas as pd  # noqa
+import talib.abstract as ta
 from pandas import DataFrame
 
-from freqtrade.strategy import IStrategy
-
-import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy import IStrategy
 
 
 class TheForce(IStrategy):
-  
+
     INTERFACE_VERSION = 2
 
     minimal_roi = {
@@ -36,7 +35,7 @@ class TheForce(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals
@@ -55,7 +54,7 @@ class TheForce(IStrategy):
         'buy': 'gtc',
         'sell': 'gtc'
     }
-    
+
     plot_config = {
         # Main plot indicators (Moving averages, ...)
         'main_plot': {
@@ -97,7 +96,7 @@ class TheForce(IStrategy):
         :param metadata: Additional information, like the currently traded pair
         :return: a Dataframe with all mandatory indicators for the strategies
         """
-        
+
         # Momentum Indicators
         # ------------------------------------
 
@@ -182,8 +181,8 @@ class TheForce(IStrategy):
                 (
                     (dataframe['ema5c'] < dataframe['ema5o'])
                 )
-                
+
             ),
             'sell'] = 1
         return dataframe
-    
+

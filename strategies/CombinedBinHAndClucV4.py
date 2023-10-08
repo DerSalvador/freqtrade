@@ -1,10 +1,13 @@
 # Definition of Bollinger Bands
-import freqtrade.vendor.qtpylib.indicators as qtpylib
+from datetime import datetime, timedelta
+
 import numpy as np
 import talib.abstract as ta
-from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
-from datetime import datetime, timedelta
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy.interface import IStrategy
+
 
 def bollinger_bands(stock_price, window_size, num_of_std):
     rolling_mean = stock_price.rolling(window=window_size).mean()
@@ -26,7 +29,7 @@ class CombinedBinHAndClucV4(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     sell_profit_offset = 0.001 # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_buy_signal = True
 

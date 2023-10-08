@@ -1,14 +1,18 @@
 
 # --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
-from typing import Dict, List
 from functools import reduce
+from typing import Dict, List
+
+import numpy  # noqa
+import talib.abstract as ta
 from pandas import DataFrame
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy.interface import IStrategy
+
+
 # --------------------------------
 
-import talib.abstract as ta
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-import numpy # noqa
 
 
 class UpSliceStrategy(IStrategy):
@@ -47,7 +51,7 @@ class UpSliceStrategy(IStrategy):
 
     # Experimental settings (configuration will overide these if set)
     # use_sell_signal = True
-    # sell_profit_only = True
+    # exit_profit_only = True
     # ignore_roi_if_buy_signal = False
 
     # Optional order type mapping

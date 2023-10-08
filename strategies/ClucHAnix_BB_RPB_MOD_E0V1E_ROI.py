@@ -1,24 +1,25 @@
-from datetime import datetime, timedelta, timezone
-from functools import reduce
-from typing import List
-# --- Do not remove these libs ---
-from freqtrade.strategy.interface import IStrategy
-from typing import Dict, List
-from pandas import DataFrame, Series
 # --------------------------------
 import logging
-import pandas as pd
-import numpy as np
-from freqtrade.persistence import Trade
 import time
-import freqtrade.vendor.qtpylib.indicators as qtpylib
+from datetime import datetime, timedelta, timezone
+from functools import reduce
+from typing import Dict, List
+
+import numpy as np
+import pandas as pd
 import pandas_ta as pta
 import talib.abstract as ta
 import technical.indicators as ftt
-from freqtrade.persistence import Trade, PairLocks
-from freqtrade.strategy import (BooleanParameter, DecimalParameter,
-                                IntParameter, stoploss_from_open, merge_informative_pair)
+from pandas import DataFrame, Series
 from skopt.space import Dimension, Integer
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.persistence import PairLocks, Trade
+from freqtrade.strategy import (BooleanParameter, DecimalParameter, IntParameter,
+                                merge_informative_pair, stoploss_from_open)
+# --- Do not remove these libs ---
+from freqtrade.strategy.interface import IStrategy
+
 
 logger = logging.getLogger(__name__)
 
@@ -132,7 +133,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI(IStrategy):
     "pSL_1": 0.02,
     "pSL_2": 0.046,
 
-    'sell-fisher': 0.38414, 
+    'sell-fisher': 0.38414,
     'sell-bbmiddle-close': 1.07634
     }
 
@@ -164,7 +165,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI(IStrategy):
 
     # Make sure these match or are not overridden in config
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Custom stoploss
@@ -195,7 +196,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI(IStrategy):
     # profit threshold 2, SL_2 is used
     pPF_2 = DecimalParameter(0.040, 0.100, default=0.080, decimals=3, space='sell', load=True)
     pSL_2 = DecimalParameter(0.020, 0.070, default=0.040, decimals=3, space='sell', load=True)
-    
+
     # buy param
     # ClucHA
     clucha_bbdelta_close = DecimalParameter(0.01,0.05, default=buy_params['clucha_bbdelta_close'], decimals=5, space='buy', optimize=True)
@@ -269,7 +270,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI(IStrategy):
 
     def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
                         current_rate: float, current_profit: float, **kwargs) -> float:
-       
+
         # hard stoploss profit
         HSL = self.pHSL.value
         PF_1 = self.pPF_1.value
@@ -291,7 +292,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI(IStrategy):
         # Only for hyperopt invalid return
         if (sl_profit >= current_profit):
             return -0.99
-    
+
         return stoploss_from_open(sl_profit, current_profit)
 
     ############################################################################
@@ -501,7 +502,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI(IStrategy):
 
     def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         params = self.sell_params
-        
+
         dataframe.loc[
             (dataframe['fisher'] > params['sell-fisher']) &
             (dataframe['ha_high'].le(dataframe['ha_high'].shift(1))) &
@@ -657,7 +658,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI_DYNAMIC_TB(ClucHAnix_BB_RPB_MOD_E0V1E_ROI):
 
     def confirm_trade_entry(self, pair: str, order_type: str, amount: float, rate: float, time_in_force: str, **kwargs) -> bool:
         val = super().confirm_trade_entry(pair, order_type, amount, rate, time_in_force, **kwargs)
-        
+
         if val:
             if self.trailing_buy_order_enabled and self.config['runmode'].value in ('live', 'dry_run'):
                 val = False
@@ -678,7 +679,7 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI_DYNAMIC_TB(ClucHAnix_BB_RPB_MOD_E0V1E_ROI):
                             trailing_buy['buy_tag'] = last_candle['buy_tag']
                             trailing_buy['start_trailing_time'] = datetime.now(timezone.utc)
                             trailing_buy['offset'] = 0
-                            
+
                             self.trailing_buy_info(pair, current_price)
                             logger.info(f'start trailing buy for {pair} at {last_candle["close"]}')
 
@@ -726,13 +727,13 @@ class ClucHAnix_BB_RPB_MOD_E0V1E_ROI_DYNAMIC_TB(ClucHAnix_BB_RPB_MOD_E0V1E_ROI):
                     self.trailing_buy_info(pair, rate)
                     self.trailing_buy(pair, reinit=True)
                     logger.info(f'STOP trailing buy for {pair} because I buy it')
-        
+
         return val
 
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe = super().populate_buy_trend(dataframe, metadata)
 
-        if self.trailing_buy_order_enabled and self.config['runmode'].value in ('live', 'dry_run'): 
+        if self.trailing_buy_order_enabled and self.config['runmode'].value in ('live', 'dry_run'):
             last_candle = dataframe.iloc[-1].squeeze()
             trailing_buy = self.trailing_buy(metadata['pair'])
             if (last_candle['buy'] == 1):

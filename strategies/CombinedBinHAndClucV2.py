@@ -1,10 +1,11 @@
 # --- Do not remove these libs ---
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 # --------------------------------
 import talib.abstract as ta
-from freqtrade.strategy import IStrategy, merge_informative_pair
 from pandas import DataFrame
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy import IStrategy, merge_informative_pair
 
 
 # The main idea is to buy only when overall uptrend in higher informative
@@ -44,7 +45,7 @@ class CombinedBinHAndClucV2(IStrategy):
     stoploss = -0.05
 
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = True
 
     protections = [

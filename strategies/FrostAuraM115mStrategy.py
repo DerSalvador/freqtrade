@@ -1,9 +1,11 @@
 import numpy as np
 import pandas as pd
-from pandas import DataFrame
-from freqtrade.strategy.interface import IStrategy
 import talib.abstract as ta
+from pandas import DataFrame
+
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy.interface import IStrategy
+
 
 class FrostAuraM115mStrategy(IStrategy):
     """
@@ -42,7 +44,7 @@ class FrostAuraM115mStrategy(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals.

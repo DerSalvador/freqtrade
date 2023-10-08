@@ -1,23 +1,27 @@
 import copy
 import logging
-import pathlib
-import rapidjson
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-import numpy as np
-import talib.abstract as ta
-import ta as ta2
-from freqtrade.strategy.interface import IStrategy
-from freqtrade.strategy import merge_informative_pair, timeframe_to_minutes, CategoricalParameter, DecimalParameter, IntParameter, stoploss_from_open
-from freqtrade.exchange import timeframe_to_prev_date
-from pandas import DataFrame, Series, concat
-from functools import reduce
 import math
-from typing import Dict
-from freqtrade.persistence import Trade
-from datetime import datetime, timedelta
-from technical.util import resample_to_interval, resampled_merge
-from technical.indicators import RMI, zema, VIDYA, ichimoku
+import pathlib
 import time
+from datetime import datetime, timedelta
+from functools import reduce
+from typing import Dict
+
+import numpy as np
+import rapidjson
+import ta as ta2
+import talib.abstract as ta
+from pandas import DataFrame, Series, concat
+from technical.indicators import RMI, VIDYA, ichimoku, zema
+from technical.util import resample_to_interval, resampled_merge
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.exchange import timeframe_to_prev_date
+from freqtrade.persistence import Trade
+from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
+                                merge_informative_pair, stoploss_from_open, timeframe_to_minutes)
+from freqtrade.strategy.interface import IStrategy
+
 
 log = logging.getLogger(__name__)
 #log.setLevel(logging.DEBUG)
@@ -142,7 +146,7 @@ def pmax(df, period, multiplier, length, MAtype, src):
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     sell_profit_only must set to false (or not set at all).                                           ##
+##     exit_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -255,7 +259,7 @@ class NostalgiaForInfinityXw(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals
@@ -374,7 +378,7 @@ class NostalgiaForInfinityXw(IStrategy):
         "sma200_rising_val": 156,
         #############
     }
-    
+
     sell_params = {
         #############
         # Enable/Disable conditions
@@ -391,124 +395,124 @@ class NostalgiaForInfinityXw(IStrategy):
         "sell_real": 0.2841,
         #############
     }
-    
+
     optimizeBuy = True
     optimizeSell = True
     optimizePump = True
     optimizeDump = True
-    
-    
+
+
     ema_fast = CategoricalParameter(
         [True, False], default=buy_params["ema_fast"], space='buy', optimize=optimizeBuy)
-    
+
     ema_fast_len = CategoricalParameter(
         ["8", "12", "16", "20", "25", "50", "100", "200"], default=buy_params["ema_fast_len"], space='buy', optimize=optimizeBuy)
-    
+
     ema_slow = CategoricalParameter(
         [True, False], default=buy_params["ema_slow"], space='buy', optimize=optimizeBuy)
-    
+
     ema_slow_len = CategoricalParameter(
         ["8", "12", "20", "25", "50", "100", "200"], default=buy_params["ema_slow_len"], space='buy', optimize=optimizeBuy)
-    
+
     close_above_ema_fast = CategoricalParameter(
         [True, False], default=buy_params["close_above_ema_fast"], space='buy', optimize=optimizeBuy)
-    
+
     close_above_ema_fast_len = CategoricalParameter(
         ["8", "12", "20", "25", "50", "100", "200"], default=buy_params["close_above_ema_fast_len"], space='buy', optimize=optimizeBuy)
-   
+
     close_above_ema_slow = CategoricalParameter(
         [True, False], default=buy_params["close_above_ema_slow"], space='buy', optimize=optimizeBuy)
-    
+
     close_above_ema_slow_len = CategoricalParameter(
         ["8", "12", "20", "25", "50", "100", "200"], default=20, space='buy', optimize=optimizeBuy)
-    
+
     sma200_rising = CategoricalParameter(
         [True, False], default=buy_params["sma200_rising"], space='buy', optimize=optimizeBuy)
-    
+
     sma200_rising_val = IntParameter(
         10, 400, default=buy_params["sma200_rising_val"], space='buy', optimize=optimizeBuy)
-    
+
     sma200_1h_rising = CategoricalParameter(
         [True, False], default=buy_params["sma200_1h_rising"], space='buy', optimize=optimizeBuy)
-    
+
     sma200_1h_rising_val = IntParameter(
         10, 400, default=buy_params["sma200_1h_rising_val"], space='buy', optimize=optimizeBuy)
-    
-    
+
+
     btc_uptrend = CategoricalParameter(
         [True, False], default=buy_params["btc_uptrend"], space='buy', optimize=optimizeBuy)
-    
-    
+
+
     buy_real = DecimalParameter(
         0.001, 0.999, decimals=4, default=buy_params["buy_real"], space='buy', optimize=optimizeBuy)
-    
+
     buy_cat = CategoricalParameter(
         [">R", "=R", "<R"], default=buy_params["buy_cat"], space='buy', optimize=optimizeBuy)
-    
-    
+
+
     ichimoku_window1 = IntParameter(
         10, 50, default=buy_params["ichimoku_window1"], space='buy', optimize=optimizeBuy)
-    
+
     ichimoku_window2 = IntParameter(
         10, 50, default=buy_params["ichimoku_window2"], space='buy', optimize=optimizeBuy)
-    
+
     sell_real = DecimalParameter(
         0.001, 0.999, decimals=4, default=sell_params["sell_real"], space='sell', optimize=optimizeSell)
     sell_cat = CategoricalParameter(
         [">R", "=R", "<R"], default=sell_params["sell_cat"], space='sell', optimize=optimizeSell)
-    
+
     kst_window1 = IntParameter(
         10, 50, default=sell_params["kst_window1"], space='sell', optimize=optimizeSell)
-    
+
     kst_window2 = IntParameter(
         10, 50, default=sell_params["kst_window2"], space='sell', optimize=optimizeSell)
-    
+
     kst_window3 = IntParameter(
         10, 50, default=sell_params["kst_window3"], space='sell', optimize=optimizeSell)
-    
+
     kst_window4 = IntParameter(
         10, 50, default=sell_params["kst_window4"], space='sell', optimize=optimizeSell)
-    
+
     kst_roc1 = IntParameter(
         10, 50, default=sell_params["kst_roc1"], space='sell', optimize=optimizeSell)
-    
+
     kst_roc2 = IntParameter(
         10, 50, default=sell_params["kst_roc2"], space='sell', optimize=optimizeSell)
-    
+
     kst_roc3 = IntParameter(
         10, 50, default=sell_params["kst_roc3"], space='sell', optimize=optimizeSell)
-    
+
     kst_roc4 = IntParameter(
         10, 50, default=sell_params["kst_roc4"], space='sell', optimize=optimizeSell)
-    
+
     safe_dips_threshold_0 = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_dips_threshold_0"], space='buy', optimize=optimizeDump)
-    
+
     safe_dips_threshold_2 = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_dips_threshold_2"], space='buy', optimize=optimizeDump)
-    
+
     safe_dips_threshold_12 = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_dips_threshold_12"], space='buy', optimize=optimizeDump)
-    
+
     safe_dips_threshold_144 = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_dips_threshold_144"], space='buy', optimize=optimizeDump)
-    
+
     safe_pump_6h_threshold = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_pump_6h_threshold"], space='buy', optimize=optimizePump)
-    
+
     safe_pump_12h_threshold = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_pump_12h_threshold"], space='buy', optimize=optimizePump)
-    
+
     safe_pump_24h_threshold = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_pump_24h_threshold"], space='buy', optimize=optimizePump)
-    
+
     safe_pump_36h_threshold = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_pump_36h_threshold"], space='buy', optimize=optimizePump)
-    
+
     safe_pump_48h_threshold = DecimalParameter(
         0.01, 1.0, decimals=2, default=buy_params["safe_pump_48h_threshold"], space='buy', optimize=optimizePump)
-    
-    
+
+
 
     #############################################################
     buy_protection_params = {
@@ -2640,8 +2644,8 @@ class NostalgiaForInfinityXw(IStrategy):
         return int(self.timeframe[:-1])
 
     def sell_signals(self, current_profit: float, max_profit:float, max_loss:float, last_candle, previous_candle_1, previous_candle_2, previous_candle_3, previous_candle_4, previous_candle_5, trade: 'Trade', current_time: 'datetime', buy_tag) -> tuple:
-        
-        
+
+
         IND = 'trend_kst_diff'
         REAL = self.sell_real.value
         OPR = self.sell_cat.value
@@ -2653,8 +2657,8 @@ class NostalgiaForInfinityXw(IStrategy):
             return True, 'sell_signal_Wieger_2'
         elif OPR == "<R" and DFIND < REAL:
             return True, 'sell_signal_Wieger_3'
-        
-        
+
+
         # Sell signal 1
         if (last_candle['rsi_14'] > 79.0) and (last_candle['close'] > last_candle['bb20_2_upp']) and (previous_candle_1['close'] > previous_candle_1['bb20_2_upp']) and (previous_candle_2['close'] > previous_candle_2['bb20_2_upp']) and (previous_candle_3['close'] > previous_candle_3['bb20_2_upp']) and (previous_candle_4['close'] > previous_candle_4['bb20_2_upp']) and (previous_candle_5['close'] > previous_candle_5['bb20_2_upp']):
             if (last_candle['close'] > last_candle['ema_200']):
@@ -5259,7 +5263,7 @@ class NostalgiaForInfinityXw(IStrategy):
             elif (last_candle['r_14'] == 0.0) and (last_candle['rsi_14'] > 65.0) and (last_candle['cmf_15m'] < -0.25):
                 return True, 'sell_profit_w_10_91'
         elif 0.2 > current_profit >= 0.12:
-            
+
             if (last_candle['r_480'] > -0.5):
                 return True, 'sell_profit_w_11_1'
             elif (last_candle['r_14'] >= -4.0) and (last_candle['r_32'] > -4.0) and (last_candle['r_64'] > -4.0) and (last_candle['rsi_14'] > 77.0):
@@ -8558,12 +8562,12 @@ class NostalgiaForInfinityXw(IStrategy):
         return False, None
 
     def sell_long_mode(self, current_profit: float, max_profit:float, max_loss:float, last_candle, previous_candle_1, previous_candle_2, previous_candle_3, previous_candle_4, previous_candle_5, trade: 'Trade', current_time: 'datetime', buy_tag) -> tuple:
-        
+
         # wieger hack
-        
+
         #if(np.isclose(last_candle[self.sell_cat.value], self.sell_val0.value)):
         #    return True, 'sell_long_yolo'
-        
+
         # Original sell signals
         sell, signal_name = self.sell_signals(current_profit, max_profit, max_loss, last_candle, previous_candle_1, previous_candle_2, previous_candle_3, previous_candle_4, previous_candle_5, trade, current_time, buy_tag)
         if sell and (signal_name is not None):
@@ -8573,7 +8577,7 @@ class NostalgiaForInfinityXw(IStrategy):
         sell, signal_name = self.sell_stoploss(current_profit, max_profit, max_loss, last_candle, previous_candle_1, trade, current_time)
         if sell and (signal_name is not None):
             return True, signal_name
-        
+
         IND = 'trend_kst_diff'
         REAL = self.sell_real.value
         OPR = self.sell_cat.value
@@ -8586,10 +8590,10 @@ class NostalgiaForInfinityXw(IStrategy):
             return True, 'sell_profit_w_12_long_Wieger_2'
         elif OPR == "<R" and DFIND < REAL:
             return True, 'sell_profit_w_12_long_Wieger_Final'
-        
+
         #if (last_candle[self.sell_cat.value] > self.sell_val0.value):
         #        return True, 'sell_profit_w_12_long_Wieger'
-        
+
         #if(np.isclose(last_candle[self.sell_cat.value], 0.9455)):
         #    return True, 'sell_long_yolo'
 
@@ -8791,7 +8795,7 @@ class NostalgiaForInfinityXw(IStrategy):
         assert self.dp, "DataProvider is required for multiple timeframes."
         # Get the informative pair
         informative_1h = self.dp.get_pair_dataframe(pair=metadata['pair'], timeframe=self.info_timeframe_1h)
-        
+
         # Heikin Ashi
         inf_heikinashi = qtpylib.heikinashi(informative_1h)
         informative_1h['ha_close'] = inf_heikinashi['close']
@@ -8799,7 +8803,7 @@ class NostalgiaForInfinityXw(IStrategy):
 
         # RSI
         informative_1h['rsi_14'] = ta.RSI(informative_1h, timeperiod=14)
-        
+
         informative_1h['rmi_length_17'] = RMI(dataframe, length=17, mom=4)
         informative_1h['cci_length_25'] = ta.CCI(dataframe, 25)
 
@@ -8941,7 +8945,7 @@ class NostalgiaForInfinityXw(IStrategy):
         # RSI
         dataframe['rsi_4'] = ta.RSI(dataframe, timeperiod=4)
         dataframe['rsi_14'] = ta.RSI(dataframe, timeperiod=14)
-        
+
         dataframe['rmi_length_17'] = RMI(dataframe, length=17, mom=4)
         dataframe['cci_length_25'] = ta.CCI(dataframe, 25)
 
@@ -8956,7 +8960,7 @@ class NostalgiaForInfinityXw(IStrategy):
         dataframe['ema_50'] = ta.EMA(dataframe, timeperiod=50)
         dataframe['ema_100'] = ta.EMA(dataframe, timeperiod=100)
         dataframe['ema_200'] = ta.EMA(dataframe, timeperiod=200)
-        
+
         dataframe['trend_ichimoku_base'] = ta2.trend.ichimoku_base_line(
             dataframe['high'],
             dataframe['low'],
@@ -8978,17 +8982,17 @@ class NostalgiaForInfinityXw(IStrategy):
             nsig=9,
             fillna=False
         )
-        
+
         dataframe['trend_kst_diff'] = KST.kst_diff()
-        
+
         # Normalisation
         tib = dataframe['trend_ichimoku_base']
         dataframe['trend_ichimoku_base'] = (
             tib-tib.min())/(tib.max()-tib.min())
-        
+
         tkd = dataframe['trend_kst_diff']
         dataframe['trend_kst_diff'] = (tkd-tkd.min())/(tkd.max()-tkd.min())
-        
+
         # SMA
         dataframe['sma_15'] = ta.SMA(dataframe, timeperiod=15)
         dataframe['sma_28'] = ta.SMA(dataframe, timeperiod=28)
@@ -9006,7 +9010,7 @@ class NostalgiaForInfinityXw(IStrategy):
         dataframe['bb40_2_delta'] = (bb_40_std2['mid'] - dataframe['bb40_2_low']).abs()
         dataframe['closedelta'] = (dataframe['close'] - dataframe['close'].shift()).abs()
         dataframe['tail'] = (dataframe['close'] - dataframe['bb40_2_low']).abs()
-        
+
         # BB 20 - STD2
         bb_20_std2 = qtpylib.bollinger_bands(qtpylib.typical_price(dataframe), window=20, stds=2)
         dataframe['bb20_2_low'] = bb_20_std2['lower']
@@ -9087,9 +9091,9 @@ class NostalgiaForInfinityXw(IStrategy):
 
         dataframe['ha_closedelta'] = (dataframe['ha_close'] - dataframe['ha_close'].shift()).abs()
         dataframe['ha_tail'] = (dataframe['ha_close'] - dataframe['ha_low']).abs()
-        
+
         dataframe['rocr'] = ta.ROCR(dataframe['ha_close'], timeperiod=28)
-        
+
         # Profit Maximizer - PMAX
         dataframe['pm'], dataframe['pmx'] = pmax(heikinashi, MAtype=1, length=9, multiplier=27, period=10, src=3)
         dataframe['source'] = (dataframe['high'] + dataframe['low'] + dataframe['open'] + dataframe['close'])/4
@@ -9097,7 +9101,7 @@ class NostalgiaForInfinityXw(IStrategy):
 
         # True range
         dataframe['trange'] = ta.TRANGE(dataframe)
-        
+
         # ClucHA
         dataframe['bb_delta_cluc'] = (dataframe['bb40_2_mid'] - dataframe['bb40_2_low']).abs()
         dataframe['ha_closedelta'] = (dataframe['ha_close'] - dataframe['ha_close'].shift()).abs()
@@ -10162,9 +10166,9 @@ class NostalgiaForInfinityXw(IStrategy):
                     item_buy_logic.append(dataframe['ewo'] < -4.0)
                     item_buy_logic.append(dataframe['r_14'] < -46.0)
                     item_buy_logic.append(dataframe['crsi_1h'] > 20.0)
-                
+
                 elif index == 65:
-                    
+
                     item_buy_logic.append(dataframe['rocr_1h'] > 0.04401)
                     item_buy_logic.append(dataframe['bb40_2_low'].shift() > 0)
                     item_buy_logic.append(dataframe['bb_delta_cluc'] > dataframe['ha_close'] * 0.02206)
@@ -10172,7 +10176,7 @@ class NostalgiaForInfinityXw(IStrategy):
                     item_buy_logic.append(dataframe['tail'] < dataframe['bb_delta_cluc'] * 1.02515)
                     item_buy_logic.append(dataframe['ha_close'] < dataframe['bb40_2_low'].shift())
                     item_buy_logic.append(dataframe['ha_close'] < dataframe['ha_close'].shift())
-                
+
                 elif index == 66:
                     item_buy_logic.append(dataframe['rmi_length_17'] < 49)
                     item_buy_logic.append(dataframe['cci_length_25'] <= -116)
@@ -10181,14 +10185,14 @@ class NostalgiaForInfinityXw(IStrategy):
                     item_buy_logic.append(dataframe['bb20_width'] > 0.095)
                     item_buy_logic.append(dataframe['closedelta'] > dataframe['close'] * 17.922 / 1000 )
                     item_buy_logic.append(dataframe['close'] < dataframe['bb20_3_low'] * 0.999)
-                
+
                 elif index == 67: # Improvement on signal 62
                     item_buy_logic.append(dataframe['ewo'] < -9.442)
                     item_buy_logic.append(dataframe['bb20_2_mid_1h'] >= dataframe['t3_avg_1h'])
                     item_buy_logic.append(dataframe['t3_avg'] <= dataframe['ema_8'] * 1.121)
                     item_buy_logic.append(dataframe['cti'] < -0.374)
                     item_buy_logic.append(dataframe['r_14'] < -51.971)
-                
+
                 elif index == 68:
                     item_buy_logic.append(dataframe['pm'] > dataframe['pmax_thresh'])
                     item_buy_logic.append(dataframe['close'] < dataframe['sma_75'] * 0.98)
@@ -10196,22 +10200,22 @@ class NostalgiaForInfinityXw(IStrategy):
                     item_buy_logic.append(dataframe['cti'] < -0.95)
                     item_buy_logic.append(dataframe['r_14'] < -97)
                     item_buy_logic.append(dataframe['crsi_1h'] > 0.5)
-                
+
                 elif index == 69:
-                    
+
                     IND = 'trend_ichimoku_base'
                     REAL = self.buy_real.value
                     OPR = self.buy_cat.value
                     DFIND = dataframe[IND]
                     # print(DFIND.mean())
-                    
+
                     if OPR == ">R":
                         item_buy_logic.append(DFIND > REAL)
                     elif OPR == "=R":
                         item_buy_logic.append(np.isclose(DFIND, REAL))
                     elif OPR == "<R":
                         item_buy_logic.append(DFIND < REAL)
-                    
+
 
                 item_buy_logic.append(dataframe['volume'] > 0)
                 item_buy = reduce(lambda x, y: x & y, item_buy_logic)

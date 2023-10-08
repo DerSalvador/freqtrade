@@ -6,11 +6,11 @@ import numpy as np  # noqa
 import pandas as pd  # noqa
 from pandas import DataFrame
 
-from freqtrade.strategy import (merge_informative_pair, 
-                                BooleanParameter, 
-                                CategoricalParameter, 
+from freqtrade.strategy import (merge_informative_pair,
+                                BooleanParameter,
+                                CategoricalParameter,
                                 DecimalParameter,
-                                IStrategy, 
+                                IStrategy,
                                 IntParameter)
 
 # --------------------------------
@@ -24,7 +24,7 @@ import freqtrade.vendor.qtpylib.indicators as qtpylib
 # This class is a sample. Feel free to customize it.
 class TrixV15Strategy(IStrategy):
     """
-    Sources : 
+    Sources :
     Cripto Robot : https://www.youtube.com/watch?v=uE04UROWkjs&list=PLpJ7cz_wOtsrqEQpveLc2xKLjOBgy4NfA&index=4
     Github : https://github.com/CryptoRobotFr/TrueStrategy/blob/main/TrixStrategy/Trix_Complete_backtest.ipynb
     """
@@ -50,7 +50,7 @@ class TrixV15Strategy(IStrategy):
     # trailing_only_offset_is_reached = True
     # trailing_stop_positive = 0.02
     # trailing_stop_positive_offset = 0.9  # Disabled / not configured
-    
+
     # Buy hyperspace params:
     buy_params = {
       "buy_stoch_rsi_enabled": True,
@@ -102,7 +102,7 @@ class TrixV15Strategy(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    sell_profit_only = True
+    exit_profit_only = True
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals
@@ -158,7 +158,7 @@ class TrixV15Strategy(IStrategy):
         # pairs = self.dp.current_whitelist()
         # # Assign tf to each pair so they can be downloaded and cached for strategy.
         # informative_pairs = [(pair, self.informative_timeframe) for pair in pairs]
-        # 
+        #
         # return informative_pairs
 
     # def informative_1d_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
@@ -261,7 +261,7 @@ class TrixV15Strategy(IStrategy):
             conditions.append(dataframe['stoch_rsi'] > self.sell_stoch_rsi.value)
         if self.sell_trix_signal_type.value == 'trailing':
             conditions.append(dataframe['trix_s_pct'] < dataframe[f'trix_s_signal_{self.sell_trix_signal_timeperiod.value}'])
-        
+
         # Triggers
         if self.sell_trix_signal_type.value == 'trigger':
             conditions.append(qtpylib.crossed_below(dataframe['trix_s_pct'], dataframe[f'trix_s_signal_{self.sell_trix_signal_timeperiod.value}']))

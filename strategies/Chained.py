@@ -1,11 +1,14 @@
-from freqtrade.strategy import IStrategy, DecimalParameter, IntParameter, stoploss_from_open
 import logging
-from pandas import DataFrame
-from freqtrade.resolvers import StrategyResolver
-from itertools import combinations
-from functools import reduce
-from freqtrade.persistence import Trade
 from datetime import datetime
+from functools import reduce
+from itertools import combinations
+
+from pandas import DataFrame
+
+from freqtrade.persistence import Trade
+from freqtrade.resolvers import StrategyResolver
+from freqtrade.strategy import DecimalParameter, IntParameter, IStrategy, stoploss_from_open
+
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +45,7 @@ class Chained(IStrategy):
     sell_profit_offset = 0.001  # it doesn't meant anything, just to guarantee there is a minimal profit.
     use_sell_signal = False
     ignore_roi_if_buy_signal = False
-    sell_profit_only = False
+    exit_profit_only = False
 
     # Trailing stoploss
     trailing_stop = False

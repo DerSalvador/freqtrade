@@ -19,15 +19,157 @@ Classifier: Operating System :: Unix
 Classifier: Topic :: Office/Business :: Financial :: Investment
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
-Provides-Extra: dev
-Provides-Extra: plot
-Provides-Extra: jupyter
-Provides-Extra: hyperopt
-Provides-Extra: hdf5
-Provides-Extra: freqai
-Provides-Extra: freqai_rl
-Provides-Extra: all
 License-File: LICENSE
+Requires-Dist: ccxt>=4.0.0
+Requires-Dist: SQLAlchemy>=2.0.6
+Requires-Dist: python-telegram-bot>=20.1
+Requires-Dist: arrow>=1.0.0
+Requires-Dist: cachetools
+Requires-Dist: requests
+Requires-Dist: urllib3
+Requires-Dist: jsonschema
+Requires-Dist: TA-Lib
+Requires-Dist: pandas-ta
+Requires-Dist: technical
+Requires-Dist: tabulate
+Requires-Dist: pycoingecko
+Requires-Dist: py_find_1st
+Requires-Dist: python-rapidjson
+Requires-Dist: orjson
+Requires-Dist: sdnotify
+Requires-Dist: colorama
+Requires-Dist: jinja2
+Requires-Dist: questionary
+Requires-Dist: prompt-toolkit
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: joblib>=1.2.0
+Requires-Dist: rich
+Requires-Dist: pyarrow; platform_machine != "armv7l"
+Requires-Dist: fastapi
+Requires-Dist: pydantic>=2.2.0
+Requires-Dist: uvicorn
+Requires-Dist: psutil
+Requires-Dist: pyjwt
+Requires-Dist: aiofiles
+Requires-Dist: schedule
+Requires-Dist: websockets
+Requires-Dist: janus
+Requires-Dist: ast-comments
+Requires-Dist: aiohttp
+Requires-Dist: cryptography
+Requires-Dist: httpx>=0.24.1
+Requires-Dist: python-dateutil
+Requires-Dist: packaging
+Provides-Extra: dev
+Requires-Dist: plotly>=4.0; extra == "dev"
+Requires-Dist: coveralls; extra == "dev"
+Requires-Dist: mypy; extra == "dev"
+Requires-Dist: ruff; extra == "dev"
+Requires-Dist: pre-commit; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Requires-Dist: pytest-asyncio; extra == "dev"
+Requires-Dist: pytest-cov; extra == "dev"
+Requires-Dist: pytest-mock; extra == "dev"
+Requires-Dist: pytest-random-order; extra == "dev"
+Requires-Dist: isort; extra == "dev"
+Requires-Dist: time-machine; extra == "dev"
+Requires-Dist: types-cachetools; extra == "dev"
+Requires-Dist: types-filelock; extra == "dev"
+Requires-Dist: types-requests; extra == "dev"
+Requires-Dist: types-tabulate; extra == "dev"
+Requires-Dist: types-python-dateutil; extra == "dev"
+Requires-Dist: jupyter; extra == "dev"
+Requires-Dist: nbstripout; extra == "dev"
+Requires-Dist: ipykernel; extra == "dev"
+Requires-Dist: nbconvert; extra == "dev"
+Requires-Dist: scipy; extra == "dev"
+Requires-Dist: scikit-learn<=1.1.3; extra == "dev"
+Requires-Dist: scikit-optimize>=0.7.0; extra == "dev"
+Requires-Dist: filelock; extra == "dev"
+Requires-Dist: tables; extra == "dev"
+Requires-Dist: blosc; extra == "dev"
+Requires-Dist: scikit-learn; extra == "dev"
+Requires-Dist: joblib; extra == "dev"
+Requires-Dist: catboost; platform_machine != "aarch64" and extra == "dev"
+Requires-Dist: lightgbm; extra == "dev"
+Requires-Dist: xgboost; extra == "dev"
+Requires-Dist: tensorboard; extra == "dev"
+Requires-Dist: datasieve>=0.1.5; extra == "dev"
+Requires-Dist: torch; extra == "dev"
+Requires-Dist: gymnasium; extra == "dev"
+Requires-Dist: stable-baselines3; extra == "dev"
+Requires-Dist: sb3-contrib; extra == "dev"
+Requires-Dist: tqdm; extra == "dev"
+Provides-Extra: plot
+Requires-Dist: plotly>=4.0; extra == "plot"
+Provides-Extra: jupyter
+Requires-Dist: jupyter; extra == "jupyter"
+Requires-Dist: nbstripout; extra == "jupyter"
+Requires-Dist: ipykernel; extra == "jupyter"
+Requires-Dist: nbconvert; extra == "jupyter"
+Provides-Extra: hyperopt
+Requires-Dist: scipy; extra == "hyperopt"
+Requires-Dist: scikit-learn<=1.1.3; extra == "hyperopt"
+Requires-Dist: scikit-optimize>=0.7.0; extra == "hyperopt"
+Requires-Dist: filelock; extra == "hyperopt"
+Provides-Extra: hdf5
+Requires-Dist: tables; extra == "hdf5"
+Requires-Dist: blosc; extra == "hdf5"
+Provides-Extra: freqai
+Requires-Dist: scikit-learn; extra == "freqai"
+Requires-Dist: joblib; extra == "freqai"
+Requires-Dist: catboost; platform_machine != "aarch64" and extra == "freqai"
+Requires-Dist: lightgbm; extra == "freqai"
+Requires-Dist: xgboost; extra == "freqai"
+Requires-Dist: tensorboard; extra == "freqai"
+Requires-Dist: datasieve>=0.1.5; extra == "freqai"
+Provides-Extra: freqai-rl
+Requires-Dist: torch; extra == "freqai-rl"
+Requires-Dist: gymnasium; extra == "freqai-rl"
+Requires-Dist: stable-baselines3; extra == "freqai-rl"
+Requires-Dist: sb3-contrib; extra == "freqai-rl"
+Requires-Dist: tqdm; extra == "freqai-rl"
+Provides-Extra: all
+Requires-Dist: plotly>=4.0; extra == "all"
+Requires-Dist: coveralls; extra == "all"
+Requires-Dist: mypy; extra == "all"
+Requires-Dist: ruff; extra == "all"
+Requires-Dist: pre-commit; extra == "all"
+Requires-Dist: pytest; extra == "all"
+Requires-Dist: pytest-asyncio; extra == "all"
+Requires-Dist: pytest-cov; extra == "all"
+Requires-Dist: pytest-mock; extra == "all"
+Requires-Dist: pytest-random-order; extra == "all"
+Requires-Dist: isort; extra == "all"
+Requires-Dist: time-machine; extra == "all"
+Requires-Dist: types-cachetools; extra == "all"
+Requires-Dist: types-filelock; extra == "all"
+Requires-Dist: types-requests; extra == "all"
+Requires-Dist: types-tabulate; extra == "all"
+Requires-Dist: types-python-dateutil; extra == "all"
+Requires-Dist: jupyter; extra == "all"
+Requires-Dist: nbstripout; extra == "all"
+Requires-Dist: ipykernel; extra == "all"
+Requires-Dist: nbconvert; extra == "all"
+Requires-Dist: scipy; extra == "all"
+Requires-Dist: scikit-learn<=1.1.3; extra == "all"
+Requires-Dist: scikit-optimize>=0.7.0; extra == "all"
+Requires-Dist: filelock; extra == "all"
+Requires-Dist: tables; extra == "all"
+Requires-Dist: blosc; extra == "all"
+Requires-Dist: scikit-learn; extra == "all"
+Requires-Dist: joblib; extra == "all"
+Requires-Dist: catboost; platform_machine != "aarch64" and extra == "all"
+Requires-Dist: lightgbm; extra == "all"
+Requires-Dist: xgboost; extra == "all"
+Requires-Dist: tensorboard; extra == "all"
+Requires-Dist: datasieve>=0.1.5; extra == "all"
+Requires-Dist: torch; extra == "all"
+Requires-Dist: gymnasium; extra == "all"
+Requires-Dist: stable-baselines3; extra == "all"
+Requires-Dist: sb3-contrib; extra == "all"
+Requires-Dist: tqdm; extra == "all"
 
 # ![freqtrade](https://raw.githubusercontent.com/freqtrade/freqtrade/develop/docs/assets/freqtrade_poweredby.svg)
 

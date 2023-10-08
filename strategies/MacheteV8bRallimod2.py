@@ -1,24 +1,24 @@
 
-from typing import Dict, List, Optional, Tuple
 from datetime import datetime, timedelta
-from cachetools import TTLCache
-from pandas import DataFrame, Series
-import numpy as np
+from typing import Dict, List, Optional, Tuple
 
+import numpy as np
 ## Indicator libs
 import talib.abstract as ta
-from finta import TA as fta
 import technical.indicators as ftt
-from technical.indicators import hull_moving_average
-from technical.indicators import PMAX, zema
-from technical.indicators import cmf
+from cachetools import TTLCache
+from finta import TA as fta
+from pandas import DataFrame, Series
+from skopt.space import Dimension
+from technical.indicators import PMAX, cmf, hull_moving_average, zema
 
-## FT stuffs
-from freqtrade.strategy import IStrategy, merge_informative_pair, stoploss_from_open, IntParameter, DecimalParameter, CategoricalParameter
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.exchange import timeframe_to_minutes
 from freqtrade.persistence import Trade
-from skopt.space import Dimension
+## FT stuffs
+from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter, IStrategy,
+                                merge_informative_pair, stoploss_from_open)
+
 
 ###   @Rallipanos mod
 """
@@ -122,7 +122,7 @@ class MacheteV8bRallimod2(IStrategy):
 
     # Experimental settings (configuration will overide these if set)
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
     startup_candle_count = 200#149
 
@@ -185,14 +185,14 @@ class MacheteV8bRallimod2(IStrategy):
 
     def get_buy_signal_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
-        dataframe['sma_9'] = ta.SMA(dataframe, timeperiod=9)  
+        dataframe['sma_9'] = ta.SMA(dataframe, timeperiod=9)
         dataframe['EWO'] = EWO(dataframe, self.fast_ewo, self.slow_ewo)
-        
+
         for val in self.base_nb_candles_buy.range:
             dataframe[f'ma_buy_{val}'] = ta.EMA(dataframe, timeperiod=val)
 
         for val in self.base_nb_candles_sell.range:
-            dataframe[f'ma_sell_{val}'] = ta.EMA(dataframe, timeperiod=val)            
+            dataframe[f'ma_sell_{val}'] = ta.EMA(dataframe, timeperiod=val)
 
         dataframe['rsi_fast'] = ta.RSI(dataframe, timeperiod=4)
         dataframe['rsi_slow'] = ta.RSI(dataframe, timeperiod=20)
@@ -283,8 +283,8 @@ class MacheteV8bRallimod2(IStrategy):
 
     def get_buy_signal_offset_strategy(self, dataframe: DataFrame):
         signal = (
-            
-            
+
+
             (self.buy_should_use_get_buy_signal_offset_strategy.value == True) &
             (dataframe['sma_9'] < dataframe[f'ma_buy_{self.base_nb_candles_buy.value}'])&
             (dataframe['rsi_fast']< dataframe['rsi_slow'])&
@@ -296,12 +296,12 @@ class MacheteV8bRallimod2(IStrategy):
             (dataframe['volume'] > 0)
         )
         return signal
-    
-    
+
+
     def get_buy_signal_bbrsi_strategy(self, dataframe: DataFrame):
         signal = (
-            
-            
+
+
             (self.buy_should_use_get_buy_signal_bbrsi_strategy.value == True) &
             (dataframe['sslUp_inf'] > dataframe['sslDown_inf'])&
             (dataframe['uptrend_5m'] == 0)&
@@ -312,7 +312,7 @@ class MacheteV8bRallimod2(IStrategy):
             (dataframe['volume'] > 0)
         )
         return signal
-       
+
     #
     # Processing sell signals
     #
@@ -323,17 +323,17 @@ class MacheteV8bRallimod2(IStrategy):
             & (
                 (qtpylib.crossed_below(dataframe['tenkan_sen_inf'], dataframe['kijun_sen_inf']))
                 |(qtpylib.crossed_below(dataframe['close_inf'], dataframe['kijun_sen_inf']))|
-           
-              
-            (   
-                
+
+
+            (
+
                 (dataframe['close']>dataframe['sma_9'])&
                 (dataframe['close'] > (dataframe[f'ma_sell_{self.base_nb_candles_sell.value}'] * self.high_offset_2.value)) &
                 #(dataframe['rsi']>150)&
                 (dataframe['volume'] > 0)&
                 (dataframe['rsi_fast']>dataframe['rsi_slow'])
             )
-            
+
             ) #&
 
             # NOTE: I keep the volume checks of feels like it has not much benifit when trading leverage tokens, maybe im wrong!?
@@ -547,4 +547,4 @@ def EWO(dataframe, ema_length=5, ema2_length=35):
     ema1 = ta.EMA(df, timeperiod=ema_length)
     ema2 = ta.EMA(df, timeperiod=ema2_length)
     emadif = (ema1 - ema2) / df['low'] * 100
-    return emadif   
+    return emadif

@@ -1,12 +1,15 @@
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-import numpy as np
-import talib.abstract as ta
-from freqtrade.strategy.interface import IStrategy
-from freqtrade.strategy import merge_informative_pair, DecimalParameter, stoploss_from_open
-from pandas import DataFrame, Series
 from datetime import datetime
 from typing import Dict, List
+
+import numpy as np
+import talib.abstract as ta
+from pandas import DataFrame, Series
 from skopt.space import Dimension, Integer, Real
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.strategy import DecimalParameter, merge_informative_pair, stoploss_from_open
+from freqtrade.strategy.interface import IStrategy
+
 
 def bollinger_bands(stock_price, window_size, num_of_std):
     rolling_mean = stock_price.rolling(window=window_size).mean()
@@ -81,7 +84,7 @@ class ClucHAnix(IStrategy):
         "pSL_1": 0.019,
         "pSL_2": 0.062,
 
-        'sell-fisher': 0.38414, 
+        'sell-fisher': 0.38414,
         'sell-bbmiddle-close': 1.07634
     }
 
@@ -106,12 +109,12 @@ class ClucHAnix(IStrategy):
     """
     END HYPEROPT
     """
-    
+
     timeframe = '1m'
 
     # Make sure these match or are not overridden in config
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Custom stoploss
@@ -195,7 +198,7 @@ class ClucHAnix(IStrategy):
         mid, lower = bollinger_bands(ha_typical_price(dataframe), window_size=40, num_of_std=2)
         dataframe['lower'] = lower
         dataframe['mid'] = mid
-        
+
         dataframe['bbdelta'] = (mid - dataframe['lower']).abs()
         dataframe['closedelta'] = (dataframe['ha_close'] - dataframe['ha_close'].shift()).abs()
         dataframe['tail'] = (dataframe['ha_close'] - dataframe['ha_low']).abs()
@@ -212,16 +215,16 @@ class ClucHAnix(IStrategy):
         dataframe["rsi"] = rsi
         rsi = 0.1 * (rsi - 50)
         dataframe["fisher"] = (np.exp(2 * rsi) - 1) / (np.exp(2 * rsi) + 1)
-        
+
         inf_tf = '1h'
-        
+
         informative = self.dp.get_pair_dataframe(pair=metadata['pair'], timeframe=inf_tf)
-        
+
         inf_heikinashi = qtpylib.heikinashi(informative)
 
         informative['ha_close'] = inf_heikinashi['close']
         informative['rocr'] = ta.ROCR(informative['ha_close'], timeperiod=168)
-     
+
         dataframe = merge_informative_pair(dataframe, informative, self.timeframe, inf_tf, ffill=True)
 
         return dataframe
@@ -233,7 +236,7 @@ class ClucHAnix(IStrategy):
             (
                 dataframe['rocr_1h'].gt(params['rocr-1h'])
             ) &
-            ((      
+            ((
                     (dataframe['lower'].shift().gt(0)) &
                     (dataframe['bbdelta'].gt(dataframe['ha_close'] * params['bbdelta-close'])) &
                     (dataframe['closedelta'].gt(dataframe['ha_close'] * params['closedelta-close'])) &
@@ -241,9 +244,9 @@ class ClucHAnix(IStrategy):
                     (dataframe['ha_close'].lt(dataframe['lower'].shift())) &
                     (dataframe['ha_close'].le(dataframe['ha_close'].shift()))
             ) |
-            (       
+            (
                     (dataframe['ha_close'] < dataframe['ema_slow']) &
-                    (dataframe['ha_close'] < params['close-bblower'] * dataframe['bb_lowerband']) 
+                    (dataframe['ha_close'] < params['close-bblower'] * dataframe['bb_lowerband'])
             )),
             'buy'
         ] = 1
@@ -278,13 +281,13 @@ class ClucHAnix_ETH(ClucHAnix):
         'rocr-1h': 0.61579,
         'volume': 27
     }
-	
+
     # Sell hyperspace params:
     sell_params = {
-        'sell-bbmiddle-close': 1.02894, 
+        'sell-bbmiddle-close': 1.02894,
 		'sell-fisher': 0.38414
     }
-	
+
     # ROI table:
     minimal_roi = {
         "0": 0.14414,
@@ -295,10 +298,10 @@ class ClucHAnix_ETH(ClucHAnix):
         "177": 0.00328,
         "277": 0
     }
-	
+
     # Stoploss:
     stoploss = -0.02
-	
+
     # Trailing stop:
     trailing_stop = True
     trailing_stop_positive = 0.01
@@ -316,13 +319,13 @@ class ClucHAnix_BTC(ClucHAnix):
         'rocr-1h': 0.53422,
         'volume': 27
     }
-	
+
     # Sell hyperspace params:
     sell_params = {
-        'sell-bbmiddle-close': 0.98016, 
+        'sell-bbmiddle-close': 0.98016,
 		'sell-fisher': 0.38414
     }
-	
+
     # ROI table:
     minimal_roi = {
         "0": 0.19724,
@@ -333,10 +336,10 @@ class ClucHAnix_BTC(ClucHAnix):
         "307": 0.0063,
         "449": 0
     }
-	
+
     # Stoploss:
     stoploss = -0.11356
-	
+
     # Trailing stop:
     trailing_stop = True
     trailing_stop_positive = 0.01544
@@ -354,10 +357,10 @@ class ClucHAnix_USD(ClucHAnix):
         'rocr-1h': 0.51901,
         'volume': 26
     }
-	
+
     # Sell hyperspace params:
     sell_params = {
-        'sell-bbmiddle-close': 0.96094, 
+        'sell-bbmiddle-close': 0.96094,
         'sell-fisher': 0.38414
     }
 

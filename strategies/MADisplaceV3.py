@@ -1,15 +1,20 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy, merge_informative_pair, DecimalParameter, IntParameter, CategoricalParameter
-from typing import Dict, List
+from datetime import datetime, timedelta
 from functools import reduce
+from typing import Dict, List
+
+import pandas as pd
+import talib.abstract as ta
 from pandas import DataFrame
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.persistence import Trade
+from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter, IStrategy,
+                                merge_informative_pair)
+
+
 # --------------------------------
 
-import talib.abstract as ta
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from datetime import datetime, timedelta
-from freqtrade.persistence import Trade
-import pandas as pd
 
 # inspired by @tirail SMAOffset
 
@@ -64,7 +69,7 @@ class MADisplaceV3(IStrategy):
     timeframe = '5m'
 
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
 
     process_only_new_candles = True
 

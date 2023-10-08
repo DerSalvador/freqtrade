@@ -4,22 +4,21 @@
 # --- Do not remove these libs ---
 import numpy as np  # noqa
 import pandas as pd  # noqa
-from pandas import DataFrame
-
-from freqtrade.strategy import IStrategy
-from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter
-
 # --------------------------------
 # Add your lib to import here
 import talib.abstract as ta
+from pandas import DataFrame
+
 import freqtrade.vendor.qtpylib.indicators as qtpylib
- 
+from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter, IStrategy
+
+
 def LUX_SuperTrendOscillator(dtloc, source = 'close', length = 6, mult = 9, smooth = 72):
     """
     // This work is licensed under a Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) https://creativecommons.org/licenses/by-nc-sa/4.0/
     // © LuxAlgo
       https://www.tradingview.com/script/dVau7zqn-LUX-SuperTrend-Oscillator/
-     :return: List of tuples in the format (osc, signal, histogram)   
+     :return: List of tuples in the format (osc, signal, histogram)
      translated for freqtrade: viksal1982  viktors.s@gmail.com
     """
     def_proc_name = '_LUX_SuperTrendOscillator'
@@ -109,7 +108,7 @@ def LUX_SuperTrendOscillator(dtloc, source = 'close', length = 6, mult = 9, smoo
     dtS[histcol] = ta.EMA((dtS[osccol]- dtS[amacol]),timeperiod = smooth)
 
     return dtS[osccol] * 100,  dtS[amacol] * 100 , dtS[histcol]  * 100, dtS[sptcol]
- 
+
 class LuxOSC(IStrategy):
 
     INTERFACE_VERSION = 2
@@ -131,24 +130,24 @@ class LuxOSC(IStrategy):
     smooth_buy = IntParameter(2, 100, default= int(buy_params['smooth_buy']), space='buy')
     cross_buy = IntParameter(-100, 100, default= int(buy_params['cross_buy']), space='buy')
     cross_sell = IntParameter(-100, 100, default= int(sell_params['cross_sell']), space='sell')
-    
+
     stoploss = -0.99
 
     # Trailing stoploss
     trailing_stop = False
-   
+
 
     timeframe = '5m'
     custom_info = {}
-  
+
     process_only_new_candles = False
 
-  
+
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
-   
+
     startup_candle_count: int = 30
 
     # Optional order type mapping.
@@ -164,7 +163,7 @@ class LuxOSC(IStrategy):
         'buy': 'gtc',
         'sell': 'gtc'
     }
-    
+
     plot_config = {
         # Main plot indicators (Moving averages, ...)
         'main_plot': {
@@ -176,22 +175,22 @@ class LuxOSC(IStrategy):
                 'osc': {'color': 'blue'},
                 'signal': {'color': 'orange'},
                 'histogram': {'color': 'green'},
-            } 
+            }
         }
     }
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        
-        dataframe['osc'],  dataframe['signal'] , dataframe['histogram'], dataframe['supertrend'] = LUX_SuperTrendOscillator(dataframe, length = int(self.length_buy.value), mult = int(self.mult_buy.value), smooth = int(self.smooth_buy.value)) 
+
+        dataframe['osc'],  dataframe['signal'] , dataframe['histogram'], dataframe['supertrend'] = LUX_SuperTrendOscillator(dataframe, length = int(self.length_buy.value), mult = int(self.mult_buy.value), smooth = int(self.smooth_buy.value))
         return dataframe
 
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-                
-                (qtpylib.crossed_above(dataframe['osc'], int(self.cross_buy.value))) &  
+
+                (qtpylib.crossed_above(dataframe['osc'], int(self.cross_buy.value))) &
                 (dataframe['supertrend'] >  dataframe['close'] ) &
-                (dataframe['volume'] > 0)  
+                (dataframe['volume'] > 0)
             ),
             'buy'] = 1
         return dataframe
@@ -199,9 +198,9 @@ class LuxOSC(IStrategy):
     def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-                (qtpylib.crossed_below(dataframe['osc'], int(self.cross_sell.value))) &  
-                (dataframe['volume'] > 0)  
+                (qtpylib.crossed_below(dataframe['osc'], int(self.cross_sell.value))) &
+                (dataframe['volume'] > 0)
             ),
             'sell'] = 1
         return dataframe
-    
+

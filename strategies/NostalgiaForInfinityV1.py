@@ -1,10 +1,11 @@
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
-from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
-from freqtrade.strategy import merge_informative_pair
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.persistence import Trade
+from freqtrade.strategy import merge_informative_pair
+from freqtrade.strategy.interface import IStrategy
 
 
 ###########################################################################################################
@@ -61,7 +62,7 @@ class NostalgiaForInfinityV1(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    sell_profit_only = False
+    exit_profit_only = False
     sell_profit_offset = 0.001 # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_buy_signal = True
 
