@@ -4,6 +4,43 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
+
+        {
+            "name": "Python: api_key_permissions",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "../binance-connector-python/examples/spot/wallet/api_key_permissions.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: sub_account_assets",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "../binance-connector-python/examples/spot/sub_account/sub_account_assets.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: exchange_info",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "../binance-connector-python/examples/spot/market/exchange_info.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: testBinanceAPI",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/testBinanceAPI.py",
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
         {
             "name": "Python: freqtrade trade",
             "type": "python",
@@ -12,7 +49,65 @@
             "program": "./freqtrade/main.py",
             "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
+        },
+        {
+            "name": "Python: freqtrade FreqaiDerSalvadorStrategy Kraken trade",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["trade","-vvv","--freqaimodel", "LightGBMRegressor", "--strategy-path", "freqtrade/templates", "--strategy", "FreqaiDerSalvadorStrategy","--logfile", "./user_data/logs/freqtrade-kraken.log",
+                      "--db-url", "sqlite:///user_data/tradesv3.sqlite",
+                        "--config", "./user_data/config_freqai.example.kraken.json","--recursive-strategy-search","--freqaimodel-path", "./freqtrade/freqai/prediction_models"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: freqtrade FreqaiExampleStrategy Binance trade",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["trade","--freqaimodel", "LightGBMRegressor", "--userdir", "user_data_binance", "--strategy-path", "freqtrade/templates", "--strategy", "FreqaiDerSalvadorStrategy","--logfile", "./user_data_binance/logs/freqtrade-binance.log",
+                      "--db-url", "sqlite:///user_data_binance/tradesv3.sqlite",
+                        "--config", "./user_data_binance/config_freqai.example.binance.json"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: freqtrade AI backtesting",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["backtesting", "--strategy",
+                        "FreqaiExampleStrategy","--stake-amount", "10000",
+                            "--max-open-trades", "10", "--export", "trades",
+                               "-d", "user_data/data/kraken", "-c", "user_data/config-staticpairs-ai.json",
+                                "--dry-run-wallet", "10200", "--timerange", "20230729-20230830", "--freqaimodel", "ReinforcementLearner"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        {
+            "name": "Python: freqtrade backtesting",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["backtesting", "-s", "SampleStrategy", "--stake-amount", "10000", "--max-open-trades", "50", "--export", "trades", "-d", "user_data/data/kraken", "-c", "user_data/config-staticpairs.json"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },{
+            "name": "Python: freqtrade download backtesting data",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            // "args": ["download-data", "--days", "30", "--pairs-file", "user_data/pairs.txt", "--trading-mode", "spot", "-t", "1m 3m 5m 15m 30m 1h 2h 4h 6h 8h 12h 1d 3d 1w 1M"],
+            "args": ["download-data", "--days", "30", "--pairs-file", "user_data/pairs.txt", "--trading-mode", "spot", "-t", "1m", "5m", "15m", "30m"],
+            "console": "integratedTerminal",
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade FreqaiExampleStrategy trade ",
@@ -23,7 +118,7 @@
             // freqaimodel: LightGBMRegressor
             "args": ["trade", "--strategy", "FreqaiExampleStrategy","--freqaimodel", "ReinforcementLearner_multiproc", "--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config-ai.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade LightGBMRegressor trade ",
@@ -34,7 +129,7 @@
             // freqaimodel: LightGBMRegressor
             "args": ["trade", "--strategy", "FreqaiExampleStrategy","--freqaimodel", "LightGBMRegressor", "--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config-ai.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade --help",
@@ -45,7 +140,7 @@
             "args": ["--help"],
             // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade list-pairs",
@@ -56,7 +151,7 @@
             "args": ["list-pairs"],
             // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade list-data",
@@ -67,7 +162,7 @@
             "args": ["list-data"],
             // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade list-freqaimodels",
@@ -78,7 +173,7 @@
             "args": ["list-freqaimodels"],
             // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade strategy-updater",
@@ -89,7 +184,7 @@
             "args": ["strategy-updater"],
             // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         },
         {
             "name": "Python: freqtrade edge",
@@ -100,12 +195,12 @@
             "args": ["edge", "--strategy", "SampleStrategy"],
             // "args": ["trade", "--strategy", "SampleStrategy","--logfile", "./user_data/logs/freqtrade.log", "--db-url", "sqlite:///user_data/tradesv3.sqlite","--config", "./user_data/config.json"],
             "console": "integratedTerminal",
-            "justMyCode": true
+            "justMyCode": false
         }
-        
 
-        
-        
-        
+
+
+
+
     ]
 }
