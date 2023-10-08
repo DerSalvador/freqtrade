@@ -6,7 +6,7 @@
     "configurations": [
 
         {
-            "name": "Python: api_key_permissions",
+            "name": "Python: api_key_permissions binance-connector",
             "type": "python",
             "request": "launch",
             "cwd": "${workspaceFolder}",
