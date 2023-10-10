@@ -1,27 +1,32 @@
-import numpy as np
-import talib.abstract as ta
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-import arrow
-
-from freqtrade.strategy.interface import IStrategy
-from freqtrade.strategy import merge_informative_pair
-from typing import Dict, List, Optional, Tuple
-from pandas import DataFrame, Series
-from functools import reduce
 from datetime import datetime, timedelta
-from freqtrade.persistence import Trade
-from cachetools import TTLCache
+from functools import reduce
+from typing import Dict, List, Optional, Tuple
 
+import arrow
+import numpy as np
 # Get rid of pandas warnings during backtesting
 import pandas as pd
+import talib.abstract as ta
+from cachetools import TTLCache
+from pandas import DataFrame, Series
+
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+from freqtrade.persistence import Trade
+from freqtrade.strategy import merge_informative_pair
+from freqtrade.strategy.interface import IStrategy
+
+
 pd.options.mode.chained_assignment = None  # default='warn'
 
 # Strategy specific imports, files must reside in same folder as strategy
 import sys
 from pathlib import Path
+
+
 sys.path.append(str(Path(__file__).parent))
 
 import custom_indicators as cta
+
 
 """
 Solipsis - By @werkkrew and @JimmyNixx
@@ -171,7 +176,7 @@ class Solipsis3(IStrategy):
 
     # Recommended
     use_sell_signal = False
-    sell_profit_only = False
+    exit_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Required

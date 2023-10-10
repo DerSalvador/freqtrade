@@ -52,6 +52,9 @@ freqtrade/data/converter.py
 freqtrade/data/dataprovider.py
 freqtrade/data/entryexitanalysis.py
 freqtrade/data/metrics.py
+freqtrade/data/converter/__init__.py
+freqtrade/data/converter/converter.py
+freqtrade/data/converter/trade_converter.py
 freqtrade/data/history/__init__.py
 freqtrade/data/history/featherdatahandler.py
 freqtrade/data/history/hdf5datahandler.py
@@ -154,6 +157,7 @@ freqtrade/mixins/logging_mixin.py
 freqtrade/optimize/__init__.py
 freqtrade/optimize/backtest_caching.py
 freqtrade/optimize/backtesting.py
+freqtrade/optimize/base_analysis.py
 freqtrade/optimize/bt_progress.py
 freqtrade/optimize/edge_cli.py
 freqtrade/optimize/hyperopt.py
@@ -164,6 +168,8 @@ freqtrade/optimize/hyperopt_loss_interface.py
 freqtrade/optimize/hyperopt_tools.py
 freqtrade/optimize/lookahead_analysis.py
 freqtrade/optimize/lookahead_analysis_helpers.py
+freqtrade/optimize/recursive_analysis.py
+freqtrade/optimize/recursive_analysis_helpers.py
 freqtrade/optimize/hyperopt_loss/hyperopt_loss_calmar.py
 freqtrade/optimize/hyperopt_loss/hyperopt_loss_max_drawdown.py
 freqtrade/optimize/hyperopt_loss/hyperopt_loss_max_drawdown_relative.py
@@ -194,6 +200,7 @@ freqtrade/plugins/__init__.py
 freqtrade/plugins/pairlistmanager.py
 freqtrade/plugins/protectionmanager.py
 freqtrade/plugins/pairlist/AgeFilter.py
+freqtrade/plugins/pairlist/FullTradesFilter.py
 freqtrade/plugins/pairlist/IPairList.py
 freqtrade/plugins/pairlist/OffsetFilter.py
 freqtrade/plugins/pairlist/PerformanceFilter.py
