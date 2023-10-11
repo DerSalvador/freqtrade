@@ -4,7 +4,27 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
+        {
+            "name": "Download-Data for Hyperopt",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["download-data", "--datadir", "user_data_k8s/kraken", "--data-format-ohlcv", "json", "--userdir", "user_data_kraken",  "--config", "user_data_kraken/config-binance.json" ],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
+        // freqtrade hyperopt --data-format-ohlcv json --hyperopt-loss SharpeHyperOptLossDaily --userdir user_data_kraken --spaces buy sell roi stoploss trailing --strategy DoubleEMACrossoverWithTrend --config user_data_kraken/config-binance.json -e 100 --strategy-path user_data_kraken/strategies --recursive-strategy-search
+        {
+            "name": "Debug Hyperopt",
+            "type": "python",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "program": "./freqtrade/main.py",
+            "args": ["hyperopt", "--datadir", "user_data_k8s/kraken", "--data-format-ohlcv", "json", "--hyperopt-loss", "SharpeHyperOptLossDaily", "--userdir", "user_data_kraken", "--spaces", "roi", "stoploss", "trailing", "--strategy", "DoubleEMACrossoverWithTrend", "--config", "user_data_kraken/config-binance.json", "-e", "100", "--strategy-path", "user_data_kraken/strategies", "--recursive-strategy-search"],
+            "console": "integratedTerminal",
+            "justMyCode": false
+        },
         {
             "name": "Python: api_key_permissions binance-connector",
             "type": "python",
