@@ -1,0 +1,28 @@
+{
+  "strategy_name": "MACD_EMA",
+  "params": {
+    "buy": {},
+    "sell": {},
+    "protection": {},
+    "roi": {
+      "0": 0.08499999999999999,
+      "2": 0.031,
+      "4": 0.004,
+      "7": 0
+    },
+    "stoploss": {
+      "stoploss": -0.108
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.068,
+      "trailing_stop_positive_offset": 0.14600000000000002,
+      "trailing_only_offset_is_reached": true
+    },
+    "max_open_trades": {
+      "max_open_trades": 9
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2023-10-12 01:24:16.283349+00:00"
+}

@@ -10,7 +10,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "program": "./freqtrade/main.py",
-            "args": ["download-data", "--datadir", "user_data_k8s/kraken", "--data-format-ohlcv", "json", "--userdir", "user_data_kraken",  "--config", "user_data_kraken/config-binance.json" ],
+            "args": ["download-data", "--datadir", "user_data_k8s/kraken", "--data-format-ohlcv", "json", "--userdir", "user_data_kraken",  "--config", "user_data_kraken/config-kraken.json" ],
             "console": "integratedTerminal",
             "justMyCode": false
         },
@@ -21,7 +21,7 @@
             "request": "launch",
             "cwd": "${workspaceFolder}",
             "program": "./freqtrade/main.py",
-            "args": ["hyperopt", "--datadir", "user_data_k8s/kraken", "--data-format-ohlcv", "json", "--hyperopt-loss", "SharpeHyperOptLossDaily", "--userdir", "user_data_kraken", "--spaces", "roi", "stoploss", "trailing", "--strategy", "DoubleEMACrossoverWithTrend", "--config", "user_data_kraken/config-binance.json", "-e", "100", "--strategy-path", "user_data_kraken/strategies", "--recursive-strategy-search"],
+            "args": ["hyperopt", "--datadir", "user_data_k8s/kraken", "--data-format-ohlcv", "json", "--hyperopt-loss", "SharpeHyperOptLossDaily", "--userdir", "user_data_kraken", "--spaces", "roi", "stoploss", "trailing", "--strategy", "DoubleEMACrossoverWithTrend", "--config", "user_data_kraken/config-kraken.json", "-e", "100", "--strategy-path", "user_data_kraken/strategies", "--recursive-strategy-search"],
             "console": "integratedTerminal",
             "justMyCode": false
         },
