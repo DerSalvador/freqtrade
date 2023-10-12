@@ -413,3 +413,20 @@ Forwarding from 0.0.0.0:8080 -> 8084
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael-4
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael-2
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
