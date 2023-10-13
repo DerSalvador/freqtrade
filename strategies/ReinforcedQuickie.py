@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -27,7 +27,6 @@ class ReinforcedQuickie(IStrategy):
         only buy on an upward tending market
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -94,7 +93,7 @@ class ReinforcedQuickie(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the buy signal for the given dataframe
         :param dataframe: DataFrame
@@ -135,11 +134,11 @@ class ReinforcedQuickie(IStrategy):
                     )
             )
             ,
-            'enter_long'] = 1
+            'buy'] = 1
 
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the sell signal for the given dataframe
         :param dataframe: DataFrame
@@ -168,7 +167,7 @@ class ReinforcedQuickie(IStrategy):
                     (dataframe['rsi'] > 70)
             )
             ,
-            'exit_long'
+            'sell'
         ] = 1
         return dataframe
 

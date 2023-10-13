@@ -1,11 +1,10 @@
 # --- Do not remove these libs ---
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 # --------------------------------
 import talib.abstract as ta
-from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.strategy.interface import IStrategy
+from pandas import DataFrame
 
 
 def bollinger_bands(stock_price, window_size, num_of_std):
@@ -35,7 +34,7 @@ class CombinedBinHAndCluc2021Bull(IStrategy):
     process_only_new_candles = False
 
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:

@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -16,7 +16,6 @@ class Scalp(IStrategy):
         Recommended is to only sell based on ROI for this strategy
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -48,7 +47,7 @@ class Scalp(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 (dataframe['open'] < dataframe['ema_low']) &
@@ -59,10 +58,10 @@ class Scalp(IStrategy):
                     (qtpylib.crossed_above(dataframe['fastk'], dataframe['fastd']))
                 )
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 (dataframe['open'] >= dataframe['ema_high'])
@@ -71,5 +70,5 @@ class Scalp(IStrategy):
                 (qtpylib.crossed_above(dataframe['fastk'], 70)) |
                 (qtpylib.crossed_above(dataframe['fastd'], 70))
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

@@ -1,22 +1,21 @@
-from datetime import datetime, timedelta
 from typing import Dict, List, Optional, Tuple
-
-import numpy as np
-## Indicator libs
-import talib.abstract as ta
+from datetime import datetime, timedelta
 from cachetools import TTLCache
-from finta import TA as fta
+
 ## I hope you know what these are already
 from pandas import DataFrame
-from skopt.space import Dimension
+import numpy as np
 
+## Indicator libs
+import talib.abstract as ta
+from finta import TA as fta
+
+## FT stuffs
+from freqtrade.strategy import IStrategy, merge_informative_pair, stoploss_from_open, IntParameter, DecimalParameter, CategoricalParameter
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.exchange import timeframe_to_minutes
 from freqtrade.persistence import Trade
-## FT stuffs
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter, IStrategy,
-                                merge_informative_pair, stoploss_from_open)
-
+from skopt.space import Dimension
 
 class CryptoFrog(IStrategy):
 
@@ -78,7 +77,7 @@ class CryptoFrog(IStrategy):
 
     # Experimental settings (configuration will overide these if set)
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     use_dynamic_roi = True

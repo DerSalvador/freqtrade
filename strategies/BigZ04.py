@@ -1,15 +1,12 @@
-from datetime import datetime, timedelta
-from functools import reduce
-
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
-from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair)
 from freqtrade.strategy.interface import IStrategy
+from pandas import DataFrame
+from datetime import datetime, timedelta
+from freqtrade.strategy import merge_informative_pair, CategoricalParameter, DecimalParameter, IntParameter
+from functools import reduce
 
 
 ###########################################################################################################
@@ -39,7 +36,7 @@ from freqtrade.strategy.interface import IStrategy
 ##   Ensure that you don't override any variables in your config.json. Especially                        ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##                                                                                                       ##
-##   exit_profit_only:                                                                                   ##
+##   sell_profit_only:                                                                                   ##
 ##       True - risk more (gives you higher profit and higher Drawdown)                                  ##
 ##       False (default) - risk less (gives you less ~10-15% profit and much lower Drawdown)             ##
 ##                                                                                                       ##
@@ -72,7 +69,7 @@ class BigZ04(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     sell_profit_offset = 0.001 # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_buy_signal = False
 
@@ -193,10 +190,10 @@ class BigZ04(IStrategy):
                     if candle['rsi_1h'] < 30:
                         return 0.99
 
-                    # Are we still sinking?
+                    # Are we still sinking? 
                     if candle['close'] > candle['ema_200']:
                         if current_rate * 1.025 < candle['open']:
-                            return 0.01
+                            return 0.01 
 
                     if current_rate * 1.015 < candle['open']:
                         return 0.01
@@ -245,7 +242,7 @@ class BigZ04(IStrategy):
         dataframe['ema_26'] = ta.EMA(dataframe, timeperiod=26)
         dataframe['ema_12'] = ta.EMA(dataframe, timeperiod=12)
 
-        # MACD
+        # MACD 
         dataframe['macd'], dataframe['signal'], dataframe['hist'] = ta.MACD(dataframe['close'], fastperiod=12, slowperiod=26, signalperiod=9)
 
         # SMA
@@ -283,7 +280,7 @@ class BigZ04(IStrategy):
                 (dataframe['close'].shift() > dataframe['bb_lowerband']) &
                 (dataframe['rsi_1h'] < 72.8) &
                 (dataframe['open'] > dataframe['close']) &
-
+                
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
@@ -348,7 +345,7 @@ class BigZ04(IStrategy):
                 (dataframe['close'] <  dataframe['bb_lowerband'] * self.buy_bb20_close_bblowerband_safe_1.value) &
                 (dataframe['rsi_1h'] < 69) &
                 (dataframe['open'] > dataframe['close']) &
-
+                
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
@@ -448,11 +445,11 @@ class BigZ04(IStrategy):
                 self.buy_condition_7_enable.value &
 
                 (dataframe['rsi_1h'] < self.buy_rsi_1h_2.value) &
-
+                
                 (dataframe['ema_26'] > dataframe['ema_12']) &
                 ((dataframe['ema_26'] - dataframe['ema_12']) > (dataframe['open'] * self.buy_macd_1.value)) &
                 ((dataframe['ema_26'].shift() - dataframe['ema_12'].shift()) > (dataframe['open']/100)) &
-
+                
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
@@ -468,7 +465,7 @@ class BigZ04(IStrategy):
 
                 (dataframe['rsi_1h'] < self.buy_rsi_1h_3.value) &
                 (dataframe['rsi'] < self.buy_rsi_1.value) &
-
+                
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
 
                 (dataframe['volume'] > 0)
@@ -482,7 +479,7 @@ class BigZ04(IStrategy):
 
                 (dataframe['rsi_1h'] < self.buy_rsi_1h_4.value) &
                 (dataframe['rsi'] < self.buy_rsi_2.value) &
-
+                
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
@@ -503,7 +500,7 @@ class BigZ04(IStrategy):
                 (dataframe['rsi'] < 40.5) &
                 (dataframe['hist'] > dataframe['close'] * 0.0012) &
                 (dataframe['open'] < dataframe['close']) &
-
+                
                 (dataframe['volume'] > 0)
             )
         )

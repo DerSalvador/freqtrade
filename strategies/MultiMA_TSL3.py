@@ -1,19 +1,16 @@
-from datetime import datetime, timedelta
-from functools import reduce
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 from typing import Dict, List
-
 import numpy as np
 import talib.abstract as ta
-from pandas import DataFrame, Series
-from technical.indicators import VIDYA, zema
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.exchange import timeframe_to_prev_date
-from freqtrade.persistence import Trade
-from freqtrade.strategy import (BooleanParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair, timeframe_to_minutes)
 from freqtrade.strategy.interface import IStrategy
-
+from freqtrade.strategy import (merge_informative_pair,
+                                DecimalParameter, IntParameter, BooleanParameter, timeframe_to_minutes)
+from pandas import DataFrame, Series
+from functools import reduce
+from freqtrade.persistence import Trade
+from datetime import datetime, timedelta
+from freqtrade.exchange import timeframe_to_prev_date
+from technical.indicators import zema, VIDYA
 
 ###########################################################################################################
 ##    MultiMA_TSL, modded by stash86, based on SMAOffsetProtectOptV1 (modded by Perkmeister)             ##
@@ -188,7 +185,7 @@ class MultiMA_TSL3(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals

@@ -1,17 +1,15 @@
 import numpy as np
 import pandas as pd
-import talib.abstract as ta
 from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.strategy.interface import IStrategy
-
+import talib.abstract as ta
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 
 class FrostAuraM11hStrategy(IStrategy):
     """
     This is FrostAura's mark 1 strategy which aims to make purchase decisions
     based on the BB and RSI.
-
+    
     Last Optimization:
         Sharpe Ratio    : 7.9319 (prev 6.99006)
         Profit %        : 1303.42% (prev 1162.01%)
@@ -44,7 +42,7 @@ class FrostAuraM11hStrategy(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals.
@@ -92,12 +90,12 @@ class FrostAuraM11hStrategy(IStrategy):
         dataframe['bb_lowerband1'] = bollinger1['lower']
         dataframe['bb_middleband1'] = bollinger1['mid']
         dataframe['bb_upperband1'] = bollinger1['upper']
-
+        
         bollinger2 = qtpylib.bollinger_bands(qtpylib.typical_price(dataframe), window=20, stds=2)
         dataframe['bb_lowerband2'] = bollinger2['lower']
         dataframe['bb_middleband2'] = bollinger2['mid']
         dataframe['bb_upperband2'] = bollinger2['upper']
-
+        
         bollinger3 = qtpylib.bollinger_bands(qtpylib.typical_price(dataframe), window=20, stds=3)
         dataframe['bb_lowerband3'] = bollinger3['lower']
         dataframe['bb_middleband3'] = bollinger3['mid']
@@ -107,7 +105,7 @@ class FrostAuraM11hStrategy(IStrategy):
 
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         minimum_coin_price = 0.0000015
-
+        
         dataframe.loc[
             (
                 #(dataframe['rsi'] > 28) &
@@ -125,5 +123,5 @@ class FrostAuraM11hStrategy(IStrategy):
                 (dataframe["close"] > dataframe['bb_upperband1'])
             ),
             'sell'] = 1
-
+        
         return dataframe

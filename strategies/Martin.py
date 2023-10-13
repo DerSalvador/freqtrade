@@ -3,13 +3,14 @@
 # --- Do not remove these libs ---
 import numpy as np  # noqa
 import pandas as pd  # noqa
+from pandas import DataFrame
+
+from freqtrade.strategy.interface import IStrategy
+
 # --------------------------------
 # Add your lib to import here
 import talib.abstract as ta
-from pandas import DataFrame
-
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy.interface import IStrategy
 
 
 class Martin(IStrategy):
@@ -55,7 +56,7 @@ class Martin(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals

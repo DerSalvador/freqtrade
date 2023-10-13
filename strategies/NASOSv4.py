@@ -1,27 +1,23 @@
 # for live trailing_stop = False and use_custom_stoploss = True
 # for backtest trailing_stop = True and use_custom_stoploss = False
 
-import datetime
-from datetime import datetime, timedelta
-from functools import reduce
 # --- Do not remove these libs ---
 # --- Do not remove these libs ---
 from logging import FATAL
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
-
-import numpy as np
+from functools import reduce
+from pandas import DataFrame
 # --------------------------------
 import talib.abstract as ta
-import technical.indicators as ftt
-from pandas import DataFrame
-from technical.util import resample_to_interval, resampled_merge
-
+import numpy as np
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+import datetime
+from technical.util import resample_to_interval, resampled_merge
+from datetime import datetime, timedelta
 from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair, stoploss_from_open)
-from freqtrade.strategy.interface import IStrategy
-
+from freqtrade.strategy import stoploss_from_open, merge_informative_pair, DecimalParameter, IntParameter, CategoricalParameter
+import technical.indicators as ftt
 
 # @Rallipanos
 # @pluxury
@@ -132,7 +128,7 @@ class NASOSv4(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 

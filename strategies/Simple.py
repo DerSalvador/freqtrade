@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -20,7 +20,6 @@ class Simple(IStrategy):
         https://www.amazon.com/Simple-Strategy-Powerful-Trading-Futures-ebook/dp/B00E66QPCG/ref=sr_1_1?ie=UTF8&qid=1525202675&sr=8-1&keywords=the+simple+strategy
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
     # This attribute will be overridden if the config file contains "minimal_roi"
@@ -53,7 +52,7 @@ class Simple(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 (
@@ -63,14 +62,14 @@ class Simple(IStrategy):
                         & (dataframe['rsi'] > 70)  # optional filter, need to investigate
                 )
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # different strategy used for sell points, due to be able to duplicate it to 100%
         dataframe.loc[
             (
                 (dataframe['rsi'] > 80)
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

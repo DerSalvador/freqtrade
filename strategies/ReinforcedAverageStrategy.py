@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame, merge, DatetimeIndex
@@ -20,7 +20,6 @@ class ReinforcedAverageStrategy(IStrategy):
         buys and sells on crossovers - doesn't really perfom that well and its just a proof of concept
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -41,12 +40,12 @@ class ReinforcedAverageStrategy(IStrategy):
     trailing_only_offset_is_reached = False
 
     # run "populate_indicators" only for new candle
-    process_only_new_candles = True
+    process_only_new_candles = False
 
     # Experimental settings (configuration will overide these if set)
-    use_exit_signal = True
-    exit_profit_only = False
-    ignore_roi_if_entry_signal = False
+    use_sell_signal = True
+    sell_profit_only = False
+    ignore_roi_if_buy_signal = False
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
@@ -65,7 +64,7 @@ class ReinforcedAverageStrategy(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the buy signal for the given dataframe
         :param dataframe: DataFrame
@@ -78,11 +77,11 @@ class ReinforcedAverageStrategy(IStrategy):
                 (dataframe['close'] > dataframe[f'resample_{self.resample_interval}_sma']) &
                 (dataframe['volume'] > 0)
             ),
-            'enter_long'] = 1
+            'buy'] = 1
 
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the sell signal for the given dataframe
         :param dataframe: DataFrame
@@ -93,5 +92,5 @@ class ReinforcedAverageStrategy(IStrategy):
                 qtpylib.crossed_above(dataframe['maMedium'], dataframe['maShort']) &
                 (dataframe['volume'] > 0)
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

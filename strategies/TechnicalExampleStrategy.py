@@ -1,11 +1,10 @@
 from pandas import DataFrame
 from technical.indicators import cmf
 
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 
 
 class TechnicalExampleStrategy(IStrategy):
-    INTERFACE_VERSION: int = 3
     minimal_roi = {
         "0": 0.01
     }
@@ -20,7 +19,7 @@ class TechnicalExampleStrategy(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 (
@@ -28,14 +27,14 @@ class TechnicalExampleStrategy(IStrategy):
 
                 )
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         # different strategy used for sell points, due to be able to duplicate it to 100%
         dataframe.loc[
             (
                 (dataframe['cmf'] > 0)
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

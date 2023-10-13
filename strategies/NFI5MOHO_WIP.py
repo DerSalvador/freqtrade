@@ -1,15 +1,13 @@
-from datetime import datetime
-from functools import reduce
-
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
-from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair)
 from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import (merge_informative_pair,
+                                DecimalParameter, IntParameter, CategoricalParameter)
+from pandas import DataFrame
+from functools import reduce
+from freqtrade.persistence import Trade
+from datetime import datetime
 
 
 ###########################################################################################################
@@ -27,7 +25,7 @@ from freqtrade.strategy.interface import IStrategy
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     exit_profit_only must set to false (or not set at all).                                           ##
+##     sell_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -135,10 +133,10 @@ class NFI5MOHO_WIP(IStrategy):
 
     # ROI table:
     minimal_roi = {
-        "0": 0.08,
-        "10": 0.04,
-        "30": 0.02,
-        "60": 0.01
+        "0": 0.111,
+        "13": 0.048,
+        "50": 0.015,
+        "61": 0.01
     }
 
     stoploss = -0.99
@@ -210,10 +208,10 @@ class NFI5MOHO_WIP(IStrategy):
     }
 
     # Trailing stoploss (not used)
-    trailing_stop = True
+    trailing_stop = False
     trailing_only_offset_is_reached = True
     trailing_stop_positive = 0.01
-    trailing_stop_positive_offset = 0.04
+    trailing_stop_positive_offset = 0.03
 
     use_custom_stoploss = False
 
@@ -226,7 +224,7 @@ class NFI5MOHO_WIP(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals
@@ -1176,7 +1174,7 @@ class NFI5MOHO_WIP(IStrategy):
             dataframe.loc[
                 reduce(lambda x, y: x | y, conditions),
                 'sell'
-            ] = 0
+            ] = 1
 
         return dataframe
 

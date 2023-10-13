@@ -1,6 +1,7 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
-from freqtrade.strategy import IntParameter
+from freqtrade.strategy.interface import IStrategy
+from typing import Dict, List
+from functools import reduce
 from pandas import DataFrame
 import numpy as np
 # --------------------------------
@@ -18,8 +19,6 @@ def bollinger_bands(stock_price, window_size, num_of_std):
 
 
 class BinHV45(IStrategy):
-    INTERFACE_VERSION: int = 3
-
     minimal_roi = {
         "0": 0.0125
     }
@@ -27,45 +26,32 @@ class BinHV45(IStrategy):
     stoploss = -0.05
     timeframe = '1m'
 
-    buy_bbdelta = IntParameter(low=1, high=15, default=30, space='buy', optimize=True)
-    buy_closedelta = IntParameter(low=15, high=20, default=30, space='buy', optimize=True)
-    buy_tail = IntParameter(low=20, high=30, default=30, space='buy', optimize=True)
-
-    # Hyperopt parameters
-    buy_params = {
-        "buy_bbdelta": 7,
-        "buy_closedelta": 17,
-        "buy_tail": 25,
-    }
-
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        bollinger = qtpylib.bollinger_bands(dataframe['close'], window=40, stds=2)
-
-        dataframe['upper'] = bollinger['upper']
-        dataframe['mid'] = bollinger['mid']
-        dataframe['lower'] = bollinger['lower']
+        mid, lower = bollinger_bands(dataframe['close'], window_size=40, num_of_std=2)
+        dataframe['mid'] = np.nan_to_num(mid)
+        dataframe['lower'] = np.nan_to_num(lower)
         dataframe['bbdelta'] = (dataframe['mid'] - dataframe['lower']).abs()
         dataframe['pricedelta'] = (dataframe['open'] - dataframe['close']).abs()
         dataframe['closedelta'] = (dataframe['close'] - dataframe['close'].shift()).abs()
         dataframe['tail'] = (dataframe['close'] - dataframe['low']).abs()
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 dataframe['lower'].shift().gt(0) &
-                dataframe['bbdelta'].gt(dataframe['close'] * self.buy_bbdelta.value / 1000) &
-                dataframe['closedelta'].gt(dataframe['close'] * self.buy_closedelta.value / 1000) &
-                dataframe['tail'].lt(dataframe['bbdelta'] * self.buy_tail.value / 1000) &
+                dataframe['bbdelta'].gt(dataframe['close'] * 0.008) &
+                dataframe['closedelta'].gt(dataframe['close'] * 0.0175) &
+                dataframe['tail'].lt(dataframe['bbdelta'] * 0.25) &
                 dataframe['close'].lt(dataframe['lower'].shift()) &
                 dataframe['close'].le(dataframe['close'].shift())
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         no sell signal
         """
-        dataframe.loc[:, 'exit_long'] = 0
+        dataframe.loc[:, 'sell'] = 0
         return dataframe

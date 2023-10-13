@@ -1,23 +1,21 @@
 import copy
 import logging
-import math
 import pathlib
-from datetime import datetime, timedelta
-from functools import reduce
-
-import numpy as np
 import rapidjson
-import talib.abstract as ta
-from pandas import DataFrame, Series, concat
-from technical.indicators import VIDYA, ichimoku, zema
-from technical.util import resample_to_interval, resampled_merge
-
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.exchange import timeframe_to_prev_date
-from freqtrade.misc import file_dump_json, json_load
-from freqtrade.persistence import Trade
-from freqtrade.strategy import merge_informative_pair, timeframe_to_minutes
+import numpy as np
+import talib.abstract as ta
+from freqtrade.misc import json_load, file_dump_json
 from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import merge_informative_pair, timeframe_to_minutes
+from freqtrade.exchange import timeframe_to_prev_date
+from pandas import DataFrame, Series, concat
+from functools import reduce
+import math
+from freqtrade.persistence import Trade
+from datetime import datetime, timedelta
+from technical.util import resample_to_interval, resampled_merge
+from technical.indicators import zema, VIDYA, ichimoku
 
 
 log = logging.getLogger(__name__)
@@ -46,7 +44,7 @@ else:
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     exit_profit_only must set to false (or not set at all).                                           ##
+##     sell_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -140,7 +138,7 @@ class NostalgiaForInfinityNext(IStrategy):
     # Phuc.PD SL Mod START ========================================================= #
     # use_sell_signal = True                                                         #
     # Phuc.PD SL Mod END =========================================================== #
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals
@@ -2971,7 +2969,7 @@ class NostalgiaForInfinityNext(IStrategy):
         dataframe.rename(columns=lambda s: "btc_" + s if (not s in ignore_columns) else s, inplace=True)
 
         return dataframe
-
+    
     # Phuc.PD SL Mod START ========================================================= #
     def custom_stoploss(self, pair: str, trade: 'Trade', current_time: datetime,
                         current_rate: float, current_profit: float, **kwargs) -> float:

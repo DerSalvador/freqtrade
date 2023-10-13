@@ -1,16 +1,14 @@
-from datetime import datetime, timedelta
-from functools import reduce
-
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
-from pandas import DataFrame, Series
-from technical.indicators import zema
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair)
 from freqtrade.strategy.interface import IStrategy
+from freqtrade.strategy import (merge_informative_pair,
+                                DecimalParameter, IntParameter, CategoricalParameter)
+from pandas import DataFrame, Series
+from functools import reduce
+from freqtrade.persistence import Trade
+from datetime import datetime, timedelta
+from technical.indicators import zema
 
 
 ###########################################################################################################
@@ -28,7 +26,7 @@ from freqtrade.strategy.interface import IStrategy
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
 ##   the timeframe (must be 5m).                                                                         ##
 ##     use_sell_signal must set to true (or not set at all).                                             ##
-##     exit_profit_only must set to false (or not set at all).                                           ##
+##     sell_profit_only must set to false (or not set at all).                                           ##
 ##     ignore_roi_if_buy_signal must set to true (or not set at all).                                    ##
 ##                                                                                                       ##
 ###########################################################################################################
@@ -70,7 +68,7 @@ class NostalgiaForInfinityV7(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals

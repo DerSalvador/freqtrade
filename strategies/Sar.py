@@ -60,7 +60,7 @@ class Sar(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals

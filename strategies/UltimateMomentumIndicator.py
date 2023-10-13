@@ -4,31 +4,32 @@
 # --- Do not remove these libs ---
 import numpy as np  # noqa
 import pandas as pd  # noqa
+from pandas import DataFrame
+
+from freqtrade.strategy import IStrategy
+from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter
+
 # --------------------------------
 # Add your lib to import here
 import talib.abstract as ta
-from pandas import DataFrame
-
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter, IStrategy
-
 
 """
     https://fr.tradingview.com/script/dV5HEGpP-Ultimate-Momentum-Indicator-CC/
     translated for freqtrade: viksal1982  viktors.s@gmail.com
 """
-
+ 
 
 
 class UltimateMomentumIndicator(IStrategy):
-
-
+  
+    
 
 
     INTERFACE_VERSION = 2
 
 
-
+ 
 
     length1_buy = IntParameter(2, 20, default= 13, space='buy')
     length2_buy = IntParameter(10, 40, default= 19, space='buy')
@@ -36,7 +37,7 @@ class UltimateMomentumIndicator(IStrategy):
     length4_buy = IntParameter(20, 80, default= 39, space='buy')
     length5_buy = IntParameter(30, 100, default= 50, space='buy')
     length6_buy = IntParameter(150, 300, default= 200, space='buy')
-
+   
     stoploss = -0.99
     # Optimal stoploss designed for the strategy.
     # This attribute will be overridden if the config file contains "stoploss".
@@ -53,7 +54,7 @@ class UltimateMomentumIndicator(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     # Number of candles the strategy requires before producing valid signals
@@ -72,7 +73,7 @@ class UltimateMomentumIndicator(IStrategy):
         'buy': 'gtc',
         'sell': 'gtc'
     }
-
+    
     plot_config = {
         # Main plot indicators (Moving averages, ...)
         'main_plot': {
@@ -88,7 +89,7 @@ class UltimateMomentumIndicator(IStrategy):
 
 
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-
+        
         source = 'close'
         length6 = int(self.length6_buy.value)
         length1 = int(self.length1_buy.value)
@@ -106,12 +107,12 @@ class UltimateMomentumIndicator(IStrategy):
         dataframe['decSum'] = pd.Series(np.where(dataframe[source].diff() > 0, 0, 1)).rolling(length2).sum()
         dataframe['ratio'] = np.where(dataframe['decSum'] != 0, dataframe['advSum']/dataframe['decSum'], 0)
         dataframe['rana'] = np.where( (dataframe['advSum'] + dataframe['decSum']) != 0, (dataframe['advSum'] - dataframe['decSum'])/(dataframe['advSum'] + dataframe['decSum']), 0)
-        dataframe['mo'] = ta.EMA(dataframe['rana'], timeperiod = length2) - ta.EMA(dataframe['rana'], timeperiod = length4)
-        dataframe['utm'] = (200 * dataframe['bPct']) + (100 * dataframe['ratio']) + (2 * dataframe['mo']) + (1.5 * ta.MFI(dataframe, timeperiod = length5) ) + (3 * ta.MFI(dataframe, timeperiod = length3) ) + (3 * ta.MFI(dataframe, timeperiod = length1) )
+        dataframe['mo'] = ta.EMA(dataframe['rana'], timeperiod = length2) - ta.EMA(dataframe['rana'], timeperiod = length4) 
+        dataframe['utm'] = (200 * dataframe['bPct']) + (100 * dataframe['ratio']) + (2 * dataframe['mo']) + (1.5 * ta.MFI(dataframe, timeperiod = length5) ) + (3 * ta.MFI(dataframe, timeperiod = length3) ) + (3 * ta.MFI(dataframe, timeperiod = length1) ) 
         dataframe['utmiRsi']  = ta.RSI(dataframe['utm'], timeperiod = length1)
         dataframe['utmi'] = ta.EMA(dataframe['utmiRsi'], timeperiod = length1)
 
-
+        
 
         return dataframe
 
@@ -120,7 +121,7 @@ class UltimateMomentumIndicator(IStrategy):
         dataframe.loc[
             (
 
-                 (qtpylib.crossed_above(dataframe['utmi'], 50)) &
+                 (qtpylib.crossed_above(dataframe['utmi'], 50)) &  
                  (dataframe['volume'] > 0)  # Make sure Volume is not 0
             ),
             'buy'] = 1
@@ -130,10 +131,10 @@ class UltimateMomentumIndicator(IStrategy):
     def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
-
-                (qtpylib.crossed_below(dataframe['utmi'], 70)) &
+             
+                (qtpylib.crossed_below(dataframe['utmi'], 70)) &  
                 (dataframe['volume'] > 0)  # Make sure Volume is not 0
             ),
             'sell'] = 1
         return dataframe
-
+    

@@ -1,20 +1,16 @@
 # --- Do not remove these libs ---
-import pandas as pd  # noqa
-import talib.abstract as ta
-from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.strategy.interface import IStrategy
-
-
+from pandas import DataFrame
+import talib.abstract as ta
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+import pandas as pd  # noqa
 pd.options.mode.chained_assignment = None  # default='warn'
-from datetime import datetime, timedelta
-from functools import reduce
-
-import numpy as np
 import technical.indicators as ftt
-
-from freqtrade.strategy import merge_informative_pair, stoploss_from_open
+from functools import reduce
+from datetime import datetime, timedelta
+from freqtrade.strategy import merge_informative_pair
+import numpy as np
+from freqtrade.strategy import stoploss_from_open
 
 
 class ichiV1(IStrategy):
@@ -58,7 +54,7 @@ class ichiV1(IStrategy):
     #trailing_only_offset_is_reached = True
 
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = False
 
     plot_config = {

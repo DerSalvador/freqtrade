@@ -1,23 +1,18 @@
 # --- Do not remove these libs ---
-import datetime
-from datetime import datetime, timedelta
-from functools import reduce
-from typing import Dict, List
-
-import numpy as np
-import talib.abstract as ta
-from pandas import DataFrame
-from technical.util import resample_to_interval, resampled_merge
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair, stoploss_from_open)
 from freqtrade.strategy.interface import IStrategy
-
-
+from typing import Dict, List
+from functools import reduce
+from pandas import DataFrame
 # --------------------------------
 
+import talib.abstract as ta
+import numpy as np
+import freqtrade.vendor.qtpylib.indicators as qtpylib
+import datetime
+from technical.util import resample_to_interval, resampled_merge
+from datetime import datetime, timedelta
+from freqtrade.persistence import Trade
+from freqtrade.strategy import stoploss_from_open, merge_informative_pair, DecimalParameter, IntParameter, CategoricalParameter
 
 # author @tirail
 
@@ -69,7 +64,7 @@ class SMAOffset(IStrategy):
 	timeframe = '5m'
 
 	use_sell_signal = True
-	exit_profit_only = False
+	sell_profit_only = False
 
 	process_only_new_candles = True
 	startup_candle_count = 30

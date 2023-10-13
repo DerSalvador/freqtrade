@@ -2,7 +2,7 @@ import talib.abstract as ta
 from pandas import DataFrame
 import scipy.signal
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 
 
 class TDSequentialStrategy(IStrategy):
@@ -21,7 +21,7 @@ class TDSequentialStrategy(IStrategy):
 
     Created by @bmoulkaf
     """
-    INTERFACE_VERSION: int = 3
+    INTERFACE_VERSION = 2
 
     # Minimal ROI designed for the strategy
     minimal_roi = {'0': 5}
@@ -39,14 +39,14 @@ class TDSequentialStrategy(IStrategy):
     timeframe = '1h'
 
     # These values can be overridden in the "ask_strategy" section in the config.
-    use_exit_signal = True
-    exit_profit_only = False
-    ignore_roi_if_entry_signal = False
+    use_sell_signal = True
+    sell_profit_only = False
+    ignore_roi_if_buy_signal = False
 
     # Optional order type mapping
     order_types = {
-        'entry': 'limit',
-        'exit': 'limit',
+        'buy': 'limit',
+        'sell': 'limit',
         'stoploss': 'limit',
         'stoploss_on_exchange': False
     }
@@ -56,8 +56,8 @@ class TDSequentialStrategy(IStrategy):
 
     # Optional time in force for orders
     order_time_in_force = {
-        'entry': 'gtc',
-        'exit': 'gtc',
+        'buy': 'gtc',
+        'sell': 'gtc',
     }
 
     def informative_pairs(self):
@@ -123,29 +123,29 @@ class TDSequentialStrategy(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the buy signal for the given dataframe
         :param dataframe: DataFrame
         :param metadata: Additional information, like the currently traded pair
         :return: DataFrame with buy column
         """
-        dataframe["enter_long"] = 0
+        dataframe["buy"] = 0
         dataframe.loc[((dataframe['exceed_low']) &
                       (dataframe['seq_buy'] > 8))
-                      , 'enter_long'] = 1
+                      , 'buy'] = 1
 
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the sell signal for the given dataframe
         :param dataframe: DataFrame
         :param metadata: Additional information, like the currently traded pair
         :return: DataFrame with buy columnNA / NaN values
         """
-        dataframe["exit_long"] = 0
+        dataframe["sell"] = 0
         dataframe.loc[((dataframe['exceed_high']) |
                        (dataframe['seq_sell'] > 8))
-                      , 'exit_long'] = 1
+                      , 'sell'] = 1
         return dataframe

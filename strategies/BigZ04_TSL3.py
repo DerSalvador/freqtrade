@@ -1,15 +1,12 @@
-from datetime import datetime, timedelta
-from functools import reduce
-
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
-from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
 from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair, stoploss_from_open)
 from freqtrade.strategy.interface import IStrategy
+from pandas import DataFrame
+from datetime import datetime, timedelta
+from freqtrade.strategy import merge_informative_pair, CategoricalParameter, DecimalParameter, IntParameter, stoploss_from_open
+from functools import reduce
 
 
 ###########################################################################################################
@@ -41,7 +38,7 @@ from freqtrade.strategy.interface import IStrategy
 ##   For optimal performance, suggested to use between 2 and 4 open trades, with unlimited stake.        ##
 ##                                                                                                       ##
 ##   As a pairlist it is recommended to use a static pairlst such as iterativ's orginal:                 ##
-##   https://discord.com/channels/700048804539400213/702584639063064586/838038600368783411               ##
+##   https://discord.com/channels/700048804539400213/702584639063064586/838038600368783411               ## 
 ##                                                                                                       ##
 ##   Ensure that you don't override any variables in your config.json. Especially                        ##
 ##   the timeframe (must be 5m).                                                                         ##
@@ -64,7 +61,7 @@ class BigZ04_TSL3(IStrategy):
     minimal_roi = {
         "0": 100.0
     }
-
+    
     stoploss = -0.99 # effectively disabled.
 
     timeframe = '5m'
@@ -72,7 +69,7 @@ class BigZ04_TSL3(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     sell_profit_offset = 0.001 # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_buy_signal = False
 
@@ -118,7 +115,7 @@ class BigZ04_TSL3(IStrategy):
         "buy_condition_13_enable": False,
     }
 
-
+    
     # V1 original
     # Sell hyperspace params:
     sell_params = {
@@ -130,8 +127,8 @@ class BigZ04_TSL3(IStrategy):
         "pPF_2": 0.080,
         "pSL_2": 0.040,
     }
-
-
+    
+    
     ############################################################################
 
     # Buy
@@ -218,7 +215,7 @@ class BigZ04_TSL3(IStrategy):
         SL_2 = self.pSL_2.value
 
         # For profits between PF_1 and PF_2 the stoploss (sl_profit) used is linearly interpolated
-        # between the values of SL_1 and SL_2. For all profits above PL_2 the sl_profit value
+        # between the values of SL_1 and SL_2. For all profits above PL_2 the sl_profit value 
         # rises linearly with current profit, for profits below PF_1 the hard stoploss profit is used.
 
         if (current_profit > PF_2):
@@ -233,8 +230,8 @@ class BigZ04_TSL3(IStrategy):
         else:
             return stoploss_from_open(HSL, current_profit)
         return stoploss_from_open(HSL, current_profit)
-
-
+        
+        
     def informative_pairs(self):
         pairs = self.dp.current_whitelist()
         informative_pairs = [(pair, '1h') for pair in pairs]
@@ -272,7 +269,7 @@ class BigZ04_TSL3(IStrategy):
         dataframe['ema_26'] = ta.EMA(dataframe, timeperiod=26)
         dataframe['ema_12'] = ta.EMA(dataframe, timeperiod=12)
 
-        # MACD
+        # MACD 
         dataframe['macd'], dataframe['signal'], dataframe['hist'] = ta.MACD(dataframe['close'], fastperiod=12, slowperiod=26, signalperiod=9)
 
         # SMA
@@ -317,7 +314,7 @@ class BigZ04_TSL3(IStrategy):
                 (dataframe['close'].shift() > dataframe['bb_lowerband']) &
                 (dataframe['rsi_1h'] < 72.8) &
                 (dataframe['open'] > dataframe['close']) &
-
+                
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
@@ -382,7 +379,7 @@ class BigZ04_TSL3(IStrategy):
                 (dataframe['close'] <  dataframe['bb_lowerband'] * self.buy_bb20_close_bblowerband_safe_1.value) &
                 (dataframe['rsi_1h'] < 69) &
                 (dataframe['open'] > dataframe['close']) &
-
+                
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
@@ -482,11 +479,11 @@ class BigZ04_TSL3(IStrategy):
                 self.buy_condition_7_enable.value &
 
                 (dataframe['rsi_1h'] < self.buy_rsi_1h_2.value) &
-
+                
                 (dataframe['ema_26'] > dataframe['ema_12']) &
                 ((dataframe['ema_26'] - dataframe['ema_12']) > (dataframe['open'] * self.buy_macd_1.value)) &
                 ((dataframe['ema_26'].shift() - dataframe['ema_12'].shift()) > (dataframe['open']/100)) &
-
+                
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
@@ -502,7 +499,7 @@ class BigZ04_TSL3(IStrategy):
 
                 (dataframe['rsi_1h'] < self.buy_rsi_1h_3.value) &
                 (dataframe['rsi'] < self.buy_rsi_1.value) &
-
+                
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
 
                 (dataframe['volume'] > 0)
@@ -516,7 +513,7 @@ class BigZ04_TSL3(IStrategy):
 
                 (dataframe['rsi_1h'] < self.buy_rsi_1h_4.value) &
                 (dataframe['rsi'] < self.buy_rsi_2.value) &
-
+                
                 (dataframe['volume'] < (dataframe['volume'].shift() * self.buy_volume_drop_1.value)) &
                 (dataframe['volume_mean_slow'] > dataframe['volume_mean_slow'].shift(48) * self.buy_volume_pump_1.value) &
                 (dataframe['volume_mean_slow'] * self.buy_volume_pump_1.value < dataframe['volume_mean_slow'].shift(48)) &
@@ -537,7 +534,7 @@ class BigZ04_TSL3(IStrategy):
                 (dataframe['rsi'] < 40.5) &
                 (dataframe['hist'] > dataframe['close'] * 0.0012) &
                 (dataframe['open'] < dataframe['close']) &
-
+                
                 (dataframe['volume'] > 0)
             )
         )
@@ -561,7 +558,7 @@ class BigZ04_TSL3(IStrategy):
             'sell'
         ] = 0
         """
-
+        
         conditions = []
         conditions.append(
             (

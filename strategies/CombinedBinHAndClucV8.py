@@ -1,14 +1,13 @@
-from datetime import datetime, timedelta
-from functools import reduce
-
+import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 import talib.abstract as ta
-from pandas import DataFrame
-
-import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.persistence import Trade
-from freqtrade.strategy import DecimalParameter, IntParameter, merge_informative_pair
+from freqtrade.strategy import merge_informative_pair
+from freqtrade.strategy import DecimalParameter, IntParameter
 from freqtrade.strategy.interface import IStrategy
+from freqtrade.persistence import Trade
+from pandas import DataFrame
+from datetime import datetime, timedelta
+from functools import reduce
 
 
 ###########################################################################################################
@@ -26,7 +25,7 @@ from freqtrade.strategy.interface import IStrategy
 ##   Prefer stable coin (USDT, BUSDT etc) pairs, instead of BTC or ETH pairs.                            ##
 ##   Highly recommended to blacklist leveraged tokens (*BULL, *BEAR, *UP, *DOWN etc).                    ##
 ##   Ensure that you don't override any variables in you config.json. Especially                         ##
-##   the timeframe (must be 5m) & exit_profit_only (must be true).                                       ##
+##   the timeframe (must be 5m) & sell_profit_only (must be true).                                       ##
 ##                                                                                                       ##
 ###########################################################################################################
 ##               DONATIONS                                                                               ##
@@ -65,7 +64,7 @@ class CombinedBinHAndClucV8(IStrategy):
 
     # Sell signal
     use_sell_signal = True
-    exit_profit_only = True
+    sell_profit_only = True
     sell_profit_offset = 0.001 # it doesn't meant anything, just to guarantee there is a minimal profit.
     ignore_roi_if_buy_signal = True
 
@@ -355,7 +354,7 @@ class CombinedBinHAndClucV8(IStrategy):
                 (dataframe['close'] > dataframe['bb_upperband']) &
                 (dataframe['close'].shift(1) > dataframe['bb_upperband'].shift(1)) &
                 (dataframe['close'].shift(2) > dataframe['bb_upperband'].shift(2)) &
-                (dataframe['close'].shift(3) > dataframe['bb_upperband'].shift(3)) &
+                (dataframe['close'].shift(2) > dataframe['bb_upperband'].shift(2)) &
                 (dataframe['volume'] > 0)
             )
         )

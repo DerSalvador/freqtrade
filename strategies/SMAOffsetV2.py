@@ -1,17 +1,13 @@
 # --- Do not remove these libs ---
-from datetime import datetime, timedelta
-from functools import reduce
-from typing import Dict, List
-
-import talib.abstract as ta
-from pandas import DataFrame
-
-from freqtrade.persistence import Trade
 from freqtrade.strategy import IStrategy, merge_informative_pair
-
-
+from typing import Dict, List
+from functools import reduce
+from pandas import DataFrame
 # --------------------------------
 
+import talib.abstract as ta
+from datetime import datetime, timedelta
+from freqtrade.persistence import Trade
 
 
 # thanks tirail for original SMAOffset sharing
@@ -27,7 +23,7 @@ class SMAOffsetV2(IStrategy):
     timeframe = '5m'
     informative_timeframe = '1h'
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     process_only_new_candles = True
 
     use_custom_stoploss = True

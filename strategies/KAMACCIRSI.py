@@ -2,16 +2,16 @@
 
 # --- Do not remove these libs ---
 from functools import reduce
-
 import numpy as np  # noqa
 import pandas as pd  # noqa
+from pandas import DataFrame
+
+from freqtrade.strategy import IStrategy
+
 # --------------------------------
 # Add your lib to import here
 import talib.abstract as ta
-from pandas import DataFrame
-
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy import IStrategy
 
 
 class KAMACCIRSI(IStrategy):
@@ -133,7 +133,7 @@ class KAMACCIRSI(IStrategy):
 
     # Make sure these match or are not overridden in config
     use_sell_signal = True
-    exit_profit_only = True
+    sell_profit_only = True
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 

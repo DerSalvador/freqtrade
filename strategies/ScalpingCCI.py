@@ -66,7 +66,6 @@ class ScalpingCCI(IStrategy):
         #TC = (Pivotr - BC) + Pivot
         #Pivot = (high + low + Close) /3
         #BC = (high + low) / 2
-        bckey =  ScalpingCCI.find_string_in_array(dataframe.columns.tolist(),"bc")
         dataframe_daily['high_daily'] = dataframe_daily['high']
         dataframe_daily['low_daily'] = dataframe_daily['low']
         dataframe_daily['pivot'] = (dataframe_daily['high'] + dataframe_daily['low'] + dataframe_daily['close']) / 3
@@ -87,37 +86,26 @@ class ScalpingCCI(IStrategy):
 
         return dataframe
 
-    def find_string_in_array(strings, substring):
-        return [s for s in strings if substring in s]
-
-
     def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        # printing all columns of the dataframe 
-        print("MSSM: Pandas KeyError")
-        print(dataframe.columns.tolist())
-        pivotkey =  ScalpingCCI.find_string_in_array(dataframe.columns.tolist(),"pivot")
-        bckey =  ScalpingCCI.find_string_in_array(dataframe.columns.tolist(),"bc")
-        tckey =  ScalpingCCI.find_string_in_array(dataframe.columns.tolist(),"tc")
         dataframe.loc[
             (
                 (dataframe['close'] > dataframe['sma']) &
                 (qtpylib.crossed_above(dataframe['macd'], dataframe['macdsignal'])) &
-                (dataframe['close'] > dataframe[pivotkey]) &
-                (dataframe['close'] > dataframe[bckey]) &
-                (dataframe['close'] > dataframe[tckey]) &
+                (dataframe['close'] > dataframe['pivot']) &
+                (dataframe['close'] > dataframe['bc']) &
+                (dataframe['close'] > dataframe['tc']) &
                 (
-                   (dataframe['pivot'] > dataframe[pivotkey].shift(97)) &
-                    (dataframe['bc'] > dataframe[bckey].shift(97)) &
-                    (dataframe['close'] > dataframe[tckey].shift(97))
+                   (dataframe['pivot'] > dataframe['pivot'].shift(97)) &
+                    (dataframe['bc'] > dataframe['bc'].shift(97)) &
+                    (dataframe['close'] > dataframe['tc'].shift(97))
                 )
             ),
             'buy'] = 1
         return dataframe
     def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
-        high_dailykey =  ScalpingCCI.find_string_in_array(dataframe.columns.tolist(),"high_daily")
         dataframe.loc[
             (
-                (dataframe['open'] >= (0.98 * dataframe[high_dailykey]))
+                (dataframe['open'] >= (0.98 * dataframe['high_daily']))
             ) |
             (
                 (qtpylib.crossed_below(dataframe['macd'], dataframe['macdsignal']))

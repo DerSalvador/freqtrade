@@ -1,23 +1,18 @@
 # --- Do not remove these libs ---
-import datetime
-from datetime import datetime, timedelta
-from functools import reduce
 from logging import FATAL
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
-
-import numpy as np
+from functools import reduce
+from pandas import DataFrame
 # --------------------------------
 import talib.abstract as ta
-from pandas import DataFrame
-from technical.util import resample_to_interval, resampled_merge
-
+import numpy as np
 import freqtrade.vendor.qtpylib.indicators as qtpylib
+import datetime
+from technical.util import resample_to_interval, resampled_merge
+from datetime import datetime, timedelta
 from freqtrade.persistence import Trade
-from freqtrade.strategy import (CategoricalParameter, DecimalParameter, IntParameter,
-                                merge_informative_pair, stoploss_from_open)
-from freqtrade.strategy.interface import IStrategy
-
-
+from freqtrade.strategy import stoploss_from_open, merge_informative_pair, DecimalParameter, IntParameter, CategoricalParameter
 #import technical.indicators as ftt
 
 # @Rallipanos
@@ -27,7 +22,7 @@ from freqtrade.strategy.interface import IStrategy
 
 # Buy hyperspace params:
 buy_params = {
-    "low_offset": 0.96,
+    "low_offset": 0.981,
     "base_nb_candles_buy": 8,  # value loaded from strategy
     "ewo_high": 3.553,  # value loaded from strategy
     "ewo_high_2": -5.585,  # value loaded from strategy
@@ -42,7 +37,7 @@ buy_params = {
 # Sell hyperspace params:
 sell_params = {
     "base_nb_candles_sell": 16,  # value loaded from strategy
-    "high_offset": 1.053,  # value loaded from strategy
+    "high_offset": 1.097,  # value loaded from strategy
     "high_offset_2": 1.472,  # value loaded from strategy
 }
 
@@ -60,60 +55,60 @@ class NASOSv5(IStrategy):
 
     # ROI table:
     minimal_roi = {
-         "0": 0.225,
-         "12": 0.032,
-         "72": 0.022,
-         "189": 0
+        # "0": 0.283,
+        # "40": 0.086,
+        # "99": 0.036,
+        "360": 0
     }
 
     # Stoploss:
-    stoploss = -0.318
+    stoploss = -0.15
 
     # SMAOffset
     base_nb_candles_buy = IntParameter(
-        2, 20, default=buy_params['base_nb_candles_buy'], space='buy', optimize=True)
+        2, 20, default=buy_params['base_nb_candles_buy'], space='buy', optimize=False)
     base_nb_candles_sell = IntParameter(
-        2, 25, default=sell_params['base_nb_candles_sell'], space='sell', optimize=True)
+        2, 25, default=sell_params['base_nb_candles_sell'], space='sell', optimize=False)
     low_offset = DecimalParameter(
         0.9, 0.99, default=buy_params['low_offset'], space='buy', optimize=True)
     low_offset_2 = DecimalParameter(
-        0.9, 0.99, default=buy_params['low_offset_2'], space='buy', optimize=True)
+        0.9, 0.99, default=buy_params['low_offset_2'], space='buy', optimize=False)
     high_offset = DecimalParameter(
         0.95, 1.1, default=sell_params['high_offset'], space='sell', optimize=True)
     high_offset_2 = DecimalParameter(
-        0.99, 1.5, default=sell_params['high_offset_2'], space='sell', optimize=True)
+        0.99, 1.5, default=sell_params['high_offset_2'], space='sell', optimize=False)
 
     # Protection
     fast_ewo = 50
     slow_ewo = 200
 
     lookback_candles = IntParameter(
-        1, 36, default=buy_params['lookback_candles'], space='buy', optimize=True)
+        1, 36, default=buy_params['lookback_candles'], space='buy', optimize=False)
 
     profit_threshold = DecimalParameter(0.99, 1.05,
-                                        default=buy_params['profit_threshold'], space='buy', optimize=True)
+                                        default=buy_params['profit_threshold'], space='buy', optimize=False)
 
     ewo_low = DecimalParameter(-20.0, -8.0,
-                               default=buy_params['ewo_low'], space='buy', optimize=True)
+                               default=buy_params['ewo_low'], space='buy', optimize=False)
     ewo_high = DecimalParameter(
-        2.0, 12.0, default=buy_params['ewo_high'], space='buy', optimize=True)
+        2.0, 12.0, default=buy_params['ewo_high'], space='buy', optimize=False)
 
     ewo_high_2 = DecimalParameter(
-        -6.0, 12.0, default=buy_params['ewo_high_2'], space='buy', optimize=True)
+        -6.0, 12.0, default=buy_params['ewo_high_2'], space='buy', optimize=False)
 
-    rsi_buy = IntParameter(10, 80, default=buy_params['rsi_buy'], space='buy', optimize=True)
+    rsi_buy = IntParameter(10, 80, default=buy_params['rsi_buy'], space='buy', optimize=False)
     rsi_fast_buy = IntParameter(
-        10, 50, default=buy_params['rsi_fast_buy'], space='buy', optimize=True)
+        10, 50, default=buy_params['rsi_fast_buy'], space='buy', optimize=False)
 
     # Trailing stop:
-    trailing_stop = True
+    trailing_stop = False
     trailing_stop_positive = 0.001
     trailing_stop_positive_offset = 0.016
     trailing_only_offset_is_reached = True
 
     # Sell signal
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     sell_profit_offset = 0.01
     ignore_roi_if_buy_signal = False
 
@@ -455,4 +450,4 @@ class NASOSv5_antipump(NASOSv5):
             ]=1
 
         return dataframe
-
+        

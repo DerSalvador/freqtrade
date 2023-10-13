@@ -1,7 +1,5 @@
 # --- Do not remove these libs ---
-from functools import reduce
-from freqtrade.strategy import IStrategy
-from freqtrade.strategy import CategoricalParameter, DecimalParameter, IntParameter
+from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 # --------------------------------
 
@@ -18,7 +16,6 @@ class AverageStrategy(IStrategy):
         buys and sells on crossovers - doesn't really perfom that well and its just a proof of concept
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -32,18 +29,14 @@ class AverageStrategy(IStrategy):
     # Optimal timeframe for the strategy
     timeframe = '4h'
 
-    buy_range_short = IntParameter(5, 20, default=8)
-    buy_range_long = IntParameter(20, 120, default=21)
-
     def populate_indicators(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
 
-        # Combine all ranges ... to avoid duplicate calculation
-        for val in list(set(list(self.buy_range_short.range) + list(self.buy_range_long.range))):
-            dataframe[f'ema{val}'] = ta.EMA(dataframe, timeperiod=val)
+        dataframe['maShort'] = ta.EMA(dataframe, timeperiod=8)
+        dataframe['maMedium'] = ta.EMA(dataframe, timeperiod=21)
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the buy signal for the given dataframe
         :param dataframe: DataFrame
@@ -51,17 +44,13 @@ class AverageStrategy(IStrategy):
         """
         dataframe.loc[
             (
-                qtpylib.crossed_above(
-                    dataframe[f'ema{self.buy_range_short.value}'],
-                    dataframe[f'ema{self.buy_range_long.value}']
-                ) &
-                (dataframe['volume'] > 0)
+                qtpylib.crossed_above(dataframe['maShort'], dataframe['maMedium'])
             ),
-            'enter_long'] = 1
+            'buy'] = 1
 
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         """
         Based on TA indicators, populates the sell signal for the given dataframe
         :param dataframe: DataFrame
@@ -69,11 +58,7 @@ class AverageStrategy(IStrategy):
         """
         dataframe.loc[
             (
-                qtpylib.crossed_above(
-                    dataframe[f'ema{self.buy_range_long.value}'],
-                    dataframe[f'ema{self.buy_range_short.value}']
-                    ) &
-                (dataframe['volume'] > 0)
+                qtpylib.crossed_above(dataframe['maMedium'], dataframe['maShort'])
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

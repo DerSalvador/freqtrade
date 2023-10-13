@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from pandas import DataFrame
 import talib.abstract as ta
 
@@ -18,7 +18,6 @@ class ADXMomentum(IStrategy):
 
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # adjust based on market conditions. We would recommend to keep it low for quick turn arounds
     # This attribute will be overridden if the config file contains "minimal_roi"
@@ -44,19 +43,19 @@ class ADXMomentum(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (dataframe['adx'] > 25) &
                     (dataframe['mom'] > 0) &
-                    (dataframe['plus_di'] > 25) &
+                    (dataframe['minus_di'] > 25) &
                     (dataframe['plus_di'] > dataframe['minus_di'])
 
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (dataframe['adx'] > 25) &
@@ -65,5 +64,5 @@ class ADXMomentum(IStrategy):
                     (dataframe['plus_di'] < dataframe['minus_di'])
 
             ),
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

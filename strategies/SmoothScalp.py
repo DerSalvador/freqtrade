@@ -1,5 +1,5 @@
 # --- Do not remove these libs ---
-from freqtrade.strategy import IStrategy
+from freqtrade.strategy.interface import IStrategy
 from typing import Dict, List
 from functools import reduce
 from pandas import DataFrame
@@ -22,7 +22,6 @@ class SmoothScalp(IStrategy):
         we recommend to have at least 60 parallel trades at any time to cover non avoidable losses
     """
 
-    INTERFACE_VERSION: int = 3
     # Minimal ROI designed for the strategy.
     # This attribute will be overridden if the config file contains "minimal_roi"
     minimal_roi = {
@@ -63,7 +62,7 @@ class SmoothScalp(IStrategy):
 
         return dataframe
 
-    def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_buy_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                 (
@@ -79,10 +78,10 @@ class SmoothScalp(IStrategy):
                 )
 
             ),
-            'enter_long'] = 1
+            'buy'] = 1
         return dataframe
 
-    def populate_exit_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
+    def populate_sell_trend(self, dataframe: DataFrame, metadata: dict) -> DataFrame:
         dataframe.loc[
             (
                     (
@@ -98,5 +97,5 @@ class SmoothScalp(IStrategy):
                     ) & (dataframe['cci'] > 150)
             )
             ,
-            'exit_long'] = 1
+            'sell'] = 1
         return dataframe

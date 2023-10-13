@@ -15,15 +15,13 @@
 # freqtrade hyperopt --hyperopt-loss OnlyProfitHyperOptLoss --spaces buy sell --timeframe 5m -e 10000 --timerange 20200801-20210820 --strategy MyStrategyNew10
 # freqtrade backtesting --timeframe 5m --timerange 20200801-20210820 --strategy MyStrategyNew10
 
-from functools import reduce
-
-import numpy as np
-import talib.abstract as ta
+from freqtrade.strategy import IStrategy, CategoricalParameter, IntParameter, merge_informative_pair
 from pandas import DataFrame, Series
 
+import talib.abstract as ta
 import freqtrade.vendor.qtpylib.indicators as qtpylib
-from freqtrade.strategy import CategoricalParameter, IntParameter, IStrategy, merge_informative_pair
-
+from functools import reduce
+import numpy as np
 
 ########################### Static Parameters ###########################
 
@@ -205,7 +203,7 @@ class MyStrategyNew10(IStrategy):
 
     # These values can be overridden in the "ask_strategy" section in the config.
     use_sell_signal = True
-    exit_profit_only = False
+    sell_profit_only = False
     ignore_roi_if_buy_signal = True
 
     # Number of candles the strategy requires before producing valid signals
