@@ -176,3 +176,6 @@ X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/
 * Successfully mounted /Users/michaelmellouk/dersalvador/freqtrading/freqtrade to /Users/michaelmellouk/dersalvador/freqtrading/freqtrade
 
 * NOTE: This process must stay alive for the mount to be accessible ...
+
+X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
+
