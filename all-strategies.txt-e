@@ -188,7 +188,6 @@ SMAOG
 SMAOffset
 SMAOffsetProtectOptV0
 SMAOffsetProtectOptV1
-SMAOffsetV2
 Sar
 Saturn5
 Scalp
@@ -218,11 +217,8 @@ TDSequentialStrategy
 TechnicalExampleStrategy
 TheForce
 TheRealPullbackV2
-ThreeCommasStrategy
-YourStrat
 ClucHAnix
 ClucHAnix_BB_RPB_MOD
-TrainCatBoostStrategy
 TrixStrategy
 TrixV15Strategy
 TuplaBollinger
@@ -236,9 +232,7 @@ CustomStoplossWithPSAR
 Deneme
 FixedRiskRewardLoss
 Gumbo1
-HLHB
 ichiV1
-MabStra
 Macd
 min5v5
 multi_tf 
