@@ -30,7 +30,6 @@ BreakEven
 BuyAllSellAllStrategy
 CCIStrategy
 CMCWinner
-Chained
 Chispei
 ClucHAnix_5m1
 ClucHAnix_5m1
@@ -80,7 +79,6 @@ EnsembleStrategy
 EnsembleStrategyV1
 EnsembleStrategyV2
 FiveMinCrossAbove
-FixedRiskRewardLoss
 FreqaiDerSalvadorStrategy
 FreqaiExampleStrategy
 Freqtrade_backtest_validation_freqtrade1
@@ -89,7 +87,6 @@ FrostAuraM11hStrategy
 FrostAuraM21hStrategy
 FrostAuraM315mStrategy
 FrostAuraM31hStrategy
-GodStra
 GymStrategy
 Heracles
 HourBasedStrategy
@@ -230,12 +227,10 @@ XebTradeStrat
 YorganStrategy
 CustomStoplossWithPSAR
 Deneme
-FixedRiskRewardLoss
 Gumbo1
 ichiV1
 Macd
 min5v5
-multi_tf 
 NostalgiaForInfinityNextV7155
 pmaxTest
 SampleStrategy
