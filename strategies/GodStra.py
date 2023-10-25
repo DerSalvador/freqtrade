@@ -16,7 +16,7 @@ from functools import reduce
 import freqtrade.vendor.qtpylib.indicators as qtpylib
 import numpy as np
 # Add your lib to import here
-# import talib.abstract as ta
+import talib.abstract as ta
 import pandas as pd
 from freqtrade.strategy import IStrategy
 from numpy.lib import math
