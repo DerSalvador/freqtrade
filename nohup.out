@@ -179,3 +179,85 @@ X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/
 
 X Exiting due to HOST_PATH_MISSING: Cannot find directory /Users/michaelmellouk/dersalvador/docker-images-saved for mount
 
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+Handling connection for 8080
+E1025 18:24:49.405255   59739 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod cc4f9aada236a075dd57c389c2efe5d42933d4d47af1e68dafa75e5c3d888c62, uid : network namespace for sandbox "cc4f9aada236a075dd57c389c2efe5d42933d4d47af1e68dafa75e5c3d888c62" is closed
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael-4
+binance-michael-prawnstarobv
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael-2
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
