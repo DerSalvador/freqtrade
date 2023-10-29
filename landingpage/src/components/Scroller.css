@@ -1,0 +1,20 @@
+.scroller-container {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .scroller-content {
+    white-space: nowrap;
+    display: inline-block;
+    animation: scroll 20s linear infinite; /* Ändern Sie die Dauer nach Bedarf */
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
