@@ -1,10 +1,11 @@
 import React, { CSSProperties } from 'react';
 
+
 const Navbar: React.FC = () => {
   const navStyle: CSSProperties = {
     height: 90,
     position: 'fixed',
-    background: 'linear-gradient(to right, blue, blueviolet)',
+    background: 'linear-gradient(to right, purple, blueviolet)',
     width: '100%',
     display: 'flex',
     alignItems: 'center',
@@ -25,7 +26,7 @@ const Navbar: React.FC = () => {
     margin: 0,
     display: 'flex',
     alignItems:'center',
-    width:'100%',
+    width:'40%',
     justifyContent:'center',
   };
 
@@ -38,17 +39,18 @@ const Navbar: React.FC = () => {
       <nav style={{ display: 'flex' , width:'100%'}}>
         <div className="logo" style={logoStyle}>
           <img src="images/logo.png" alt="Logo" height={80} style={{ marginRight: '10px' }} />
-          <span>freqtrade-boys</span>
+          <div style={{margin: "auto", whiteSpace: "nowrap"}}>Freqtrade on Kubernetes</div>
+          <img src="images/Kubernetes-Logo.wine.svg" height={80} width={80} alt="KubernetesLogo" />
         </div>
         <ul className="nav-links" style={navLinkStyle}>
           <li style={linkItemStyle}>
-            <a href="#what-we-do" style={{ color: 'white' }}>
-              What We Do
-            </a>
+            <div style={{ color: 'white', width: 600 }}>
+               We run your bot with your personal configuration on SRE driven Kubernetes Infrastructure
+            </div>
           </li>
           <li style={linkItemStyle}>
             <a href="#pricing" style={{ color: 'white' }}>
-              Pricing
+              
             </a>
           </li>
         </ul>

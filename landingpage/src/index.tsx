@@ -14,11 +14,10 @@ root.render(
   <React.StrictMode>
     <Navbar />
     <Scroller />
-    <Kubernetes />
-    <Pricing />
-    <Footers />
     <ContactForm />
-    <App />
+    {/* <Pricing /> */}
+    {/* <Footers /> */}
+    {/* <App /> */}
   </React.StrictMode>
 );
 
