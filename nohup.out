@@ -1645,3 +1645,42 @@ kraken-stieves
 kube-node-lease
 kube-public
 kube-system
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080

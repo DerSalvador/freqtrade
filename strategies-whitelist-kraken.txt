@@ -1,8 +1,8 @@
-ADXMomentum
-ASDTSRockwellTrading
-AdxSmas
-AverageStrategy
-AwesomeMacd
+# ADXMomentum
+# ASDTSRockwellTrading
+# AdxSmas
+# AverageStrategy
+# AwesomeMacd
 BBRSIv2
 BbandRsi
 BinHV27
@@ -29,24 +29,24 @@ Strategy004
 Strategy005 
 Strategy005HigherROI 
 Heracles 
-HourBasedStrategy 
-InformativeSample 
-Low_BB 
-MACDCrossoverWithTrend 
-MACDStrategy 
-MACDStrategy_crossed 
-MultiRSI
-PowerTower 
+# HourBasedStrategy 
+# InformativeSample 
+# Low_BB 
+# MACDCrossoverWithTrend 
+# MACDStrategy 
+# MACDStrategy_crossed 
+# MultiRSI
+# PowerTower 
 Quickie 
-RSIDirectionalWithTrend 
-RSIDirectionalWithTrendSlow 
+# RSIDirectionalWithTrend 
+# RSIDirectionalWithTrendSlow 
 ReinforcedAverageStrategy 
 ReinforcedQuickie 
 ReinforcedSmoothScalp 
 SMAOffset 
-SMAOffsetProtectOptV0 
-SMAOffsetProtectOptV1 
-SMAOffsetV2 
+# SMAOffsetProtectOptV0 
+# SMAOffsetProtectOptV1 
+# SMAOffsetV2 
 Scalp 
 Simple 
 SmartMoneyStrategy 
@@ -55,7 +55,7 @@ SmoothScalp
 SwingHighToSky 
 TDSequentialStrategy 
 TechnicalExampleStrategy 
-TheForce 
+# TheForce 
 TrixV15Strategy 
 UniversalMACD 
 hlhb 
