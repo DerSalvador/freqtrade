@@ -1625,3 +1625,23 @@ Forwarding from 0.0.0.0:8080 -> 8084
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+E1031 15:07:29.655385   20871 memcache.go:265] couldn't get current server API group list: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api?timeout=32s": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+E1031 15:07:59.657744   20871 memcache.go:265] couldn't get current server API group list: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api?timeout=32s": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
