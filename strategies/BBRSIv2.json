@@ -1,0 +1,28 @@
+{
+  "strategy_name": "BBRSIv2",
+  "params": {
+    "buy": {},
+    "sell": {},
+    "protection": {},
+    "roi": {
+      "0": 0.088,
+      "8": 0.03,
+      "20": 0.012,
+      "44": 0
+    },
+    "stoploss": {
+      "stoploss": -0.148
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.29,
+      "trailing_stop_positive_offset": 0.357,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 9
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2023-11-01 22:54:45.922288+00:00"
+}

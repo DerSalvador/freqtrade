@@ -43,10 +43,10 @@ RSIDirectionalWithTrendSlow
 ReinforcedAverageStrategy 
 ReinforcedQuickie 
 ReinforcedSmoothScalp 
-SMAOffset 
-SMAOffsetProtectOptV0 
-SMAOffsetProtectOptV1 
-SMAOffsetV2 
+# #SMAOffset 
+#SMAOffsetProtectOptV0 
+#SMAOffsetProtectOptV1 
+#SMAOffsetV2 
 Scalp 
 Simple 
 SmartMoneyStrategy 

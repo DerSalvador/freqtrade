@@ -1,8 +1,8 @@
-# ADXMomentum
-# ASDTSRockwellTrading
-# AdxSmas
-# AverageStrategy
-# AwesomeMacd
+ADXMomentum
+ASDTSRockwellTrading
+AdxSmas
+AverageStrategy
+AwesomeMacd
 BBRSIv2
 BbandRsi
 BinHV27
@@ -14,7 +14,6 @@ ClucMay72018
 CofiBitStrategy
 CustomStoplossWithPSAR
 Diamond
-DoesNothingStrategy
 DoubleEMACrossoverWithTrend
 EMAPriceCrossoverWithThreshold
 EMASkipPump
@@ -29,21 +28,21 @@ Strategy004
 Strategy005 
 Strategy005HigherROI 
 Heracles 
-# HourBasedStrategy 
-# InformativeSample 
-# Low_BB 
-# MACDCrossoverWithTrend 
-# MACDStrategy 
-# MACDStrategy_crossed 
-# MultiRSI
-# PowerTower 
+HourBasedStrategy 
+InformativeSample 
+Low_BB 
+MACDCrossoverWithTrend 
+MACDStrategy 
+MACDStrategy_crossed 
+MultiRSI
+PowerTower 
 Quickie 
-# RSIDirectionalWithTrend 
-# RSIDirectionalWithTrendSlow 
+RSIDirectionalWithTrend 
+RSIDirectionalWithTrendSlow 
 ReinforcedAverageStrategy 
 ReinforcedQuickie 
 ReinforcedSmoothScalp 
-SMAOffset 
+# SMAOffset 
 # SMAOffsetProtectOptV0 
 # SMAOffsetProtectOptV1 
 # SMAOffsetV2 
@@ -55,7 +54,7 @@ SmoothScalp
 SwingHighToSky 
 TDSequentialStrategy 
 TechnicalExampleStrategy 
-# TheForce 
+TheForce 
 TrixV15Strategy 
 UniversalMACD 
 hlhb 
