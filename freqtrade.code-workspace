@@ -5,6 +5,9 @@
 		},
 		{
 			"path": "../binance-connector-python"
+		},
+		{
+			"path": "../freqtrade-helm-chart"
 		}
 	],
 	"settings": {}
