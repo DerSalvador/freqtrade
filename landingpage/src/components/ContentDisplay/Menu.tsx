@@ -30,7 +30,7 @@ const Menu: React.FC<MenuProps> = ({ onItemClick }) => {
     };
 
     return (
-        <ul style={{ width: '100%', listStyleType: 'none', margin: 0, padding: 0 ,}}>
+        <ul style={{ width: '100%', listStyleType: 'none', margin: 0, padding: 0, }}>
             {allItems.map((item, index) => (
                 <li
                     key={index}

@@ -1,5 +1,5 @@
 import React, { CSSProperties, useEffect } from "react";
-import "./Scroller.css"; // Sie können die CSS-Datei nach Bedarf anpassen
+import "./SupportedExchanges.css"; // Sie können die CSS-Datei nach Bedarf anpassen
 import { Container, Typography } from "@mui/material";
 
 export const imageStyle: CSSProperties = {
@@ -7,7 +7,7 @@ export const imageStyle: CSSProperties = {
     marginRight: 15,
   };
 
-const Scroller = () => {
+const SupportedExchanges = () => {
   useEffect(() => {
     const scrollContainer = document.querySelector(".scroller-container");
     const content = document.querySelector(".scroller-content");
@@ -30,7 +30,7 @@ const Scroller = () => {
   }, []);
 
   return (<>
-    <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }} style={{paddingTop:150}}>
+    <Container disableGutters maxWidth="sm" component="main" sx={{ pt: 8, pb: 6 }} style={{paddingTop:50}}>
         <Typography
           component="h1"
           variant="h2"
@@ -61,4 +61,4 @@ const Scroller = () => {
   );
 };
 
-export default Scroller;
+export default SupportedExchanges;

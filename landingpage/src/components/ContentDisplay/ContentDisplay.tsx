@@ -21,7 +21,7 @@ const ContentDisplay: React.FC<MyLayoutProps> = () => {
     return (
         <Grid container style={{ height: 'calc(100vh - 90px)', marginTop: 90 }}>
             {/* Left Sidebar (1/6) on desktop, full width on mobile */}
-            <Grid item xs={12} sm={2} display="flex" alignItems="center">
+            <Grid item xs={12} sm={2} display="flex" alignItems="Top" marginTop="5vh">
                 <Menu onItemClick={handleMenuItemClick} />
             </Grid>
 

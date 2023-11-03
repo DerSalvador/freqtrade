@@ -18,7 +18,7 @@ const ContactForm: React.FC<{}> = () => {
 
   const onSendPress = () => {
     setLoading(true);
-    const url =`https://api.telegram.org/bot6682467333:AAGZb8iXECztbpzamiIpBWaN630AJ-E_Gi4/sendMessage?chat_id=477936067&text=${sendersEmail}%0A%0A${message}`;
+    const url =`https://api.telegram.org/bot6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA/sendMessage?chat_id=1759706931&text=${sendersEmail}%0A%0A${message}`;
     fetch(url, {
       method: "POST",
       body: JSON.stringify({
@@ -40,7 +40,8 @@ const ContactForm: React.FC<{}> = () => {
   };
   const disabled = message.length < 10 || !isValidEmail();
   return (
-    <Container style={{ backgroundColor: 'lightgrey', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', borderRadius: '5px',minHeight:500 }}>
+    <Container style={{ backgroundColor: 'lightgrey', display: 'flex', flexDirection: 'column', alignItems: 'left', padding: '20px', borderRadius: '5px',minHeight:500 }}>
+      Contact us via Telegram Message:
       <TextField
         value={sendersEmail}
         type="email"
@@ -55,7 +56,7 @@ const ContactForm: React.FC<{}> = () => {
         value={message}
         variant="outlined"
         fullWidth
-        label="Your message"
+        label="Your message  (at least 10 characters)"
         onChange={(e) => onMessageChange(e.target.value)}
         multiline
         rows={4}

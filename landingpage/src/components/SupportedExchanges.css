@@ -7,6 +7,7 @@
     white-space: nowrap;
     display: inline-block;
     animation: scroll 20s linear infinite; /* Ändern Sie die Dauer nach Bedarf */
+    margin-top: 2vh;
   }
   
   @keyframes scroll {
