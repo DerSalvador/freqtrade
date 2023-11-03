@@ -2546,3 +2546,1012 @@ kraken-stieves
 kube-node-lease
 kube-public
 kube-system
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  6566 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  6784 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  7005 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  7229 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  7453 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1103 10:32:02.661401    7809 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 233962ef6f1757a95da98f3c262d0787669369d29b5d5f343ea9b6981730a5d6, uid : failed to execute portforward in network namespace "/var/run/netns/cni-9b2312cf-779d-8c4c-551b-5b41d8e417aa": failed to connect to localhost:8084 inside namespace "233962ef6f1757a95da98f3c262d0787669369d29b5d5f343ea9b6981730a5d6", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  8022 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  8293 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  8503 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  9774 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  9985 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 10195 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 10405 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 10614 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 10836 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 11047 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 11257 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:02:ec
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
