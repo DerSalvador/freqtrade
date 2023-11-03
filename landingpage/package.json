@@ -1,6 +1,8 @@
 {
   "name": "freqtrade-landingpage",
+  "build_staging": "PUBLIC_URL=https://dersalvador.com/ react-scripts build",
   "version": "0.1.0",
+  "proxy": "http://localhost:5000",  
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

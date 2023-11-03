@@ -1,10 +1,11 @@
 import React, { ReactNode } from 'react';
-import Scroller from '../SupportedExchanges';
+import Footer from '../Footers';
 import Kubernetes from '../Kubernetes';
 import ContactForm from '../ContactForm/ContactForm';
 import Onboarding from '../WhatWeOffer';
 import About from '../About';
 
+import NewFeatures from '../NewFeatures';
 // Define the type for your components array
 type ComponentItem = {
     item: string;
@@ -16,13 +17,16 @@ export const components: ComponentItem[] = [
     {
         item: 'What we offer',
         component: <Onboarding />
-    },   
+    },       {
+        item: 'Features in Planning',
+        component: <NewFeatures />
+    }, 
     {
         item: 'Why Kubernetes',
         component: <Kubernetes />,
     },
     {
-        item: 'Contact via Telegram',
+        item: 'Apply via Telegram',
         component: <ContactForm />
     },
     {

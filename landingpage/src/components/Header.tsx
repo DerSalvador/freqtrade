@@ -25,6 +25,11 @@ const Navbar: React.FC = () => {
     whiteSpace: 'nowrap'
   };
 
+  const imageStyleK8s: CSSProperties = {
+    marginLeft: 15,
+    marginRight: 15,
+    marginTop: 15,
+  };
   // const navLinkStyle: CSSProperties = {
   //   listStyleType: 'none',
   //   padding: 0,
@@ -46,9 +51,10 @@ const Navbar: React.FC = () => {
           <img src="images/logo.png" alt="Logo" height={80} style={{ marginRight: '10px' }} />
           <div style={nowrap}>Trading as a Service on Kubernetes Cloud</div>
         </div>
-        <img src="images/Kubernetes-Logo.wine.svg" height={80} width={80} style={imageStyle} alt="KubernetesLogo" />
+        <img src="images/Kubernetes-Logo.wine.svg" height={80} width={80} style={imageStyleK8s} alt="KubernetesLogo" />
         <div className="scroller-container">
       <div className="scroller-content" >
+         <div style={imageStyle}>Supported Exchanges</div> 
         {/* Fügen Sie Ihre Logos hier ein */}
         <img src="exchanges/binance.svg" height={50} width={120} style={imageStyle} alt="binance" />
         <img src="exchanges/kraken2.svg" height={50} width={120}  style={imageStyle} alt="kraken" />

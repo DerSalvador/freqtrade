@@ -7,6 +7,10 @@ export const imageStyle: CSSProperties = {
     marginRight: 15,
   };
 
+  export const href: CSSProperties = {
+    textDecorationStyle: "unset",
+  }
+
 const SupportedExchanges = () => {
   useEffect(() => {
     const scrollContainer = document.querySelector(".scroller-container");

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Container, TextField, Button } from '@mui/material';
-
+import { Box, Typography } from '@mui/material';
 
 const ContactForm: React.FC<{}> = () => {
 
@@ -18,7 +18,7 @@ const ContactForm: React.FC<{}> = () => {
 
   const onSendPress = () => {
     setLoading(true);
-    const url =`https://api.telegram.org/bot6639084686:AAGj9lUYrVdZAVIpb7YDradHCloJ7R3HNrA/sendMessage?chat_id=1759706931&text=${sendersEmail}%0A%0A${message}`;
+    const url =`https://api.telegram.org/bot6915852728:AAFjxjFTL0Br1zilYXCwZ73_JmJ2W-DW8qU/sendMessage?chat_id=1759706931&text=${sendersEmail}%0A%0A${message}`;
     fetch(url, {
       method: "POST",
       body: JSON.stringify({
@@ -40,8 +40,16 @@ const ContactForm: React.FC<{}> = () => {
   };
   const disabled = message.length < 10 || !isValidEmail();
   return (
-    <Container style={{ backgroundColor: 'lightgrey', display: 'flex', flexDirection: 'column', alignItems: 'left', padding: '20px', borderRadius: '5px',minHeight:500 }}>
-      Contact us via Telegram Message:
+    <Box
+      display="flow"
+      justifyContent="top"
+      alignItems="top"
+      height="80vh"
+      marginTop="6vh"
+      marginLeft="5vh"
+      marginRight="60vh"
+    >
+      <div style={{ textAlign: 'left', fontStyle: 'italic', fontSize: 20, alignContent: 'left', marginTop: "5vh"}}>Apply via Telegram Message:</div>
       <TextField
         value={sendersEmail}
         type="email"
@@ -72,7 +80,7 @@ const ContactForm: React.FC<{}> = () => {
       >
         {loading ? 'Sending...' : 'Send'}
       </Button>
-    </Container>
+    </Box>
   );
 };
 
