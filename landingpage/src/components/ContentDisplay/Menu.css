@@ -1,0 +1,7 @@
+@media screen and (max-width: 600px) {
+    /* Apply styles for screens with a maximum width of 600px (e.g., mobile screens) */
+    li {
+        font-size: 8px; /* Adjust the font size for mobile view */
+        /* Add any other mobile-specific styles here */
+    }
+}

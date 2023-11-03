@@ -15,6 +15,7 @@ const ContactForm: React.FC<{}> = () => {
   const onMessageChange = (value) => {
     setMessage(value);
   };
+
   const onSendPress = () => {
     setLoading(true);
     const url =`https://api.telegram.org/bot6682467333:AAGZb8iXECztbpzamiIpBWaN630AJ-E_Gi4/sendMessage?chat_id=477936067&text=${sendersEmail}%0A%0A${message}`;
@@ -39,7 +40,7 @@ const ContactForm: React.FC<{}> = () => {
   };
   const disabled = message.length < 10 || !isValidEmail();
   return (
-    <Container>
+    <Container style={{ backgroundColor: 'lightgrey', display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '20px', borderRadius: '5px',minHeight:500 }}>
       <TextField
         value={sendersEmail}
         type="email"
@@ -48,6 +49,7 @@ const ContactForm: React.FC<{}> = () => {
         label="Your email"
         onChange={(e) => onEmailChange(e.target.value)}
         placeholder="Your email"
+        style={{ marginBottom: '25px' ,marginTop:50,backgroundColor: 'white'}}
       />
       <TextField
         value={message}
@@ -58,12 +60,14 @@ const ContactForm: React.FC<{}> = () => {
         multiline
         rows={4}
         placeholder="Your message..."
+        style={{ marginBottom: '25px'  ,backgroundColor: 'white'}}
       />
       <Button
         variant="contained"
         color="primary"
         onClick={onSendPress}
         disabled={disabled}
+        style={{ width: '50%', marginTop: '20px',margin:'auto'}}
       >
         {loading ? 'Sending...' : 'Send'}
       </Button>

@@ -4,6 +4,7 @@ import React, { CSSProperties } from 'react';
 const Navbar: React.FC = () => {
   const navStyle: CSSProperties = {
     height: 90,
+    marginTop:-90,
     position: 'fixed',
     background: 'linear-gradient(to right, purple, blueviolet)',
     width: '100%',
@@ -20,6 +21,7 @@ const Navbar: React.FC = () => {
     alignItems: 'center',
   };
 
+<<<<<<< HEAD
   const navLinkStyle: CSSProperties = {
     listStyleType: 'none',
     padding: 0,
@@ -29,10 +31,21 @@ const Navbar: React.FC = () => {
     width:'40%',
     justifyContent:'center',
   };
+=======
+  // const navLinkStyle: CSSProperties = {
+  //   listStyleType: 'none',
+  //   padding: 0,
+  //   margin: 0,
+  //   display: 'flex',
+  //   alignItems:'center',
+  //   width:'100%',
+  //   justifyContent:'center',
+  // };
+>>>>>>> 1511aa6d72 (added new ContentDisplay Component)
 
-  const linkItemStyle: CSSProperties = {
-    marginLeft: '20px', // Add spacing between list items
-  };
+  // const linkItemStyle: CSSProperties = {
+  //   marginLeft: '20px', // Add spacing between list items
+  // };
 
   return (
     <div style={navStyle}>
@@ -42,7 +55,7 @@ const Navbar: React.FC = () => {
           <div style={{margin: "auto", whiteSpace: "nowrap"}}>Freqtrade on Kubernetes</div>
           <img src="images/Kubernetes-Logo.wine.svg" height={80} width={80} alt="KubernetesLogo" />
         </div>
-        <ul className="nav-links" style={navLinkStyle}>
+        {/* <ul className="nav-links" style={navLinkStyle}>
           <li style={linkItemStyle}>
             <div style={{ color: 'white', width: 600 }}>
                We run your bot with your personal configuration on SRE driven Kubernetes Infrastructure
@@ -53,7 +66,7 @@ const Navbar: React.FC = () => {
               
             </a>
           </li>
-        </ul>
+        </ul> */}
       </nav>
     </div>
   );

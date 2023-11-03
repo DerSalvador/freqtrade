@@ -1,23 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Pricing from './components/Pricing'
 import Navbar from './components/Navbar';
-import Scroller from './components/Scroller';
-import Footers from './components/Footers';
-import ContactForm from './components/ContactForm/ContactForm';
-import Kubernetes from './components/Kubernetes';
+import ContentDisplay from './components/ContentDisplay/ContentDisplay';
+import Content from './components/ContentDisplay/Content';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
+<<<<<<< HEAD
     <Scroller />
     <ContactForm />
     {/* <Pricing /> */}
     {/* <Footers /> */}
     {/* <App /> */}
+=======
+    <ContentDisplay content={<Content/>}/>
+    {/* <Pricing /> */}
+>>>>>>> 1511aa6d72 (added new ContentDisplay Component)
   </React.StrictMode>
 );
 
