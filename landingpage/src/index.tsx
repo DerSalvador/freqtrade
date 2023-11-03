@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Navbar from './components/Header';
+import Navbar from './components/Navbar';
 import ContentDisplay from './components/ContentDisplay/ContentDisplay';
 import Content from './components/ContentDisplay/Content';
 
@@ -9,16 +9,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Navbar />
-<<<<<<< HEAD
-    <Scroller />
-    <ContactForm />
-    {/* <Pricing /> */}
-    {/* <Footers /> */}
-    {/* <App /> */}
-=======
     <ContentDisplay content={<Content/>}/>
     {/* <Pricing /> */}
->>>>>>> 1511aa6d72 (added new ContentDisplay Component)
   </React.StrictMode>
 );
 
