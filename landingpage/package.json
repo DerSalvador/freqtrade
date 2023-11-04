@@ -1,6 +1,6 @@
 {
   "name": "freqtrade-landingpage",
-  "build_staging": "PUBLIC_URL=https://dersalvador.com/ react-scripts build",
+  "build_staging": "PUBLIC_URL=https://trading-aas/ react-scripts build",
   "version": "0.1.0",
   "proxy": "http://localhost:5000",  
   "private": true,

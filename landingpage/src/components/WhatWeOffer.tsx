@@ -18,6 +18,10 @@ const Text = (
     </div>  
     <br/> 
     <div> 
+    <img src="images/Kubernetes-Logo.wine.svg" height={20} width={20} style={imageStyle} alt="KubernetesLogo" />Updated Blacklists from remotepairlist.com
+    </div>  
+    <br/> 
+    <div> 
     <img src="images/Kubernetes-Logo.wine.svg" height={20} width={20} style={imageStyle} alt="KubernetesLogo" />Daily Backtesting for about 40 updated Strategies (<a href="https://www.freqst.com/" target="_blank">Freqtrade Strategies</a>)
     </div>   
     <br/>
