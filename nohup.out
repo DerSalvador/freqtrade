@@ -3655,3 +3655,86 @@ E1108 22:45:05.231404   42364 memcache.go:265] couldn't get current server API g
 E1108 22:45:35.233923   42364 memcache.go:265] couldn't get current server API group list: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api?timeout=32s": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
 error: the server doesn't have a resource type "namespaces"
 error getting namespace list
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from 172.20.7.141:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9: 12934 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh namespace port
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+binance-adriana
+binance-hassan
+binance-juliano
+binance-michael
+binance-oliver
+binance-stieves
+default
+kaniko-skaffold-build
+kraken-adriana
+kraken-hellen
+kraken-michael
+kraken-robert
+kraken-stieves
+kube-node-lease
+kube-public
+kube-system
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from 172.20.7.141:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
