@@ -10457,3 +10457,43 @@ Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from 192.168.8.239:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 10.18.28.46:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
