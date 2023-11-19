@@ -11009,6 +11009,7 @@ Forwarding from 0.0.0.0:8080 -> 8084
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+<<<<<<< HEAD
 /Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 9:  8061 Terminated: 15          sudo kubectl port-forward -n $1 deploy/freqtrade-$1 $2:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
 
 Usage: dsTradingFreqUIPortforward.sh namespace port
@@ -11403,10 +11404,94 @@ Ethernet Address: 82:20:5e:8a:54:05
 Hardware Port: Thunderbolt 4
 Device: en4
 Ethernet Address: 82:20:5e:8a:54:04
+=======
+/Users/msantana/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13:  5062 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+do-ams3-k8s-do-dersalvador-production
+do-sfo2-k8s-dersalvador-acceptance
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 10.18.28.46:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+do-ams3-k8s-do-dersalvador-production
+do-sfo2-k8s-dersalvador-acceptance
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+>>>>>>> e311abe2c (gita commit)
 
 VLAN Configurations
 ===================
 Forwarding from 0.0.0.0:8080 -> 8084
+<<<<<<< HEAD
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 
@@ -11458,10 +11543,52 @@ Ethernet Address: 82:20:5e:8a:54:05
 Hardware Port: Thunderbolt 4
 Device: en4
 Ethernet Address: 82:20:5e:8a:54:04
+=======
+Forwarding from 10.18.28.46:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+do-ams3-k8s-do-dersalvador-production
+do-sfo2-k8s-dersalvador-acceptance
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+>>>>>>> e311abe2c (gita commit)
 
 VLAN Configurations
 ===================
 Forwarding from 0.0.0.0:8080 -> 8084
+<<<<<<< HEAD
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
@@ -12594,11 +12721,15 @@ kube-node-lease
 kube-public
 kube-system
 Forwarding from 0.0.0.0:8080 -> 8084
+=======
+Forwarding from 10.18.28.46:8080 -> 8084
+>>>>>>> e311abe2c (gita commit)
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
 error: lost connection to pod
 
+<<<<<<< HEAD
 Usage: dsTradingFreqUIPortforward.sh namespace port
 E1031 15:07:29.655385   20871 memcache.go:265] couldn't get current server API group list: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api?timeout=32s": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
 E1031 15:07:59.657744   20871 memcache.go:265] couldn't get current server API group list: Get "https://4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com/api?timeout=32s": dial tcp: lookup 4dafc664-7edc-4a09-95f8-d49f6818667e.k8s.ondigitalocean.com: i/o timeout
@@ -26491,3 +26622,8 @@ Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from 192.168.8.239:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+=======
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+do-ams3-k8s-do-dersalvador-production
+do-sfo2-k8s-dersalvador-acceptance
+>>>>>>> e311abe2c (gita commit)
