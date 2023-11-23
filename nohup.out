@@ -964,3 +964,276 @@ Forwarding from 0.0.0.0:8080 -> 8084
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 61858 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 98410 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 33463 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
