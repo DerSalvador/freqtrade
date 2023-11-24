@@ -3832,3 +3832,23 @@ Forwarding from 10.220.0.5:8080 -> 8084
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 54118 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
