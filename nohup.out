@@ -1237,3 +1237,2562 @@ Forwarding from 0.0.0.0:8080 -> 8084
 Forwarding from 127.0.0.1:8080 -> 8084
 Forwarding from [::1]:8080 -> 8084
 Handling connection for 8080
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 98458 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 27778 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 17:14:31.720103   28804 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod add7f1a9d1c74d0283500c4ff07f61c94869bd2cf7f9e12dc60d11c1b6481ec2, uid : failed to execute portforward in network namespace "/var/run/netns/cni-a5e8197f-db84-c9fe-b3a4-10438aba8cdf": failed to connect to localhost:8084 inside namespace "add7f1a9d1c74d0283500c4ff07f61c94869bd2cf7f9e12dc60d11c1b6481ec2", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 67483 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 18:52:12.900808   68503 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod ecf94aff71c2b399a0d104d167d210987c6da4105d7773876d7d7d0acc454ad6, uid : failed to execute portforward in network namespace "/var/run/netns/cni-27929ef6-5077-e846-1c79-1eafffbb9da6": failed to connect to localhost:8084 inside namespace "ecf94aff71c2b399a0d104d167d210987c6da4105d7773876d7d7d0acc454ad6", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 18:53:46.975650   69419 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 76b70404e3135eab14293a106cb88e40293e79a4228bb46d388d4de327f62f3f, uid : failed to execute portforward in network namespace "/var/run/netns/cni-da1fcdc8-3dc3-4fbd-76c7-1c7c9dacf895": failed to connect to localhost:8084 inside namespace "76b70404e3135eab14293a106cb88e40293e79a4228bb46d388d4de327f62f3f", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 18:55:40.841580   70628 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod ec46db3de37baacec5fd1f24f153dd4bebb47a0fec81a4da7e7ff92a3b72eeb2, uid : failed to execute portforward in network namespace "/var/run/netns/cni-a20a9a73-8f12-d106-7004-7af3e8a85b5a": failed to connect to localhost:8084 inside namespace "ec46db3de37baacec5fd1f24f153dd4bebb47a0fec81a4da7e7ff92a3b72eeb2", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 72200 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 18:59:47.317363   73478 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 989bcc929cbf5d298d02cf5231678339015b7fc7a807201d05eeb1aeaa2dfe06, uid : failed to execute portforward in network namespace "/var/run/netns/cni-50a608c4-65fb-bb80-3746-c78951f33af6": failed to connect to localhost:8084 inside namespace "989bcc929cbf5d298d02cf5231678339015b7fc7a807201d05eeb1aeaa2dfe06", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:10:01.697994   71478 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 850c4c29866bc72a04a673e8f478cd84576441b8413d0b42089ac10b27bc2262, uid : failed to execute portforward in network namespace "/var/run/netns/cni-66d2eb3f-e3b1-708b-d337-527c4307d4c3": failed to connect to localhost:8084 inside namespace "850c4c29866bc72a04a673e8f478cd84576441b8413d0b42089ac10b27bc2262", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:11:45.407096   72479 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 8ee19c796b1bf24f4fcd89da2ded99c981781e7ff8669d0320e4c8fd3a2a6752, uid : failed to execute portforward in network namespace "/var/run/netns/cni-01ad5d32-63e6-7cd7-edd3-9b128542e056": failed to connect to localhost:8084 inside namespace "8ee19c796b1bf24f4fcd89da2ded99c981781e7ff8669d0320e4c8fd3a2a6752", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:13:15.650904   73383 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod e11a1d9cc5bb026bdcc97aa2a5435f790aeb12b926c59c9a2a9557d794cfad6f, uid : failed to execute portforward in network namespace "/var/run/netns/cni-2af21a76-943d-e969-9465-3ce2958b61de": failed to connect to localhost:8084 inside namespace "e11a1d9cc5bb026bdcc97aa2a5435f790aeb12b926c59c9a2a9557d794cfad6f", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:14:59.044327   74345 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod a836874b52f8a198745cc3776cdc9bd506ee9c9b7f065b55e746ffb4368a3a64, uid : failed to execute portforward in network namespace "/var/run/netns/cni-f9f4bd72-5557-64fd-b4d3-470e02164172": failed to connect to localhost:8084 inside namespace "a836874b52f8a198745cc3776cdc9bd506ee9c9b7f065b55e746ffb4368a3a64", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:16:31.565768   75257 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 22e7a10ea060454b8c28edf185864c835ded471b63bc178a8ad9fdb18d207c38, uid : failed to execute portforward in network namespace "/var/run/netns/cni-c96be80c-0da4-72b4-f09e-a854f0393ca4": failed to connect to localhost:8084 inside namespace "22e7a10ea060454b8c28edf185864c835ded471b63bc178a8ad9fdb18d207c38", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:20:15.038918   77223 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod a234c0a84e2206da85ee7a5ad9733554d94d62ff5076d3cc8161f547ed11c085, uid : failed to execute portforward in network namespace "/var/run/netns/cni-05c435bc-1d23-adbf-3b74-4ae75e7d3c31": failed to connect to localhost:8084 inside namespace "a234c0a84e2206da85ee7a5ad9733554d94d62ff5076d3cc8161f547ed11c085", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:32:27.433591   83495 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 1632035c1f3b2e22f347336c14267b9058056e632c564f3393363a62d06c136b, uid : failed to execute portforward in network namespace "/var/run/netns/cni-f3d07bea-539e-b0d5-b56a-c709de88bf45": failed to connect to localhost:8084 inside namespace "1632035c1f3b2e22f347336c14267b9058056e632c564f3393363a62d06c136b", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:34:12.524315   84475 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 05dfd4896a0703c2fa5e208c855c221275e254cfac20f1b304b96f67d24a0484, uid : failed to execute portforward in network namespace "/var/run/netns/cni-2c761d5b-c910-5588-dd04-94fd5ccb53cf": failed to connect to localhost:8084 inside namespace "05dfd4896a0703c2fa5e208c855c221275e254cfac20f1b304b96f67d24a0484", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1123 22:36:53.770137   86079 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 418e9ae9cdf5d8277371bcf60a0687032f22002b5f995cd534e0f908042de805, uid : failed to execute portforward in network namespace "/var/run/netns/cni-a5911d35-bbc6-0c29-851f-5db48aa0f539": failed to connect to localhost:8084 inside namespace "418e9ae9cdf5d8277371bcf60a0687032f22002b5f995cd534e0f908042de805", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 90351 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 91892 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 93372 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 94940 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 96796 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 40768 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 42346 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 43903 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 45598 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 47071 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 65187 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 66870 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 69802 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 71258 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 76765 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 78243 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 79588 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 81217 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 82576 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 84908 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/michaelmellouk/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 86595 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1124 09:59:31.011884   27976 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod c7010dbb74c4c573df4305229f8f0ec48e1ddc58e41384a85a8fe6b88826ed17, uid : failed to execute portforward in network namespace "/var/run/netns/cni-0a59c2f9-99df-3e7b-6be0-01209f61b351": failed to connect to localhost:8084 inside namespace "c7010dbb74c4c573df4305229f8f0ec48e1ddc58e41384a85a8fe6b88826ed17", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1124 10:12:55.965252   37164 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod c83757cd76e29c3ada9edd19d5c9fd7b7afe1d4591c130a53dcca80ac5adf089, uid : failed to execute portforward in network namespace "/var/run/netns/cni-538825a8-b509-d3f4-3070-d7df05eba51d": failed to connect to localhost:8084 inside namespace "c83757cd76e29c3ada9edd19d5c9fd7b7afe1d4591c130a53dcca80ac5adf089", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: connection refused 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
+
+Hardware Port: AX88179A
+Device: en11
+Ethernet Address: f8:e4:3b:73:47:b0
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f0:18:98:21:ae:d0
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 82:20:5e:8a:54:01
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 82:20:5e:8a:54:00
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 82:20:5e:8a:54:05
+
+Hardware Port: Thunderbolt 4
+Device: en4
+Ethernet Address: 82:20:5e:8a:54:04
+
+VLAN Configurations
+===================
+Unable to connect to the server: dial tcp: lookup b01f45c2-c604-44f1-b224-a937fb13a811.k8s.ondigitalocean.com: no such host
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+/api-crc-testing:6443/developer
+EXSANTANA@epneo-prod-cluster.eu-central-1.eksctl.io
+EXSANTANA@mvp-ebmpapst.eu-central-1.eksctl.io
+brokerme
+brokerme-preprod
+brokerme-prod
+crc-admin
+crc-developer
+default/api-crc-testing:6443/kubeadmin
+dev
+do-ams3-k8s-dersalvador-production
+docker-desktop
+egress-ip/api-crc-testing:6443/kubeadmin
+gke_plucky-door-200208_europe-west1_brokerme-prod
+gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
+minikube
+rancher-desktop
