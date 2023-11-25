@@ -1,0 +1,20 @@
+.footer-container {
+    display: flex;
+    padding: 64px 106px;
+    text-align: center;
+    justify-content: space-between;
+    box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+
+    p {
+        color: var(--neutral-colors-text-gray, #9795B5);
+        font-feature-settings: 'clig' off, 'liga' off;
+        margin: 0;
+        /* Text single/200/Regular */
+        font-family: DM Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 18px;
+        /* 100% */
+    }
+}
