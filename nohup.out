@@ -4480,3 +4480,199 @@ error: lost connection to pod
 Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
 gke_vaulted-gift-406223_europe-west1-b_private-cluster-3
 minikube
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:11:e3
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1125 16:58:45.184433   93618 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 62b31d902c0782f84725df865ae26dbcf644704c38aea06d38b9556a8625bdc3, uid : failed to execute portforward in network namespace "/var/run/netns/cni-a4001610-edce-8f0f-c61c-3837eb69683b": failed to connect to localhost:8084 inside namespace "62b31d902c0782f84725df865ae26dbcf644704c38aea06d38b9556a8625bdc3", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: cannot assign requested address 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+gke_vaulted-gift-406223_europe-west1-b_private-cluster-3
+minikube
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:11:e3
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1125 17:00:11.794399   93991 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 54a73961238a58589ad9f7cac2cb6f807724a44efa678c0dffdad2abc7a3f4a9, uid : failed to execute portforward in network namespace "/var/run/netns/cni-f50bf0a6-91f3-936e-537c-787c66dd316b": failed to connect to localhost:8084 inside namespace "54a73961238a58589ad9f7cac2cb6f807724a44efa678c0dffdad2abc7a3f4a9", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: cannot assign requested address 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+gke_vaulted-gift-406223_europe-west1-b_private-cluster-3
+minikube
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:11:e3
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1125 17:27:22.327566   94650 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 724abcfc8cd92a30df018d0419de8790349a4b1b3f54a305c0fe7525702c9213, uid : failed to execute portforward in network namespace "/var/run/netns/cni-38bdb331-2b71-d94a-5b32-1fe4d3947301": failed to connect to localhost:8084 inside namespace "724abcfc8cd92a30df018d0419de8790349a4b1b3f54a305c0fe7525702c9213", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: cannot assign requested address 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+gke_vaulted-gift-406223_europe-west1-b_private-cluster-3
+minikube
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:11:e3
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+E1125 17:28:47.737883   95021 portforward.go:409] an error occurred forwarding 8080 -> 8084: error forwarding port 8084 to pod 9c3aaf9242effc46f8beb7e8054339c3dc514580512090e0cb76b9ae19ca91ed, uid : failed to execute portforward in network namespace "/var/run/netns/cni-b4114331-b5f5-4ba7-0b65-b237e2c15dc1": failed to connect to localhost:8084 inside namespace "9c3aaf9242effc46f8beb7e8054339c3dc514580512090e0cb76b9ae19ca91ed", IPv4: dial tcp4 127.0.0.1:8084: connect: connection refused IPv6 dial tcp6 [::1]:8084: connect: cannot assign requested address 
+error: lost connection to pod
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+gke_vaulted-gift-406223_europe-west1-b_private-cluster-3
+minikube
