@@ -89,7 +89,6 @@ function Contact() {
             placeholder="Please type your message here..."
             value={message}
             onChange={(e) => onMessageChange(e.target.value)}
-            disabled={disabled}
           />
         </div>
         <button type="submit" onClick={onSendPress}>{loading ? 'Sending...' : 'Apply'}</button>

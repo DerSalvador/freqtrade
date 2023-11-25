@@ -1,25 +1,15 @@
 {
-  "name": "freqtrade-landingpage",
-  "build_staging": "PUBLIC_URL=https://trading-aas/ react-scripts build",
+  "name": "landing_page",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
-    "@fontsource/roboto": "^5.0.8",
-    "@fortawesome/fontawesome-svg-core": "^6.4.2",
-    "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@mui/icons-material": "^5.14.15",
-    "@mui/material": "^5.14.15",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/react": "^18.2.31",
-    "@types/react-dom": "^18.2.14",
-    "bun": "^1.0.7",
-    "dotenv": "^16.3.1",
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.18.62",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.19.0",
@@ -51,8 +41,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "bun-types": "^1.0.7"
   }
 }

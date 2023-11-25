@@ -33,7 +33,7 @@ function Header() {
     <header className="nav_style">
       <div>
         <h3 className="logo">
-          trading<span className="black-color">ass</span>
+          trading<span className="black-color">aas</span>
         </h3>
       </div>
       <nav className="navbar">
