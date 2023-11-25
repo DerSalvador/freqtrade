@@ -3852,3 +3852,98 @@ gke_plucky-door-200208_europe-west1_brokerme-prod
 gke_plucky-door-200208_europe-west6_autopilot-cluster-trading
 minikube
 rancher-desktop
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:11:e3
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
+/Users/msantana/dersalvador/general_purpose_scripts/dsTradingFreqUIPortforward.sh: line 13: 50787 Terminated: 15          sudo kubectl --context=$1 port-forward -n $NS deploy/freqtrade-$NS $3:8084 --address=0.0.0.0 --address=127.0.0.1 --address=localhost --address=$(getIPAddressMac.sh en0)
+
+Usage: dsTradingFreqUIPortforward.sh kubectx namespace port
+
+Hardware Port: Ethernet Adapter (en4)
+Device: en4
+Ethernet Address: 42:fd:93:36:2f:cb
+
+Hardware Port: USB 10/100/1000 LAN
+Device: en7
+Ethernet Address: 00:e0:4c:68:11:e3
+
+Hardware Port: Ethernet Adapter (en5)
+Device: en5
+Ethernet Address: 42:fd:93:36:2f:cc
+
+Hardware Port: Ethernet Adapter (en6)
+Device: en6
+Ethernet Address: 42:fd:93:36:2f:cd
+
+Hardware Port: Thunderbolt Bridge
+Device: bridge0
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Wi-Fi
+Device: en0
+Ethernet Address: f8:4d:89:6b:ec:bd
+
+Hardware Port: Thunderbolt 1
+Device: en1
+Ethernet Address: 36:6e:18:26:65:80
+
+Hardware Port: Thunderbolt 2
+Device: en2
+Ethernet Address: 36:6e:18:26:65:84
+
+Hardware Port: Thunderbolt 3
+Device: en3
+Ethernet Address: 36:6e:18:26:65:88
+
+VLAN Configurations
+===================
+do-ams3-k8s-dersalvador-production
+gke_plucky-door-200208_europe-west1-b_private-cluster-3
+gke_vaulted-gift-406223_europe-west1-b_private-cluster-3
+gke_vaulted-gift-406223_europe-west1_autopilot-cluster-1
+knative
+minikube
+Forwarding from 0.0.0.0:8080 -> 8084
+Forwarding from 127.0.0.1:8080 -> 8084
+Forwarding from [::1]:8080 -> 8084
+Handling connection for 8080
