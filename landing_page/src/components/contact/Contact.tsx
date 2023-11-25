@@ -41,7 +41,7 @@ function Contact() {
   const disabled = message.length < 10 || !isValidEmail();
 
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="contact">
       <div className="contact-info">
         <span>Apply via Telegram Message:</span>
         <h4>Get in touch today</h4>

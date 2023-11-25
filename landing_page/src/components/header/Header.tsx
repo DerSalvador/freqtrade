@@ -39,17 +39,17 @@ function Header() {
       <nav className="navbar">
         <ul className="nav-list">
           <li>
-            <a href="#" className="nav-link">
+            <a href="#theService" className="nav-link">
               The service
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link">
+            <a href="#whyKubernetes" className="nav-link">
               Why Kubernetes?
             </a>
           </li>
           <li>
-            <a href="#" className="nav-link apply-button">
+            <a href="#contact" className="nav-link apply-button">
               Apply via Telegram
             </a>
           </li>

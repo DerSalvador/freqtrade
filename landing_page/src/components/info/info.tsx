@@ -20,7 +20,7 @@ function info() {
           ))}
         </div>
       </section>
-      <section className="info-container">
+      <section className="info-container" id="theService">
         <h3 className="section-title">The service</h3>
         <div className="card-container">
           <div className="offer-card">
@@ -57,7 +57,7 @@ function info() {
                 interview
               </li>
             </ul>
-            <a href="">Get started</a>
+            <a href="#contact">Get started</a>
           </div>
           <div className="planning-card">
             <h4>Features in planning</h4>
@@ -76,7 +76,7 @@ function info() {
           </div>
         </div>
       </section>
-      <section className="kubernetes-container">
+      <section className="kubernetes-container" id="whyKubernetes">
         <h3 className="section-title">Why Kubernetes?</h3>
         <p>
           Kubernetes (sometimes referred to as K8s) is an open-source container
