@@ -1,0 +1,38 @@
+{
+  "strategy_name": "Diamond",
+  "params": {
+    "entry": {
+      "entry_fast_key": "high",
+      "entry_horizontal_push": 9,
+      "entry_slow_key": "volume",
+      "entry_vertical_push": 1.316
+    },
+    "exit": {
+      "exit_fast_key": "volume",
+      "exit_horizontal_push": 2,
+      "exit_slow_key": "high",
+      "exit_vertical_push": 0.927
+    },
+    "protection": {},
+    "roi": {
+      "0": 0.10500000000000001,
+      "30": 0.07400000000000001,
+      "70": 0.024,
+      "126": 0
+    },
+    "stoploss": {
+      "stoploss": -0.088
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.226,
+      "trailing_stop_positive_offset": 0.325,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 8
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2023-10-08 12:51:56.263028+00:00"
+}

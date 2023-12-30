@@ -1,0 +1,28 @@
+{
+  "strategy_name": "FrostAuraM115mStrategy",
+  "params": {
+    "entry": {},
+    "exit": {},
+    "protection": {},
+    "roi": {
+      "0": 0.081,
+      "7": 0.023,
+      "19": 0.015,
+      "38": 0
+    },
+    "stoploss": {
+      "stoploss": -0.288
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.168,
+      "trailing_stop_positive_offset": 0.249,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 3
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2023-10-13 07:56:09.523810+00:00"
+}

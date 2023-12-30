@@ -1,0 +1,60 @@
+{
+  "strategy_name": "CombinedBinHAndClucV8Hyper",
+  "params": {
+    "entry": {
+      "entry_dip_threshold_0": 0.015,
+      "entry_dip_threshold_1": 0.12,
+      "entry_dip_threshold_2": 0.28,
+      "entry_dip_threshold_3": 0.36,
+      "entry_ema_open_mult_1": 0.02,
+      "entry_volume_1": 2.0,
+      "entry_bb20_close_bblowerband": 0.91,
+      "entry_bb20_volume": 24,
+      "entry_bb40_bbdelta_close": 0.029,
+      "entry_bb40_closedelta_close": 0.01,
+      "entry_bb40_tail_bbdelta": 0.289,
+      "entry_mfi": 41.96,
+      "entry_min_inc": 0.04,
+      "entry_rsi": 32.54,
+      "entry_rsi_1h": 40.68,
+      "entry_rsi_diff": 46.92
+    },
+    "exit": {
+      "exit_custom_roi_profit_1": 0.01,
+      "exit_custom_roi_profit_2": 0.04,
+      "exit_custom_roi_profit_3": 0.08,
+      "exit_custom_roi_profit_4": 0.14,
+      "exit_custom_roi_profit_5": 0.04,
+      "exit_custom_roi_rsi_1": 50,
+      "exit_custom_roi_rsi_2": 50,
+      "exit_custom_roi_rsi_3": 56,
+      "exit_custom_roi_rsi_4": 58,
+      "exit_custom_stoploss_1": -0.05,
+      "exit_trail_down_1": 0.03,
+      "exit_trail_down_2": 0.015,
+      "exit_trail_profit_max_1": 0.4,
+      "exit_trail_profit_max_2": 0.1,
+      "exit_trail_profit_min_1": 0.1,
+      "exit_trail_profit_min_2": 0.02,
+      "exit_rsi_main": 74.94
+    },
+    "protection": {},
+    "roi": {
+      "0": 0.065,
+      "10": 0.034,
+      "23": 0.021,
+      "89": 0
+    },
+    "stoploss": {
+      "stoploss": -0.042
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.305,
+      "trailing_stop_positive_offset": 0.353,
+      "trailing_only_offset_is_reached": true
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2021-10-14 19:51:26.366608+00:00"
+}

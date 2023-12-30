@@ -1,0 +1,28 @@
+{
+  "strategy_name": "TrixV15Strategy",
+  "params": {
+    "buy": {},
+    "sell": {},
+    "protection": {},
+    "roi": {
+      "0": 0.228,
+      "35": 0.06,
+      "91": 0.011,
+      "200": 0
+    },
+    "stoploss": {
+      "stoploss": -0.208
+    },
+    "trailing": {
+      "trailing_stop": true,
+      "trailing_stop_positive": 0.103,
+      "trailing_stop_positive_offset": 0.16199999999999998,
+      "trailing_only_offset_is_reached": false
+    },
+    "max_open_trades": {
+      "max_open_trades": 2
+    }
+  },
+  "ft_stratparam_v": 1,
+  "export_time": "2023-12-19 21:32:34.672171+00:00"
+}
