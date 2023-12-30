@@ -17,7 +17,7 @@ spec:
     env:
       - name: GOOGLE_APPLICATION_CREDENTIALS
         value: /secret/kaniko-secret.json/application_default_credentials.json
-  restartPolicy: Never
+    restartPolicy: Never
   initContainers:
   - image: python
     name: clonerepo
@@ -33,7 +33,7 @@ spec:
         mountPath: /tmp/freqtrade
       - name: sshkey
         mountPath: /tmp/sshkey
-  restartPolicy: Never
+    restartPolicy: Never
   volumes:
     - name: kaniko-secret
       secret:
