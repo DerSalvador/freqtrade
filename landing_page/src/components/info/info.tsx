@@ -96,20 +96,20 @@ function info() {
           Kubernetes (sometimes referred to as K8s) is an open-source container
           orchestration platform that schedules and automates the deployment,
           management and scaling of containerized applications (monoliths and
-          microservices).The Kubernetes platform is all about optimization —
+          microservices). The Kubernetes platform is all about optimization —
           automating many of the DevOps processes that were previously handled
           manually and simplifying the work of software developers.
         </p>
         <p>
           So, what’s the secret behind the platform’s success? Kubernetes
           services provide load balancing and simplify container management on
-          multiple hosts.They make it easy for an enterprise’s apps to have
-          greater scalability and be flexible, portable and more productive.In
+          multiple hosts. They make it easy for an enterprise’s apps to have
+          greater scalability and be flexible, portable and more productive. In
           fact, Kubernetes is the fastest growing project in the history of
-          open-source software, after Linux
+          open-source software, after Linux.
         </p>
         <p>
-          .According to a 2021 study by the Cloud Native Computing Foundation
+          According to a 2021 study by the Cloud Native Computing Foundation
           (CNCF), from 2020 to 2021, the number of Kubernetes engineers grew by
           67% to 3.9 million. That’s 31% of all backend developers, an increase
           of 4 percentage points in a year.The increasingly widespread use of

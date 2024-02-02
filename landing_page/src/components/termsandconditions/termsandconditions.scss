@@ -11,7 +11,7 @@
         }
     
         .offer-card {
-            width: calc((624 / 1440) * 100%);
+            width: calc((1100 / 1440) * 100%);
             border-radius: 24px;
             background: var(--neutral-colors-color-900, #8D8BA7);
             padding: 80px 45px 56px;
@@ -39,7 +39,7 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: 18px;
-                flex-direction: column;
+                text-align: left;
                 // color: var(--neutral-colors-white, #FFF);
                 text-decoration: none;
                 margin-bottom: 16px;

@@ -67,10 +67,10 @@ function Contact() {
             www.dersalvador.com<br /> 
           </a>
           <a href={`mailto:${mailAdress}`} target="_blank">
-            contact@dersalvador.com<br /> 
+            contact@dersalvador.com
           </a>
           <a href={"https://t.me/41768030327}"} target="_blank">
-            +41 (0) 76 803 03 27 (Telegram)<br /> 
+            +41 (0) 76 803 03 27 (Telegram)
           </a>
 
           {/* <a href={"https://wa.me/5571984162112"} target="_blank">
@@ -81,12 +81,11 @@ function Contact() {
               "https://www.google.com/maps?q=Zimmergasse%207,%208008%20Zurich,%20Switzerland"
             }
             target="_blank"
-          >
-            Zimmergasse 7, 8008 <br />
-            Zurich, Switzerland<br /><br />  
-          </a>
-            UID: CHE‑292.260.024 <br /> CH-ID: CH17040101968 <br />{" "}
-            EHRA-ID: 1003646
+          ><br/>
+          Zimmergasse 7, 8008
+          Zurich, Switzerland<br/>
+            </a>
+           
           </p>
         </div>
       </div>
