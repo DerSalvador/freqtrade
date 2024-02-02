@@ -52,13 +52,18 @@ function info() {
                 Personal Bots
               </li>
               <li>
-                Deploying Best Strategy including Hyperopt Parameter File to
-                Personal Bots
-              </li>
-              <li>
                 Limited Onboarding (2 per month) after evaluation and personal
                 interview
               </li>
+              <li>API Key Management and Consulting</li>
+              <li>Private access to FreqUI frontend via domain/ip (extra costs)</li>
+              <li>Pilot Phase: 1 month free of charge</li>
+              <li>Customized freqtrade container image with special python libraries and other modules</li>
+              <li>Individual Configuration updates once per day</li>
+              <li>Private freqtrade strategy onboarding</li>
+              <li>SRE operations (Post mortem analyses, Service Level Monitoring)</li>
+              <li>Cost Control Transparency</li>
+              <li>Bot Control (ForceBuy, ForceSell, Stop/Start trading, ...) through configurable Telegram Frontend</li>
             </ul>
             <a href="#contact">Get started</a>
           </div>
@@ -69,17 +74,18 @@ function info() {
             </p>
             <ul>
               <li>
-                Changing Config Parameters like Strategy/Stake Amount via
+                Changing Configuration Parameters like Strategy/Stake Amount via
                 Telegram Command during Runtime without Redeployment
               </li>
+              <li>Consulting recommendation platforms like TA API for crypto pair specific trading directions (short, long)</li>
               <li>
-                Please feel free to suggest more improvements for evaluation...
+                more to come...
               </li>
             </ul>
           </div>
         </div>
         <div className="image-container">
-        <p>10 Freqtrade Bots running for differenr clients</p>
+        <p>10 Freqtrade Bots running for different clients</p>
           <img src={freqtrade} alt="Descrição da imagem" />
         </div>
       </section>

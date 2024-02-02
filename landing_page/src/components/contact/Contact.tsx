@@ -73,9 +73,9 @@ function Contact() {
             +41 (0) 76 803 03 27 (Telegram)<br /> 
           </a>
 
-          <a href={"https://wa.me/5571984162112"} target="_blank">
+          {/* <a href={"https://wa.me/5571984162112"} target="_blank">
             +55 (71) 98 416 2112 (Whatsapp)<br /> 
-          </a>
+          </a> */}
           <a
             href={
               "https://www.google.com/maps?q=Zimmergasse%207,%208008%20Zurich,%20Switzerland"

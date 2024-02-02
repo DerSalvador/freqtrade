@@ -6,7 +6,7 @@ function footer() {
       <p>Copyright © Trading
       as a Service 2024.</p>
       <p>All Rights Reserved</p> 
-      <p><a>Terms and Conditions</a></p>
+      <p></p>
     </div>
   )
 }

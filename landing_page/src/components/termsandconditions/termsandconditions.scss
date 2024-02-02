@@ -1,0 +1,111 @@
+.termsandconditions-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-bottom: 207px;
+    
+        .card-container {
+            display: flex;
+            gap: 60px;
+            justify-content: center;
+        }
+    
+        .offer-card {
+            width: calc((624 / 1440) * 100%);
+            border-radius: 24px;
+            background: var(--neutral-colors-color-900, #8D8BA7);
+            padding: 80px 45px 56px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    
+            h4 {
+                color: var(--neutral-colors-white, #FFF);
+                font-family: DM Sans;
+                font-size: 44px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 50px;
+                margin: 0 0 24px;
+            }
+    
+            ul {
+                // list-style:none;
+                margin-bottom: 40px;
+            }
+    
+            li {
+                font-family: DM Sans;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                // color: var(--neutral-colors-white, #FFF);
+                text-decoration: none;
+                margin-bottom: 16px;
+            }
+    
+            a {
+                // padding: 24px 28px;
+                border-radius: 40px;
+                text-decoration: none;
+                box-sizing: border-box;
+                display: inline-block;
+                // background: var(--neutral-colors-white, #FFF);
+                color: var(--neutral-colors-headings-black, #b7cb65);
+                text-align: center;
+                font-family: DM Sans;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+    
+                // &:hover {
+                //     background-color: #f5f5f5;
+                //     color: #5D5A88;
+                // }
+    
+                // &:active {
+                //     background-color: #e0e0e0;
+                //     color: #5D5A88;
+                // }
+            }
+        }
+    
+        .planning-card {
+            width: calc((502 / 1440) * 100%);
+            padding: 80px 40px 56px;
+            border-radius: 24px;
+            box-sizing: border-box;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    
+            h4 {
+                color: var(--neutral-colors-headings-black, #5D5A88);
+                font-family: DM Sans;
+                font-size: 43px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 50px;
+                margin: 0 0 10px;
+            }
+    
+            p {
+                color: var(--neutral-colors-text-gray, #9795B5);
+                font-family: DM Sans;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 30px;
+                margin: 0 0 26px;
+            }
+    
+            li {
+                color: var(--neutral-colors-headings-black, #5D5A88);
+                font-family: DM Sans;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 18px;
+                margin-bottom: 16px;
+            }
+        }
+}
