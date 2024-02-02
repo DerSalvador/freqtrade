@@ -18,6 +18,7 @@ freqtrade/rpc/api_server/ui/*
 build_helpers/ta-lib/*
 user_data_k8s/*
 landing_page/node_modules/*
+node_modules/*
 lib.tgz
 
 # Macos related
