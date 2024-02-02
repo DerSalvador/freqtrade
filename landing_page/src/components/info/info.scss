@@ -21,6 +21,7 @@
         gap: 32px;
         justify-content: center;
         align-items: center;
+
         img {
             height: 100%;
         }
@@ -170,5 +171,95 @@
         font-weight: 400;
         line-height: 36px;
         max-width: 800px;
+    }
+}
+
+.image-container {
+    max-width: 80%;
+    margin: 120px auto 0;
+
+    img {
+        border-radius: 8px;
+    }
+
+    p {
+        color: var(--neutral-colors-text-gray, #9795B5);
+        font-family: DM Sans;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px;
+        margin: 0 0 48px;
+        text-align: center;
+        margin-top: 8px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .info-container {
+
+        padding-bottom: 0px; 
+        
+        .card-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .offer-card,
+        .planning-card {
+            width: 90%;
+
+            h4 {
+                font-family: DM Sans;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 40px;
+            }
+
+            ul {
+                list-style: circle;
+            }
+
+            li {
+                overflow: hidden;
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+
+            }
+
+            a {
+                display: block;
+            }
+        }
+    }
+
+    .section-title {
+        font-family: DM Sans;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 50px;
+        margin: 0 0 16px;
+    }
+    .image-container {
+        margin: 60px auto 0px;
+        width: 100%;
+        p {
+            display: none;
+        }
+        img {
+            display: none;
+            width: 100%;
+        }
+    }
+
+    .kubernetes-container {
+        padding: 0 12px;
+
+        p {
+            font-size: 20px;
+            font-weight: 600;
+        }
     }
 }

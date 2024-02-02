@@ -1,8 +1,10 @@
-import React from "react";
 import "./info.scss";
+
+import React from "react";
 import binance from "../../assets/exchanges/binance.svg";
 import bitfinex from "../../assets/exchanges/bitfinex.svg";
 import coinbase from "../../assets/exchanges/coinbase.svg";
+import freqtrade from "../../assets/freqtrade.png";
 import huobi from "../../assets/exchanges/huobi.svg";
 import kraken from "../../assets/exchanges/kraken.svg";
 import okx from "../../assets/exchanges/okx.svg";
@@ -21,7 +23,8 @@ function info() {
         </div>
       </section>
       <section className="info-container" id="theService">
-        <h3 className="section-title">The service</h3>
+        <h3 className="section-title">The Service</h3>
+
         <div className="card-container">
           <div className="offer-card">
             <h4>What we offer</h4>
@@ -74,6 +77,10 @@ function info() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="image-container">
+        <p>10 Freqtrade Bots running for differenr clients</p>
+          <img src={freqtrade} alt="Descrição da imagem" />
         </div>
       </section>
       <section className="kubernetes-container" id="whyKubernetes">

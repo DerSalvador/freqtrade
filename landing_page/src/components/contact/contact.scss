@@ -1,19 +1,20 @@
 .contact-section {
+    padding: 178px 0 310px;
     display: flex;
+    justify-content: center;
     gap: 168px;
-
-    @media (max-width: 768px) {
-        flex-direction: column;
-        gap: 50px;
-    }
 
     .contact-info {
         span {
+            display: block;
+            color: var(--neutral-colors-color-900, #8D8BA7);
+            font-family: DM Sans;
             font-size: 18px;
-    
-            @media (max-width: 768px) {
-                font-size: 14px;
-            }
+            font-style: normal;
+            font-weight: 700;
+            line-height: 20px;
+            letter-spacing: 1.8px;
+            text-transform: uppercase;
         }
 
         h4 {
@@ -41,22 +42,24 @@
             flex-direction: column;
             gap: 24px;
 
-            p, a {
+            p,
+            a {
                 color: var(--neutral-colors-color-900, #8D8BA7);
                 font-family: DM Sans;
-                font-size: 18px;
+                font-size: 12px;
                 font-style: normal;
-                font-weight: 400;
-                line-height: 30px;
+                font-weight: 600;
+                line-height: 20px;
                 margin: 0;
                 text-decoration: none;
                 width: fit-content;
             }
+
             a {
                 &:hover {
                     color: #787593;
                 }
-            
+
                 &:active {
                     color: #534f74;
                 }
@@ -93,7 +96,7 @@
                 width: 100%;
                 padding: 26px 24px;
                 box-sizing: border-box;
-                border: none;
+                //border: none;
                 margin-top: 12px;
                 box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
             }
@@ -136,5 +139,34 @@
             }
         }
     }
+}
 
+@media screen and (max-width: 768px) {
+
+    .contact-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 32px 16px;
+        gap: 40px; 
+        
+        .contact-info {
+            padding: 0 12px;
+            text-align: center;
+            
+            .infos a, .infos p{
+                text-align: center;
+                display: block;
+            }
+        }
+
+        .contact-card {
+            padding: 40px 25px;
+            min-width: 90%;
+
+            button {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
 }

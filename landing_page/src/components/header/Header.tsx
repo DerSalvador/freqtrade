@@ -1,46 +1,30 @@
-import React, { useState } from "react";
 import "./header.scss";
+
+import React, { useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function Header() {
-  // const [isNavVisible, setNavVisibility] = useState(false);
-  // const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
 
-  // useEffect(() => {
-  //   const mediaQuery = window.matchMedia("(max-width: 700px)");
-  //   mediaQuery.addListener(handleMediaQueryChange);
-  //   handleMediaQueryChange(mediaQuery);
-
-  //   return () => {
-  //     mediaQuery.removeListener(handleMediaQueryChange);
-  //   };
-  // }, []);
-
-  // // const handleMediaQueryChange = (mediaQuery) => {
-  // //   if (mediaQuery.matches) {
-  // //     setIsSmallScreen(true);
-  // //   } else {
-  // //     setIsSmallScreen(false);
-  // //   }
-  // // };
-
-  // const toggleNav = () => {
-  //   setNavVisibility(!isNavVisible);
-  // };
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+  const rootUrl = window.location.origin;
 
   return (
     <header className="nav_style">
       <div>
         <h3 className="logo">
-          trading<span className="black-color">aas</span>
+          <a href={rootUrl}>trading<span className="black-color">aas</span></a>
         </h3>
       </div>
       <nav className="navbar">
         <ul className="nav-list">
           <li>
             <a href="#theService" className="nav-link">
-              The service
+              The Service
             </a>
           </li>
           <li>
@@ -58,6 +42,9 @@ function Header() {
       <button className="hamburger">
         <FontAwesomeIcon icon={faBars} />
       </button>
+      {showMenu && <div>
+        
+        </div>}
     </header>
   );
 }
