@@ -55,7 +55,8 @@ function info() {
                 Limited Onboarding (2 per month) after evaluation and personal
                 interview
               </li>
-              <li>API Key Management and Consulting</li>
+              <li>FreqAI configuration with Reinforcement Learning section</li>
+              <li>API Key Security Management and Consulting</li>
               <li>Private access to FreqUI frontend via domain/ip (extra costs)</li>
               <li>Pilot Phase: 1 month free of charge</li>
               <li>Customized freqtrade container image with special python libraries and other modules</li>

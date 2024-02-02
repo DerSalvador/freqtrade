@@ -2,7 +2,7 @@ import React from "react";
 import "./termsandconditions.scss";
 function termsandconditions() {
   return (
-<section className="termsandconditions-container" id="theService">
+<section className="termsandconditions-container" id="termsandconditions">
         <h3 className="section-title">Terms, Conditions and Disclaimer</h3>
 
         <div className="card-container">

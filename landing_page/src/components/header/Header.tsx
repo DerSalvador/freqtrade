@@ -22,6 +22,11 @@ function Header() {
       </div>
       <nav className="navbar">
         <ul className="nav-list">
+        <li>
+            <a href="#termsandconditions" className="nav-link">
+              Terms and Conditions
+            </a>
+          </li>
           <li>
             <a href="#theService" className="nav-link">
               The Service
@@ -29,7 +34,7 @@ function Header() {
           </li>
           <li>
             <a href="#whyKubernetes" className="nav-link">
-              Why Kubernetes?
+              Why Kubernetes
             </a>
           </li>
           <li>
