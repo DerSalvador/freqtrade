@@ -60,14 +60,14 @@ function Contact() {
         <div className="infos">
         <p>
           <a
-            href="https://www.dersalvador.com"
+            href="https://www.dersalvador.com/en/home-en/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            www.dersalvador.com<br /> 
+            DerSalvador GmbH<br /> 
           </a>
           <a href={`mailto:${mailAdress}`} target="_blank">
-            contact@dersalvador.com<br /> 
+            trading@dersalvador.com<br /> 
           </a>
           <a href={"https://t.me/41768030327}"} target="_blank">
             +41 (0) 76 803 03 27 (Telegram)

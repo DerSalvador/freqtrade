@@ -11,6 +11,7 @@ import okx from "../../assets/exchanges/okx.svg";
 
 function info() {
   const logos = [binance, bitfinex, coinbase, huobi, kraken, okx];
+  const platforms = ["https://binance.com","https://bitfinex.com","https://coinbase.com","https://huobi.com","https://kraken.com","https://okx.com"]
 
   return (
     <>
@@ -18,7 +19,7 @@ function info() {
         <h6>Supported Exchanges</h6>
         <div className="exchanges-container">
           {logos.map((logo, index) => (
-            <img key={index} src={logo} alt={`Logo ${index + 1}`} />
+            <a href={platforms[index]} target="_blank"><img key={index} src={logo} alt={`Logo ${index + 1}`} /></a> 
           ))}
         </div>
       </section>
@@ -30,7 +31,7 @@ function info() {
             <h4>What we offer</h4>
             <ul>
               <li>
-                Hosting Personal Trading Bots on High Available and Securable Kubernetes
+                Hosting personalized Freqtrading Bots on High Available and Secured Kubernetes
                 Cluster in the Cloud 
               </li>
               <li>
@@ -38,36 +39,39 @@ function info() {
                 interview
               </li>
               <li>Pilot Phase: 1 month free of charge</li>
+              <li>Elaborated SRE (Service Level Monitoring, SLAs/SLOs/SLIs, Post mortem analyses, ...)</li>
+              <li>API Key Security Management and Consulting</li>
               <li>
                 Security Configuration Consulting (YUBI/Pass Keys, Securing API
-                Keys, IP Restrictions, Whitelisting, Blacklisting, Kubernetes Namespace Network Policies, ...)
+                Keys, IP Restrictions, Whitelisting, Blacklisting, Cilium Network Policies, ...)
               </li>
               <li>Automated Updated Blacklists from remotepairlist.com</li>
               <li>
-                Daily Backtesting for about 40 updated Strategies (Freqtrade
-                Strategies)
+                Backtesting of recent 10 Strategies from <a  className="a-container" href="https://www.freqst.com/" target="_blank">Freqtrade Strategies</a> and <br/>
+                <a  className="a-container" href="https://strat.ninja/strategies.php" target="_blank">Freqtrade Strategy Ninja</a>
+                as well as strategies from other sources
               </li>
               <li>
                 Hyperopting Best Strategy (profit_total_abs, ...) on a daily
                 basis
               </li>
-              <li>Deploying customized or free Strategies and HyperLossFunctions</li>
-              <li><a href="https://www.copyrightlaws.com/" className="a-container">Intellectual properties protected by international copyright laws</a>, jurisdiction Switzerland</li>
-
               <li>
-                Deploying Best Strategy including Hyperopt Parameter File to
+                Best Strategy deployment including Hyperopt Parameter File to
                 Personal Bots
               </li>
-
+              <li>Deploying customized or free Strategies and HyperLossFunctions
+              <br/> <ul><br/>
+              <li><a href="https://www.copyrightlaws.com/" className="a-container">Intellectual properties protected by international copyright laws</a>, jurisdiction Switzerland</li>
+              <li>International ND Agreement backed by Swiss officials</li>
+              </ul>
+              </li>
               <li>FreqAI configuration with Reinforcement Learning section</li>
-              <li>API Key Security Management and Consulting</li>
-              <li>Private access to FreqUI frontend via domain/ip (extra costs)</li>
-              <li>Customized freqtrade container image with Dependency Management (special python libraries, etc.)</li>
-              <li>Individual Configuration updates once per day</li>
+              <li>Private access to FreqUI frontend via domain/ip</li>
+              <li>Customized freqtrade container image (Docker) with Dependency Management (extra python libraries, etc.)</li>
+              <li>Individual Configuration updates once per day (Stake amount, Strategy, Stoploss, ...)</li>
               <li>Private freqtrade strategy onboarding</li>
-              <li>SRE operations (Post mortem analyses, Service Level Monitoring)</li>
               <li>Cost Control Transparency</li>
-              <li>Bot Control (ForceBuy, ForceSell, Stop/Start trading, ...) through configurable Telegram Frontend</li>
+              <li>Telegram Bot Control (ForceBuy, ForceSell, Stop/Start trading, ...) through configurable Telegram Frontend</li>
             </ul>
             <a href="#contact">Get started</a>
           </div>
@@ -115,7 +119,7 @@ function info() {
           According to a 2021 study by the Cloud Native Computing Foundation
           (CNCF), from 2020 to 2021, the number of Kubernetes engineers grew by
           67% to 3.9 million. That’s 31% of all backend developers, an increase
-          of 4 percentage points in a year.The increasingly widespread use of
+          of 4 percentage points in a year. The increasingly widespread use of
           Kubernetes among DevOps teams means businesses have a lower learning
           curve when starting with the container orchestration platform.
         </p>
