@@ -48,8 +48,7 @@ function info() {
               <li>Automated Updated Blacklists from remotepairlist.com</li>
               <li>
                 Backtesting of recent 10 Strategies from <a  className="a-container" href="https://www.freqst.com/" target="_blank">Freqtrade Strategies</a> and <br/>
-                <a  className="a-container" href="https://strat.ninja/strategies.php" target="_blank">Freqtrade Strategy Ninja</a>
-                as well as strategies from other sources
+                <a  className="a-container" href="https://strat.ninja/strategies.php" target="_blank">Freqtrade Strategy Ninja</a> as well as strategies from other sources
               </li>
               <li>
                 Hyperopting Best Strategy (profit_total_abs, ...) on a daily
@@ -72,6 +71,7 @@ function info() {
               <li>Private freqtrade strategy onboarding</li>
               <li>Cost Control Transparency</li>
               <li>Telegram Bot Control (ForceBuy, ForceSell, Stop/Start trading, ...) through configurable Telegram Frontend</li>
+              <li>Anytime cancellation and purging of all private data with no costs</li>
             </ul>
             <a href="#contact">Get started</a>
           </div>
