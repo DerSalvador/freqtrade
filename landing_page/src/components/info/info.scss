@@ -111,6 +111,33 @@
                 color: #5D5A88;
             }
         }
+        .a-container {
+            padding: initial;
+            border-radius: initial;
+            text-decoration: initial;
+            box-sizing: initial;
+            display: initial;
+            background: initial;
+            color: initial;
+            text-align: initial;
+            font-family: DM Sans;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            color: beige;
+
+            &:hover {
+                background-color: initial;
+                color: blue;
+            }
+
+            &:active {
+                background-color: initial;
+                color:blue;
+            }
+    
+        }
     }
 
     .planning-card {
@@ -150,6 +177,56 @@
             margin-bottom: 16px;
         }
     }
+
+    .image-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        width: calc((1300 / 1440) * 100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        max-width: 100%;
+        margin: 10px auto 0;
+        padding-bottom: 60px;
+    
+        img {
+            border-radius: 8px;
+
+        }
+    
+        p {
+            color: var(--neutral-colors-text-gray, #9795B5);
+            font-family: DM Sans;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 200;
+            line-height: 30px;
+            text-align: center;
+        }
+    }    
+    .p-container {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        width: calc((1700 / 1440) * 100%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;    
+        max-width: 100%;
+        margin: 10px auto 0;
+        padding-top: 10px;
+    
+            color: var(--neutral-colors-text-gray, #9795B5);
+            font-family: DM Sans;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            margin: 0 0 48px;
+            text-align: center;
+            margin-top: 8px;
+    }    
 }
 
 .kubernetes-container {
@@ -174,26 +251,7 @@
     }
 }
 
-.image-container {
-    max-width: 80%;
-    margin: 120px auto 0;
 
-    img {
-        border-radius: 8px;
-    }
-
-    p {
-        color: var(--neutral-colors-text-gray, #9795B5);
-        font-family: DM Sans;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 30px;
-        margin: 0 0 48px;
-        text-align: center;
-        margin-top: 8px;
-    }
-}
 
 @media screen and (max-width: 768px) {
     .info-container {
@@ -232,6 +290,7 @@
                 display: block;
             }
         }
+
     }
 
     .section-title {

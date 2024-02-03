@@ -13,8 +13,8 @@ function termsandconditions() {
               If you do not agree with any part of these terms and conditions, please refrain from using our platform.
               </li>
               <li>   
-              <a href="https://tradingaas.com">tradingaas</a> makes use of the open source crypto trading solution <a href="https://github.com/freqtrade/freqtrade#GPL-3.0-1-ov-file">freqtrade</a> and <a href="https://cloud.google.com/kubernetes-engine?hl=en"> Google Kubernetes Engine on Google Cloud</a>.<br/>Please study all terms, conditions and disclaimer 
-              of freqtrade and Google Cloud which all apply also to all services offered by <a href="https://tradingaas.com">tradingaas </a>.  
+              Trading as a Service makes use of the open source crypto trading solution <a href="https://github.com/freqtrade/freqtrade#GPL-3.0-1-ov-file" target="_blank">FREQTRADE</a> and <a href="https://cloud.google.com/kubernetes-engine?hl=en" target="_blank"> Google Kubernetes Engine on Google Cloud</a>.<br/>Please study all terms, conditions and disclaimer 
+              of freqtrade and Google Cloud which all apply also to all services offered by tradingaas.  
 
               </li>
               <li>

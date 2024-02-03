@@ -30,14 +30,19 @@ function info() {
             <h4>What we offer</h4>
             <ul>
               <li>
-                Hosting Personal Trading Bots on High Available Kubernetes
-                Cluster in the Cloud (One Namespace per Bot)
+                Hosting Personal Trading Bots on High Available and Securable Kubernetes
+                Cluster in the Cloud 
               </li>
               <li>
-                Security Configuration Consulting (YUBI/Pass Keys, Securing API
-                Keys, IP Restrictions, Whitelisting, Blacklisting, ...)
+                Limited Onboarding (2 per month) after evaluation and personal
+                interview
               </li>
-              <li>Updated Blacklists from remotepairlist.com</li>
+              <li>Pilot Phase: 1 month free of charge</li>
+              <li>
+                Security Configuration Consulting (YUBI/Pass Keys, Securing API
+                Keys, IP Restrictions, Whitelisting, Blacklisting, Kubernetes Namespace Network Policies, ...)
+              </li>
+              <li>Automated Updated Blacklists from remotepairlist.com</li>
               <li>
                 Daily Backtesting for about 40 updated Strategies (Freqtrade
                 Strategies)
@@ -46,20 +51,18 @@ function info() {
                 Hyperopting Best Strategy (profit_total_abs, ...) on a daily
                 basis
               </li>
-              <li>Deploying own Strategies/HyperLossFunctions</li>
+              <li>Deploying customized or free Strategies and HyperLossFunctions</li>
+              <li><a href="https://www.copyrightlaws.com/" className="a-container">Intellectual properties protected by international copyright laws</a>, jurisdiction Switzerland</li>
+
               <li>
                 Deploying Best Strategy including Hyperopt Parameter File to
                 Personal Bots
               </li>
-              <li>
-                Limited Onboarding (2 per month) after evaluation and personal
-                interview
-              </li>
+
               <li>FreqAI configuration with Reinforcement Learning section</li>
               <li>API Key Security Management and Consulting</li>
               <li>Private access to FreqUI frontend via domain/ip (extra costs)</li>
-              <li>Pilot Phase: 1 month free of charge</li>
-              <li>Customized freqtrade container image with special python libraries and other modules</li>
+              <li>Customized freqtrade container image with Dependency Management (special python libraries, etc.)</li>
               <li>Individual Configuration updates once per day</li>
               <li>Private freqtrade strategy onboarding</li>
               <li>SRE operations (Post mortem analyses, Service Level Monitoring)</li>
@@ -85,13 +88,13 @@ function info() {
             </ul>
           </div>
         </div>
-        <div className="image-container">
-        <p>10 Freqtrade Bots running for different clients</p>
-          <img src={freqtrade} alt="Descrição da imagem" />
-        </div>
       </section>
       <section className="kubernetes-container" id="whyKubernetes">
-        <h3 className="section-title">Why Kubernetes?</h3>
+        <h3 className="section-title">Why Kubernetes</h3>
+        <div >
+        <p className="p-container">Freqtrade Bots running for different tenants and trading APIs</p>
+          <img className="image-container" src={freqtrade} alt="GKE Image" />
+        </div>
         <p>
           Kubernetes (sometimes referred to as K8s) is an open-source container
           orchestration platform that schedules and automates the deployment,

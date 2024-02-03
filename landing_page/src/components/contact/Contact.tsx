@@ -67,7 +67,7 @@ function Contact() {
             www.dersalvador.com<br /> 
           </a>
           <a href={`mailto:${mailAdress}`} target="_blank">
-            contact@dersalvador.com
+            contact@dersalvador.com<br /> 
           </a>
           <a href={"https://t.me/41768030327}"} target="_blank">
             +41 (0) 76 803 03 27 (Telegram)
