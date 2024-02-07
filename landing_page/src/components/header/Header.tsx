@@ -11,18 +11,19 @@ function Header() {
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
+
   const rootUrl = window.location.origin;
 
   return (
     <header className="nav_style">
       <div>
         <h3 className="logo">
-          <a href={rootUrl}>trading<span className="black-color">aas</span></a>
+          <a className="nav-link, nav-link-header" href={rootUrl}>trading<span className="black-color">aas</span></a>
         </h3>
       </div>
       <nav className="navbar">
-        <ul className="nav-list">
-        <li>
+        <ul className={"nav-list" + (showMenu ? " show" : "")}>
+          <li>
             <a href="#termsandconditions" className="nav-link">
               Terms and Conditions
             </a>
@@ -44,14 +45,12 @@ function Header() {
           </li>
         </ul>
       </nav>
-      <button className="hamburger">
+      <button className="hamburger" onClick={toggleMenu}>
         <FontAwesomeIcon icon={faBars} />
       </button>
-      {showMenu && <div>
-        
-        </div>}
     </header>
   );
 }
+
 
 export default Header;

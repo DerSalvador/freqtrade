@@ -14,7 +14,7 @@ function termsandconditions() {
               </li>
               <li>   
               Trading as a Service makes use of the open source crypto trading solution <a href="https://github.com/freqtrade/freqtrade#GPL-3.0-1-ov-file" target="_blank">FREQTRADE</a> and <a href="https://cloud.google.com/kubernetes-engine?hl=en" target="_blank"> Google Kubernetes Engine on Google Cloud</a>.<br/>Please study all terms, conditions and disclaimer 
-              of freqtrade and Google Cloud which all apply also to all services offered by tradingaas.  
+              of <a href="https://github.com/freqtrade/freqtrade#GPL-3.0-1-ov-file" target="_blank">FREQTRADE</a> and <a href="https://cloud.google.com/kubernetes-engine?hl=en" target="_blank">Google Cloud</a> which all apply also to all services offered by tradingaas.  
 
               </li>
               <li>
@@ -39,7 +39,7 @@ User Obligations: Users agree to use our trading platform in compliance with all
 Intellectual Property: All intellectual property rights, including but not limited to trademarks, logos, and content, on our trading platform are the property of their respective owners. Users agree not to use, reproduce, or distribute any of our intellectual property without prior written consent.
 </li>
 <li>
-Privacy: We value user privacy and handle personal information in accordance with applicable data protection laws.
+Privacy: We value user privacy and handle personal information in accordance with applicable international data protection laws.
 </li>
 <li>
 Modification of Terms: We reserve the right to modify, amend, or update these terms and conditions at any time without prior notice. Users are responsible for regularly reviewing these terms and conditions for any changes. Continued use of our platform after any modifications constitutes acceptance of the updated terms and conditions.

@@ -3,11 +3,12 @@ import "./contact.scss";
 import React, { useState, useRef, useEffect } from "react" ;
 
 function Contact() {
-  const mailAdress = "contact@dersalvador.com";
+  const mailAdress = "trading@tradingaas.ai";
 
   const [sendersEmail, setSendersEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const onEmailChange = (value: string) => {
     setSendersEmail(value);
@@ -27,10 +28,12 @@ function Contact() {
       }),
     })
       .then(() => {
+        setSuccessMessage("Message sent successfully!");
         setLoading(false);
       })
       .catch(() => {
         setLoading(false);
+        setSuccessMessage("Unable to send message at this time.");
         //Alert.alert("Sorry", "Unable to send a message this time.");
       });
   };
@@ -55,6 +58,7 @@ function Contact() {
       <div className="contact-info">
         <span>Apply via Telegram Message:</span>
         <h4>Get in touch today</h4>
+        <h3>Initial Limited Onboarding (2 per month) after evaluation and personal interview.</h3>
         <p>Responsible for Content (except for external links)</p>
 
         <div className="infos">
@@ -67,7 +71,7 @@ function Contact() {
             DerSalvador GmbH<br /> 
           </a>
           <a href={`mailto:${mailAdress}`} target="_blank">
-            trading@dersalvador.com<br /> 
+            {mailAdress}<br /> 
           </a>
           <a href={"https://t.me/41768030327}"} target="_blank">
             +41 (0) 76 803 03 27 (Telegram)
@@ -84,6 +88,7 @@ function Contact() {
           ><br/>
           Zimmergasse 7, 8008
           Zurich, Switzerland<br/>
+          {/* UID:CHE‑292.260.024 - CH-ID:CH17040101968 - EHRA-ID:1003646<br/> */}
             </a>
            
           </p>
@@ -110,10 +115,12 @@ function Contact() {
             value={message}
             onChange={(e) => onMessageChange(e.target.value)}
           />
+                  <p>{successMessage}</p>
         </div>
         <button type="submit" onClick={onSendPress}>
           {loading ? "Sending..." : "Apply"}
         </button>
+
       </form>
     </section>
   );

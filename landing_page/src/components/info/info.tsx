@@ -31,23 +31,29 @@ function info() {
             <h4>What we offer</h4>
             <ul>
               <li>
-                Hosting personalized Freqtrading Bots on High Available and Secured Kubernetes
-                Cluster in the Cloud 
+                Hosting personalized <a  className="a-container"  href="https://github.com/freqtrade/freqtrade#GPL-3.0-1-ov-file" target="_blank">FREQTRADE</a> Bots on Highly Available and Secured GKE 
               </li>
-              <li>
-                Limited Onboarding (2 per month) after evaluation and personal
-                interview
-              </li>
+
               <li>Pilot Phase: 1 month free of charge</li>
               <li>Elaborated SRE (Service Level Monitoring, SLAs/SLOs/SLIs, Post mortem analyses, ...)</li>
+              <li>Production Issue Anticipation by using <a  className="a-container" href="https://www.cncf.io/projects/chaosmesh/" target="_blank">Chaos Engineering Concepts</a></li>
+              <li>AIOps Approaches</li>
+              <li>Effective ChatGPT 4 and special LLMs for Trading and Infrastructure as Code</li>
+              <li>Full Software Lifecycle Management for Freqtrade And GKE
+              <ul><br/>
+              <li>Running latest recommended versions</li>
+              <li>Installing recommended security updates</li>
+              <li>Steady Extra Vulnerability Scanning</li>
+              </ul>
+              </li>
               <li>API Key Security Management and Consulting</li>
               <li>
-                Security Configuration Consulting (YUBI/Pass Keys, Securing API
-                Keys, IP Restrictions, Whitelisting, Blacklisting, Cilium Network Policies, ...)
+                Security Configuration (YUBI/Pass Keys, Securing API
+                Keys, IP Restrictions/Whitelisting/Blacklisting, Cilium Network Policies, ...)
               </li>
-              <li>Automated Updated Blacklists from remotepairlist.com</li>
+              <li>Automated Updated Blacklists from <a  className="a-container" href="https://remotepairlist.com" target="_blank">Remotepairlist</a></li>
               <li>
-                Backtesting of recent 10 Strategies from <a  className="a-container" href="https://www.freqst.com/" target="_blank">Freqtrade Strategies</a> and <br/>
+                Backtesting of recent n Strategies from <a  className="a-container" href="https://www.freqst.com/" target="_blank">Freqtrade Strategies</a> and <br/>
                 <a  className="a-container" href="https://strat.ninja/strategies.php" target="_blank">Freqtrade Strategy Ninja</a> as well as strategies from other sources
               </li>
               <li>
@@ -58,27 +64,32 @@ function info() {
                 Best Strategy deployment including Hyperopt Parameter File to
                 Personal Bots
               </li>
-              <li>Deploying customized or free Strategies and HyperLossFunctions
+              <li>Deploying protected or free Strategies and HyperLossFunctions
               <br/> <ul><br/>
-              <li><a href="https://www.copyrightlaws.com/" className="a-container">Intellectual properties protected by international copyright laws</a>, jurisdiction Switzerland</li>
-              <li>International ND Agreement backed by Swiss officials</li>
+              <li><a href="https://www.copyrightlaws.com/" className="a-container" target="_blank">Intellectual properties protected by international copyright laws</a>, jurisdiction Switzerland</li>
+              <li><a href="https://swissstartupassociation.ch/content/uploads/2022/03/SSA-NDA-EN.docx" className="a-container" target="_blank">International ND Agreement</a> backed by Swiss Legal Authorities</li>
               </ul>
               </li>
-              <li>FreqAI configuration with Reinforcement Learning section</li>
-              <li>Private access to FreqUI frontend via domain/ip</li>
-              <li>Customized freqtrade container image (Docker) with Dependency Management (extra python libraries, etc.)</li>
-              <li>Individual Configuration updates once per day (Stake amount, Strategy, Stoploss, ...)</li>
-              <li>Private freqtrade strategy onboarding</li>
+              <li>FreqAI configuration with Reinforcement Learning</li>
+              <li>Private Access to FreqUI Frontend via Domain/IPAddress</li>
+              <li>Customized Freqtrade container image (Docker) with Dependency Management (extra python libraries, etc.)</li>
+              <li>Individual Configuration updates once/day (Stake Amount, Strategy, Stoploss, ...)</li>
+              <li>Private Freqtrade Strategy Onboarding</li>
               <li>Cost Control Transparency</li>
-              <li>Telegram Bot Control (ForceBuy, ForceSell, Stop/Start trading, ...) through configurable Telegram Frontend</li>
+              <li>Telegram Bot Control (ForceEntry, ForceExit, Stop/Start Trader, ...) through configurable Telegram Frontend</li>
               <li>Anytime cancellation and purging of all private data with no costs</li>
+              <li>Basic Introduction to <a  className="a-container" href="https://github.com/freqtrade/freqtrade#GPL-3.0-1-ov-file" target="_blank">FREQTRADE</a> for Beginners</li>
+              <li>
+                Limited Onboarding (2 per month) after evaluation and personal
+                interview
+              </li>
             </ul>
             <a href="#contact">Get started</a>
           </div>
           <div className="planning-card">
             <h4>Features in planning</h4>
             <p>
-              Be one step ahead by using high available operating improvements
+              Be one step ahead by using professional cloud infrastructure at scale.
             </p>
             <ul>
               <li>
