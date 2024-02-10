@@ -1,0 +1,36 @@
+{
+  "bot_name": "freqtrade-kraken-stieves",
+  "exchange": {
+    "key": "iYMnr561Jd2W/5mO5vGh0dRkxVuRIIFASiyMg438+JxOo+3x4E0hRsRg",
+    "name": "kraken",
+    "pair_whitelist": [
+      "AVAX/USDT",
+      "ATOM/USDT",
+      "ALGO/USDT",
+      "MANA/USDT",
+      "MATIC/USDT",
+      "LTC/USDT",
+      "LINK/USDT",
+      "APE/USDT",
+      "EOS/USDT",
+      "XMR/USDT",
+      "ETH/USDT",
+      "DOGE/USDT",
+      "DOT/USDT",
+      "XTZ/USDT",
+      "ADA/USDT",
+      "XRP/USDT",
+      "SOL/USDT",
+      "BTC/USDT"
+    ],
+    "secret": "7WUb1oOKiy13s45HBDO9s+LMzjw6SXpsLAYuKC5biErZ83Wjt+fTY/QL7s2R6qG/5NCLr2EyxGJE1tqVMshJgQ=="
+  },
+  "stake_amount": "unlimited",
+  "telegram": {
+    "chat_id": "743804896",
+    "enabled": true,
+    "token": "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
+  },
+  "timeframe": "5m",
+  "trading_mode": "spot"
+}
