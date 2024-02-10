@@ -23,6 +23,11 @@ function Header() {
       </div>
       <nav className="navbar">
         <ul className={"nav-list" + (showMenu ? " show" : "")}>
+        <li>
+            <a href="https://github.com/DerSalvador/freqtrade-k8s-helm-chart" target="_blank" className="nav-link">
+              Tradingaas on Github 
+            </a>
+          </li>
           <li>
             <a href="#termsandconditions" className="nav-link">
               Terms and Conditions
@@ -35,7 +40,7 @@ function Header() {
           </li>
           <li>
             <a href="#whyKubernetes" className="nav-link">
-              Why Kubernetes
+              Why Kubernetes-Cloud
             </a>
           </li>
           <li>
