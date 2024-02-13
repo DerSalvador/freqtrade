@@ -1,0 +1,106 @@
+{
+  "bot_name": "freqtrading-binance-futures-larissa",
+  "exchange": {
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "future",
+        "leverage": 100
+      },
+      "rateLimit": 1200
+    },
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "future",
+        "leverage": 100
+      },
+      "rateLimit": 1200
+    },
+    "key": "eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7",
+    "name": "binance",
+    "pair_whitelist": [
+      "ILV/USDT:USDT",
+      "ZEC/USDT:USDT",
+      "COMP/USDT:USDT",
+      "AXS/USDT:USDT",
+      "BCH/USDT:USDT",
+      "LDO/USDT:USDT",
+      "NEO/USDT:USDT",
+      "ICP/USDT:USDT",
+      "LINK/USDT:USDT",
+      "MATIC/USDT:USDT",
+      "INJ/USDT:USDT",
+      "AVAX/USDT:USDT",
+      "MKR/USDT:USDT",
+      "WLD/USDT:USDT",
+      "DOT/USDT:USDT",
+      "DYDX/USDT:USDT",
+      "GMX/USDT:USDT",
+      "DASH/USDT:USDT",
+      "APT/USDT:USDT",
+      "NEAR/USDT:USDT",
+      "LTC/USDT:USDT",
+      "ATOM/USDT:USDT",
+      "EGLD/USDT:USDT",
+      "FIL/USDT:USDT",
+      "ENS/USDT:USDT",
+      "STX/USDT:USDT",
+      "ETC/USDT:USDT",
+      "XMR/USDT:USDT",
+      "YFI/USDT:USDT",
+      "QNT/USDT:USDT",
+      "UNI/USDT:USDT",
+      "PERP/USDT:USDT",
+      "SSV/USDT:USDT",
+      "KSM/USDT:USDT",
+      "CYBER/USDT:USDT",
+      "AAVE/USDT:USDT",
+      "RUNE/USDT:USDT"
+    ],
+    "secret": "qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy"
+  },
+  "margin_mode": "isolated",
+  "max_open_trades": 3,
+  "pairlists": [
+    {
+      "keep_pairlist_on_failure": true,
+      "method": "RemotePairList",
+      "mode": "whitelist",
+      "number_assets": 50,
+      "pairlist_url": "https://remotepairlist.com?q=4eed8c01974dba13",
+      "processing_mode": "append",
+      "read_timeout": 120,
+      "refresh_period": 600
+    },
+    {
+      "method": "AgeFilter",
+      "min_days_listed": 30
+    },
+    {
+      "low_price_ratio": 0.003,
+      "method": "PriceFilter"
+    },
+    {
+      "max_spread_ratio": 0.005,
+      "method": "SpreadFilter"
+    },
+    {
+      "lookback_days": 3,
+      "method": "RangeStabilityFilter",
+      "min_rate_of_change": 0.03,
+      "refresh_period": 1800
+    },
+    {
+      "method": "ShuffleFilter"
+    }
+  ],
+  "stake_amount": "unlimited",
+  "telegram": {
+    "chat_id": "5711830404",
+    "enabled": false,
+    "token": "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+  },
+  "timeframe": "15m",
+  "trading_mode": "futures"
+}

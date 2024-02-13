@@ -1,6 +1,22 @@
 {
   "bot_name": "freqtrade-kraken-stieves",
   "exchange": {
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "spot",
+        "leverage": 10
+      },
+      "rateLimit": 3000
+    },
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "spot",
+        "leverage": 10
+      },
+      "rateLimit": 3000
+    },
     "key": "iYMnr561Jd2W/5mO5vGh0dRkxVuRIIFASiyMg438+JxOo+3x4E0hRsRg",
     "name": "kraken",
     "pair_whitelist": [
@@ -28,7 +44,7 @@
   "stake_amount": "unlimited",
   "telegram": {
     "chat_id": "743804896",
-    "enabled": true,
+    "enabled": false,
     "token": "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
   },
   "timeframe": "5m",
