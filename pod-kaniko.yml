@@ -8,7 +8,7 @@ spec:
   containers:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:v1.9.2 # gcr.io/kaniko-project/executor:latest
-    args: [ "--dockerfile=./docker/Dockerfile.custom", "--context=/tmp/freqtrade", "--destination=europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade:2023.12_freqaitorch_ds", "--force" ]
+    args: [ "--dockerfile=./docker/Dockerfile.custom", "--context=/tmp/freqtrade", "--destination=europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade:2024.1_freqaitorch_ds", "--force" ]
     volumeMounts:
       - name: clonerepo
         mountPath: /tmp/freqtrade
@@ -22,7 +22,7 @@ spec:
   - image: python
     name: clonerepo
     command: ["/bin/sh"]
-    args: ["-c", "cat $GOOGLE_APPLICATION_CREDENTIALS; mkdir -p /kaniko/.docker/; mkdir /root/.ssh/; cp /tmp/sshkey/id_rsa /root/.ssh/id_rsa; chmod 0600 /root/.ssh/id_rsa; GIT_SSH_COMMAND='ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no' git clone git@github.com:DerSalvador/freqtrade.git --single-branch --branch 2023.12 /tmp/freqtrade; echo finished cloning"] 
+    args: ["-c", "cat $GOOGLE_APPLICATION_CREDENTIALS; mkdir -p /kaniko/.docker/; mkdir /root/.ssh/; cp /tmp/sshkey/id_rsa /root/.ssh/id_rsa; chmod 0600 /root/.ssh/id_rsa; GIT_SSH_COMMAND='ssh -i /root/.ssh/id_rsa -o StrictHostKeyChecking=no' git clone git@github.com:DerSalvador/freqtrade.git --single-branch --branch 2024.1 /tmp/freqtrade; echo finished cloning"] 
     env:
       - name: GOOGLE_APPLICATION_CREDENTIALS
         value: /secret/kaniko-secret.json/application_default_credentials.json
