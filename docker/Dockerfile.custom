@@ -7,7 +7,7 @@ FROM freqtradeorg/freqtrade:2024.1_freqaitorch
 # The below dependency - pyti - serves as an example. Please use whatever you need!
 COPY extra_strategies /freqtrade/user_data/extra_strategies
 RUN pip install --upgrade pip
-RUN pip install --use-pep517 --user pandas==2.0.3 pyti finta llvmlite numba patsy py3cw statsmodels PyWavelets freqtrade_custom_indicators utils ta
+RUN pip install --use-pep517 --user --no-deps statsmodels==0.13.5 pandas==1.5.3 pyti finta llvmlite numba patsy py3cw PyWavelets freqtrade_custom_indicators utils ta
 # RUN pip install --use-pep517 --user pyti finta dotenv llvmlite numba patsy py3cw statsmodels ta
 # Switch back to user (only if you required root above)
 # USER ftuser
