@@ -1,4 +1,6 @@
 # Freqtrade rules
+**/models/**/*.h5
+**/models/**/*.keras
 config*.json
 *.sqlite
 *.sqlite-shm
