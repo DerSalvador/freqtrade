@@ -8,7 +8,7 @@ spec:
   containers:
   - name: kaniko
     image: gcr.io/kaniko-project/executor:v1.9.2 # gcr.io/kaniko-project/executor:latest
-    args: [ "--dockerfile=./docker/Dockerfile.custom", "--context=/tmp/freqtrade", "--destination=europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade:2024.1_freqaitorch_ds", "--force" ]
+    args: [ "--dockerfile=./docker/Dockerfile.custom", "--context=/tmp/freqtrade", "--destination=europe-west1-docker.pkg.dev/vaulted-gift-406223/dersalvador/freqtradeorg/freqtrade:2024.1_freqaitorch_ds_1", "--force" ]
     volumeMounts:
       - name: clonerepo
         mountPath: /tmp/freqtrade
