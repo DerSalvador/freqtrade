@@ -1,0 +1,269 @@
+{
+  "amend_last_stake_amount": true,
+  "api_server": {
+    "CORS_origins": [
+      "http://127.0.0.1:8084",
+      "http://localhost:8084",
+      "http://0.0.0.0:8084"
+    ],
+    "enable_openapi": true,
+    "enabled": true,
+    "jwt_secret_key": "235573d45bb26d0cbf1986893b12d4aaf0cf4934f3566d9459d818ec7fbb851b\n",
+    "listen_ip_address": "0.0.0.0",
+    "listen_port": 8084,
+    "password": "&&Liz270117!!",
+    "username": "freqtrade",
+    "verbosity": "error",
+    "ws_token": "acnQI1n44GG9lJ51fLKqWQvVJF5k5q7xsw"
+  },
+  "cancel_open_orders_on_exit": false,
+  "dataformat_ohlcv": "feather",
+  "dataformat_trades": "feather",
+  "db_url": "sqlite:///user_data/tradesv3.sqlite",
+  "download_trades": true,
+  "dry_run": false,
+  "dry_run_wallet": 4000,
+  "entry_pricing": {
+    "check_depth_of_market": {
+      "bids_to_ask_delta": 1,
+      "enabled": false
+    },
+    "order_book_top": 1,
+    "price_last_balance": 0,
+    "price_side": "other",
+    "use_order_book": true
+  },
+  "exchange": {
+    "ccxt_async_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "spot",
+        "leverage": 10
+      },
+      "rateLimit": 1200
+    },
+    "ccxt_config": {
+      "enableRateLimit": true,
+      "options": {
+        "defaultType": "spot",
+        "leverage": 10
+      },
+      "rateLimit": 1200
+    },
+    "pair_blacklist": [
+      ".*(3L|3S|5L|5S|UP|DOWN)/.*",
+      "(AUD|BRZ|CAD|CHF|EUR|GBP|HKD|IDRT|JPY|NGN|RUB|SGD |TRY|UAH|USD|ZAR)/.*",
+      "(BUSD|CUSD|CUSDT|DAI|PAXG|SUSD|TUSD|USDC|USDN|USDP |USDT|VAI|UST|USDD|USDJ|USTC|AUSD|OUSD)/.*",
+      "(ACM|AFA|ALA|ALL|ALPINE|APL|ASR|ATM|BAR|CAI|CITY |FOR|GAL|GOZ|IBFK|JUV|LEG|LOCK-1|NAVI|NMR|NOV|PFL |PORTO|PSG|ROUSH|STV|TH|TRA|UCH|UFC|YBO)/.*",
+      "(1EARTH|ILA|MEM|AMPL|BOBA|CWAR|OMG|XYM|POLX|CARR |SKEY|KLV|KRL|KOK|DMTR|CHMB|CPOOL|MLS|RBS|SRBS |SYLO|VR|KARA|LUNA|SRBP|PSL|AI|QKC|EPK|BAX|UQC |ZBC|PLATO|ACA|XCN|MC|FTT|SRM|PRMX|SWP|XWG|PIAS |KICKS|TIME|BNX|WEMIX|HI.*|ALBT|ANC|CIX100|GLCH |MIR|XTAG|CELT|TEM|ZKT|MVP|ADB|AXPR|H2O|FT|BNC |BNX|STG|RLY|HNT|MARS4|DRGN|WXT|ROSN|KYL|FRR |STARLY|RBP|UNB|ARNM|NGC|CARE|REAP|TEM|EDG |GOM2|GRIN|INDI|LOVE|NGM|SHFT|ASTRA|PEPE|SOLVE |SUKU|ECOX|JASMY|GFT|PNT|AMB|BASIC|LMWR|VEGA |COCOS|PKF|SHX|DAPPT|BOB|ID|ZPAY|XHV|PCX|MODEFI |PEPE2|TRIBE|RFUEL|SIN|UBX|NOM|QUARTZ|XED|DG |SLCL|PLGR|OPCT|GMB|COV|TAUM|HAWK|LAVAX|CPC |AOA|EFX|FKX|JAR|NRG|REV|OXEN|UBX|CIX100|LOC |IXS|FORESTPLUS|BNS|MNET|EQZ|LACE|VID|H3RO3S |2CRZ|RACEFI|WOM|DERO|MLN|MEME|TOKEN)/.*",
+      "SHIB/USDT",
+      "BCH/USDT",
+      "LINK/USDT"
+    ],
+    "pair_whitelist": [
+      "BTC/USDT",
+      "USDC/USDT",
+      "ETH/USDT",
+      "DOT/USDT",
+      "XMR/USDT",
+      "LTC/USDT",
+      "XRP/USDT",
+      "ADA/USDT",
+      "DAI/USDT",
+      "SOL/USDT",
+      "LINK/USDT",
+      "EOS/USDT",
+      "DOGE/USDT",
+      "MATIC/USDT",
+      "ATOM/USDT",
+      "BCH/USDT",
+      "SHIB/USDT",
+      "AVAX/USDT",
+      "ALGO/USDT",
+      "APE/USDT",
+      "XTZ/USDT",
+      "MANA/USDT",
+      "USTC/USDT"
+    ]
+  },
+  "exit_pricing": {
+    "order_book_top": 1,
+    "price_side": "other",
+    "use_order_book": true
+  },
+  "exit_profit_only": true,
+  "fiat_display_currency": "EUR",
+  "force_entry_enable": true,
+  "freqai": {
+    "data_split_parameters": {
+      "random_state": 1,
+      "test_size": 0
+    },
+    "enabled": true,
+    "feature_parameters": {
+      "DI_threshold": 0.9,
+      "include_corr_pairlist": [
+        "ATOM/USDT",
+        "MATIC/USDT",
+        "ADA/USDT",
+        "ALGO/USDT",
+        "APE/USDT",
+        "ATOM/USDT",
+        "AVAX/USDT",
+        "BCH/USDT",
+        "BTC/USDT",
+        "DAI/USDT",
+        "DOGE/USDT",
+        "DOT/USDT",
+        "EOS/USDT",
+        "ETH/USDT",
+        "EURT/USDT",
+        "LINK/USDT",
+        "LTC/USDT",
+        "MANA/USDT",
+        "MATIC/USDT",
+        "SHIB/USDT",
+        "SOL/USDT",
+        "XMR/USDT",
+        "XRP/USDT",
+        "XTZ/USDT"
+      ],
+      "include_shifted_candles": 2,
+      "include_timeframes": [
+        "5m"
+      ],
+      "indicator_periods_candles": [
+        3,
+        10,
+        20
+      ],
+      "label_period_candles": 20,
+      "principal_component_analysis": false,
+      "use_SVM_to_remove_outliers": true,
+      "weight_factor": 0.9
+    },
+    "fit_live_predictions_candles": 300,
+    "identifier": "unique-id",
+    "live_retrain_hours": 1,
+    "model_training_parameters": {
+      "n_estimators": 800
+    },
+    "purge_old_models": true,
+    "train_period_days": 30
+  },
+  "has_downtime_protection": false,
+  "hold_support_enabled": true,
+  "ignore_roi_if_entry_signal": true,
+  "include_timeframes": [
+    "1m",
+    "5m",
+    "15m",
+    "30m",
+    "1h",
+    "4h",
+    "1d"
+  ],
+  "initial_state": "running",
+  "internals": {
+    "process_throttle_secs": 5
+  },
+  "margin_mode": "",
+  "max_open_trades": 3,
+  "minimal_roi": {
+    "0": 0.1,
+    "20160": 0.09,
+    "40160": 0
+  },
+  "order_types": {
+    "entry": "market",
+    "exit": "limit",
+    "force_entry": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": false
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList",
+      "number_assets": 50,
+      "refresh_period": 900,
+      "sort_key": "quoteVolume"
+    },
+    {
+      "method": "AgeFilter",
+      "min_days_listed": 15
+    },
+    {
+      "low_price_ratio": 0.003,
+      "method": "PriceFilter"
+    },
+    {
+      "max_spread_ratio": 0.008,
+      "method": "SpreadFilter"
+    },
+    {
+      "lookback_days": 3,
+      "method": "RangeStabilityFilter",
+      "min_rate_of_change": 0.03,
+      "refresh_period": 900
+    },
+    {
+      "method": "ShuffleFilter"
+    },
+    {
+      "keep_pairlist_on_failure": true,
+      "method": "StaticPairList",
+      "mode": "blacklist",
+      "number_assets": 39,
+      "processing_mode": "append",
+      "read_timeout": 60,
+      "refresh_period": 900
+    }
+  ],
+  "position_adjustment_enable": true,
+  "process_only_new_candles": true,
+  "stake_amount": "unlimited",
+  "stake_amount_type": "quote_currency",
+  "stake_currency": "USDT",
+  "stoploss": -0.1,
+  "telegram": {
+    "keyboard": [
+      [
+        "/forcelong",
+        "/balance",
+        "/profit",
+        "/reload_config",
+        "/stopentry"
+      ],
+      [
+        "/status table",
+        "/performance",
+        "/mix_tags",
+        "/start",
+        "/stop"
+      ],
+      [
+        "/show_config",
+        "/whitelist",
+        "/logs",
+        "/trades",
+        "/forceexit"
+      ]
+    ]
+  },
+  "timeframe": "5m",
+  "tradable_balance_ratio": 0.99,
+  "trading_mode": "spot",
+  "trailing_only_offset_is_reached": true,
+  "trailing_stop": false,
+  "trailing_stop_positive": 0.01,
+  "trailing_stop_positive_offset": 0.03,
+  "unfilledtimeout": {
+    "entry": 10,
+    "exit": 30,
+    "exit_timeout_count": 0,
+    "unit": "minutes"
+  },
+  "use_custom_stoploss": false,
+  "use_exit_signal": true
+}

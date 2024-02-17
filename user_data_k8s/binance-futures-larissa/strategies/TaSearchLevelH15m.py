@@ -193,6 +193,9 @@ class TaSearchLevelH15m(IStrategy):
         df.loc[(df['buy_long'] > 0), 'enter_long'] = 1
         df.loc[(df['buy_long2'] > 0), 'enter_long'] = 1
 
+        # Set leverage
+        df['leverage'] = 15  # example leverage of 1x, adjust accordingly
+    
         return df
 
     def populate_exit_trend(self, df: pd.DataFrame, metadata: dict) -> pd.DataFrame:

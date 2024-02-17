@@ -1,0 +1,16 @@
+{
+  "bot_name": "freqtrade-kraken-adriana",
+  "exchange": {
+    "key": "+H4NKdY1EIWMVwq4s+qOymZATOYoQPvND+wCMzo+jasiN+zScLEVPODo",
+    "name": "kraken",
+    "secret": "jOrx0aLMbRzOjAoagVx0nU1fW2qzTvvT+2bZQNIehqjKfieATglkZ+o92QJm9AuCCdmH4k3owys+nWHKlCEJmw=="
+  },
+  "stake_amount": "unlimited",
+  "telegram": {
+    "chat_id": "6274423445",
+    "enabled": true,
+    "token": "6687835448:AAE4LHQGt4wLoJFstZ4H0eoMhhg4u3k7UJo"
+  },
+  "timeframe": "5m",
+  "trading_mode": "spot"
+}

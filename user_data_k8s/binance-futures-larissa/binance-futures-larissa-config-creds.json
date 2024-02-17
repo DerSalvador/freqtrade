@@ -19,49 +19,71 @@
     },
     "key": "eU4J1XrpnGLKNpxjSE16AIPnxkjOVCp6twsieeOOng9g97zvICIYbChITn0nCwe7",
     "name": "binance",
-    "pair_whitelist": [
-      "ILV/USDT:USDT",
-      "ZEC/USDT:USDT",
-      "COMP/USDT:USDT",
-      "AXS/USDT:USDT",
-      "BCH/USDT:USDT",
-      "LDO/USDT:USDT",
-      "NEO/USDT:USDT",
-      "ICP/USDT:USDT",
-      "LINK/USDT:USDT",
-      "MATIC/USDT:USDT",
-      "INJ/USDT:USDT",
-      "AVAX/USDT:USDT",
-      "MKR/USDT:USDT",
-      "WLD/USDT:USDT",
-      "DOT/USDT:USDT",
-      "DYDX/USDT:USDT",
-      "GMX/USDT:USDT",
-      "DASH/USDT:USDT",
-      "APT/USDT:USDT",
-      "NEAR/USDT:USDT",
-      "LTC/USDT:USDT",
-      "ATOM/USDT:USDT",
-      "EGLD/USDT:USDT",
-      "FIL/USDT:USDT",
-      "ENS/USDT:USDT",
-      "STX/USDT:USDT",
-      "ETC/USDT:USDT",
-      "XMR/USDT:USDT",
-      "YFI/USDT:USDT",
-      "QNT/USDT:USDT",
-      "UNI/USDT:USDT",
-      "PERP/USDT:USDT",
-      "SSV/USDT:USDT",
-      "KSM/USDT:USDT",
-      "CYBER/USDT:USDT",
-      "AAVE/USDT:USDT",
-      "RUNE/USDT:USDT"
-    ],
+    "pair_blacklist": [],
+    "pair_whitelist": [],
     "secret": "qoetTs4vyUSouAG34yI5s6DVdcIPl7aJ39hftP1xEukPzuoXCCirgvOe07MI0wsy"
+  },
+  "freqai": {
+    "data_split_parameters": {
+      "random_state": 1,
+      "test_size": 0
+    },
+    "enabled": true,
+    "feature_parameters": {
+      "DI_threshold": 0.9,
+      "include_corr_pairlist": [
+        "ATOM/USDT",
+        "MATIC/USDT",
+        "ADA/USDT",
+        "ALGO/USDT",
+        "APE/USDT",
+        "ATOM/USDT",
+        "AVAX/USDT",
+        "BCH/USDT",
+        "BTC/USDT",
+        "DAI/USDT",
+        "DOGE/USDT",
+        "DOT/USDT",
+        "EOS/USDT",
+        "ETH/USDT",
+        "LINK/USDT",
+        "LTC/USDT",
+        "MANA/USDT",
+        "MATIC/USDT",
+        "SHIB/USDT",
+        "SOL/USDT",
+        "XMR/USDT",
+        "XRP/USDT",
+        "XTZ/USDT"
+      ],
+      "include_shifted_candles": 2,
+      "include_timeframes": [
+        "15m"
+      ],
+      "indicator_periods_candles": [
+        3,
+        10,
+        20
+      ],
+      "label_period_candles": 20,
+      "principal_component_analysis": false,
+      "use_SVM_to_remove_outliers": true,
+      "weight_factor": 0.9
+    },
+    "fit_live_predictions_candles": 300,
+    "identifier": "unique-id",
+    "live_retrain_hours": 1,
+    "model_training_parameters": {
+      "n_estimators": 800
+    },
+    "purge_old_models": true,
+    "train_period_days": 30
   },
   "margin_mode": "isolated",
   "max_open_trades": 3,
+  "minimal_roi": {
+    "0": 0.05
+  },
   "pairlists": [
     {
       "keep_pairlist_on_failure": true,
@@ -69,6 +91,16 @@
       "mode": "whitelist",
       "number_assets": 50,
       "pairlist_url": "https://remotepairlist.com?q=4eed8c01974dba13",
+      "processing_mode": "append",
+      "read_timeout": 120,
+      "refresh_period": 600
+    },
+    {
+      "keep_pairlist_on_failure": true,
+      "method": "RemotePairList",
+      "mode": "blacklist",
+      "number_assets": 50,
+      "pairlist_url": "https://remotepairlist.com?q=08f55c8e02529216",
       "processing_mode": "append",
       "read_timeout": 120,
       "refresh_period": 600
@@ -96,11 +128,16 @@
     }
   ],
   "stake_amount": "unlimited",
+  "stoploss": -0.05,
   "telegram": {
-    "chat_id": "5711830404",
-    "enabled": false,
-    "token": "6271542729:AAFvduNLbNHDhi2_381mqBymKZomA1TAL7I"
+    "chat_id": "743804896",
+    "enabled": true,
+    "token": "6896507427:AAH1t5Z5Nfww5Izoms6tHo5hq6PdP6d0q58"
   },
   "timeframe": "15m",
-  "trading_mode": "futures"
+  "trading_mode": "futures",
+  "trailing_only_offset_is_reached": true,
+  "trailing_stop": true,
+  "trailing_stop_positive": 0.05,
+  "trailing_stop_positive_offset": 0.2
 }
